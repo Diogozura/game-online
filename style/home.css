@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    background-color: rgba(210, 105, 30, 0.555);
+}
+h1{
+    text-align: center;
+}
+
+article{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    width: 200px;
+    border-radius: 50px;
+    
+}
+article > h2{
+    text-align: center;
+}
+.bloco1{
+    display: grid;
+    justify-content: space-around;
+    justify-items: stretch;
+    padding: 50px;
+    background-color: red;
+
+}
+button{
+    background-color: crimson;
+    border: crimson;
+    padding: 10px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    text-decoration: initial;
+}
+
+.bloco {
+    display: grid;
+    justify-content: space-around;
+    justify-items: stretch;
+    padding: 50px;
+    background-color: aqua;
+    
+}
+textarea{
+    resize: none;
+    margin-bottom: 5px;
+}
