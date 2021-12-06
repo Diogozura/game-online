@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+
+article{
+    width: 500px;
+    background-color: lawngreen;
+   margin-left: auto;
+   margin-right: auto;
+}
+article h2{
+    text-align: center;
+}
+
+picture{
+    width: 500px;
+    padding: 10px;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+
+img{ 
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
+.nome{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ninkNome{
+    background-color: lawngreen;
+    border-radius: 30px;
+    text-align: center;
+}
+button{
+    
+    
+}
+a{
+    text-align: center;
+}

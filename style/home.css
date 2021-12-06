@@ -36,6 +36,9 @@ button{
     color: #FFFFFF;
     text-decoration: initial;
 }
+a{
+    text-align: center;
+}
 
 .bloco {
     display: grid;
@@ -45,7 +48,6 @@ button{
     background-color: aqua;
     
 }
-textarea{
-    resize: none;
+input#link{
     margin-bottom: 5px;
 }
