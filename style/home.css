@@ -5,27 +5,37 @@ body{
 h1{
     text-align: center;
 }
-
-article{
-    
-    display: block;
+main{
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+}
+
+section{
+    
+    
+    margin-left: auto;
+    margin-right: auto;
+    
 
     width: 200px;
+    height: 90px;
     border-radius: 50px;
     
 }
-article > h2{
+h2{
     text-align: center;
+    margin: 0;
+
 }
+
 .bloco1{
     display: grid;
     justify-content: space-around;
     justify-items: stretch;
     padding: 50px;
     background-color: red;
+    margin-bottom: 10px;
 
 }
 button{
