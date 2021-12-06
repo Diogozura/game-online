@@ -1,4 +1,3 @@
-
 // link para criar sala 
 const criarSala = document.querySelector("#criar-sala")
 
