@@ -6,32 +6,32 @@ nome.addEventListener("input", function () {
 })
 
 
-// escolher cores
-    const cores = ["vermelho",
-        "amarelo",
-        "verde",
-        "roxo"
-    ]
-cores.vermelho = document.querySelector("#vermelho")
-cores.amarelo = document.querySelector("#amarelo")
-cores.verde = document.querySelector("#verde")
-cores.roxo = document.querySelector("#roxo")
+// escolher 
+function escolhido() {
+    var res = '';
+    const items = document.getElementsByName('cores');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].checked) {
+        res = items[i].value
+        break;
+      }
+    }  
+    return res;
+  }
+  
+  function verificar() {
+    
+  }
 
-vermelho.addEventListener("click", function() {
-    console.log("vermelho")
-})
-amarelo.addEventListener("click", function() {
-    console.log("amarelo")
-})
-verde.addEventListener("click", function() {
-    console.log("verde")
-})
-roxo.addEventListener("click", function() {
-    console.log("roxo")
-})
 
 // iniciar gamer
 const iniciarGame = document.querySelector("#iniciar")
 iniciarGame.addEventListener("click", function() {
-    console.log("iniciar game")
+    const res = escolhido();
+    if (res === '') {
+      alert('nenhum item foi selecionado');
+      return false;
+    }
+    console.log('O item selecionado foi ' + res);
+    return true;
 })
