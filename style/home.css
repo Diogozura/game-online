@@ -1,60 +1,42 @@
 body{
     margin: 0;
-    background-color: rgba(210, 105, 30, 0.555);
+    background-image: url(../img/fundoHome.png);
 }
-h1{
-    text-align: center;
-}
+
 main{
-    width: 500px;
+    width: 700px;
     margin-left: auto;
     margin-right: auto;
+
+    display: flex;
+    justify-content: space-between;
 }
 
-section{
-    
-    margin-left: auto;
-    margin-right: auto;
-    
-
-    width: 200px;
-    height: 90px;
-    border-radius: 50px;
-    
-}
-h2{
-    text-align: center;
-    margin: 0;
-
-}
-
-.bloco1{
-    display: grid;
-    justify-content: space-around;
-    justify-items: stretch;
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+  
     padding: 50px;
-    background-color: red;
-    margin-bottom: 10px;
+    background-color: rgb(90, 241, 85);
 
+
+    border-radius: 10px;
 }
-button{
-    background-color: crimson;
-    border: crimson;
+.color1{
+    background-color: rgb(109, 80, 238);
+}
+.color2{
+    background-color: rgb(247, 60, 60);
+}
+.btn{
+    margin-top: 5px;
+    background-color: crimson;;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
+
     color: #FFFFFF;
     text-decoration: initial;
-}
-
-
-.bloco {
-    display: grid;
-    justify-content: space-around;
-    justify-items: stretch;
-    padding: 50px;
-    background-color: aqua;
-    
-}
-input#link{
-    margin-bottom: 5px;
+    text-align: center;
 }
