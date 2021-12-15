@@ -20,15 +20,16 @@ main{
   
     padding: 50px;
     background-color: rgb(90, 241, 85);
-
-
+    margin-top: 100px;
     border-radius: 10px;
 }
 .color1{
     background-color: rgb(109, 80, 238);
+    color: #f7f7f7;
 }
 .color2{
     background-color: rgb(247, 60, 60);
+    color:#f7f7f7;
 }
 .btn{
     margin-top: 5px;
