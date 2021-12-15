@@ -13,7 +13,7 @@ const player = document.querySelector("#entrar-sala")
 
 player.addEventListener("click", function () {
     location.href= "game-online/jogador.html"
-})
+    })
 
 // monitorar o que tem dentro do campo 
 const link = document.querySelector("#link")
