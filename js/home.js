@@ -12,7 +12,7 @@ criarSala.addEventListener("click", function () {
 const player = document.querySelector("#entrar-sala")
 
 player.addEventListener("click", function () {
-    location.href= "../jogador.html"
+    location.href= "/jogador.html"
 })
 
 // monitorar o que tem dentro do campo 
