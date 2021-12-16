@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/donoDaSala.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -25,7 +25,7 @@
     <main>
         <section id="valor inicial">
             <h2>valor inicial</h2>
-            <input type="number" name="valor" id="dinheiro-inicial" placeholder="R$">
+            <input type="number" name="valor" id="valor-inicial" placeholder="R$">
             <aside id="valor1">33</aside>
             <aside id="valor2">11</aside>
             <aside id="valor3">646</aside>
@@ -35,15 +35,8 @@
 
         <!-- link  -->
         <section id="link">
-            <!-- <p type="text" id="link-url"> adkakda</p>
-
-            <button onclick="myFunction()" onmouseout="outFunc()">
-                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-                Copy text
-                </button> -->
-            <p type="text" value="dlals" id="link-url"></p>
-            <button onclick="myFunction()">Copy text</button>
-
+            <span id="pwd_spn" class="password-span">Test</span>
+            <button id="cp_btn">Copy</button>
         </section>
 
 
@@ -124,7 +117,7 @@
             <a href="game.html">iniciar game</a>
     </main>
 
-    <script src="js/donoDaSala.js"></script>
+    <script type="module" src="js/criarSala.js"></script>
 </body>
 
 </html>

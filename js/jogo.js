@@ -1,3 +1,2 @@
-import { donoDaSala } from "./donoDaSala";
+import { criarSala } from "../js/criarSala.js";
 
-console.log(sala.keyRoom)
