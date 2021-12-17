@@ -1,18 +1,22 @@
 import { linkSala } from "../js/linkSala.js"
 
 // pega valor
-function valor() {
-    const valorInserido = document.querySelector("#valor-inicial").value
-   
-    console.log(valorInserido)
-    return valor()
-}
+
+var input = document.querySelector('#valor-inicial');
+input.addEventListener('input', function() {
+  console.log( this.value);
+})
+var input = document.querySelector('#nick-nome');
+input.addEventListener('input', function() {
+  console.log( this.value);
+})
+
 // confere  valor
 
 // coloca link da sala 
 linkSala.sala()
     .then(sala => {
-        console.log(sala.keyRoom)
+        sala.keyRoom
         let link = document.querySelector('#pwd_spn')
         link.textContent = sala.keyRoom
     })
