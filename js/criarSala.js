@@ -1,15 +1,20 @@
 import { linkSala } from "../js/linkSala.js"
 
+
 // pega valor
 
-var input = document.querySelector('#valor-inicial');
-input.addEventListener('input', function() {
-  console.log( this.value);
+var valor = document.querySelector('#valor-inicial');
+valor.addEventListener('input', function() {
+  
+  const valorDoJogo = this.value
+  console.log(valorDoJogo); 
+  if (valorDoJogo.length <=3) {
+    valor.classList.add("color2")
+  } else {
+    valor.classList.remove("color2")
+  }
 })
-var input = document.querySelector('#nick-nome');
-input.addEventListener('input', function() {
-  console.log( this.value);
-})
+
 
 // confere  valor
 
@@ -36,7 +41,50 @@ function copy_password() {
 }
 
 // pega nome
-
+var nome = document.querySelector('#nick-nome');
+nome.addEventListener('input', function () {
+  const nick = this.value
+  console.log(nick);
+  if (nick.length <=2 ) {
+    nome.classList.add("color2")
+  } else {
+    nome.classList.remove("color2")
+  }
+})
 // valida nome
 
-// confere identificador 
+// confere identificador
+
+const dadoSala = ['oi']
+dadoSala.unshift ()
+
+
+  console.log(dadoSala)
+
+  function escolhido() {
+    var res = '';
+    const items = document.getElementsByName('cores');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].checked) {
+        res = items[i].value
+        break;
+      }
+    }  
+    return res;
+  }
+  
+  function verificar() {
+    
+  }
+
+// iniciar gamer
+const iniciarGame = document.querySelector("#iniciar")
+iniciarGame.addEventListener("click", function() {
+    const res = escolhido();
+    if (res === '') {
+      alert('nenhum item foi selecionado');
+      return false;
+    }
+    console.log('O item selecionado foi ' + res);
+    return true;
+})
