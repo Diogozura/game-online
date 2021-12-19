@@ -1,5 +1,5 @@
-import { criarSala } from "../js/criarSala.js";
-
+const sessao = document.querySelectorAll('#lista') 
+    console.log(sessao)
 function criarTabela() {
-    createElemente()
+    
 }

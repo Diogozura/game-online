@@ -80,7 +80,9 @@ function enviar() {
   console.log(dados)
   }
 
- 
+  export const criarSala = {
+    enviar
+}
 //     const iniciarGame = document.querySelector("#iniciar")
 //     iniciarGame.addEventListener("click", function() {
 //       const id = escolhido();
