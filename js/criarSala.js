@@ -3,19 +3,22 @@ import { linkSala } from "../js/linkSala.js"
 
 // pega valor
 
-var valor = document.querySelector('#valor-inicial');
-valor.addEventListener('input', function() {
-  
-  const valorDoJogo = this.value
-  console.log(valorDoJogo); 
-  if (valorDoJogo.length <=3) {
-    valor.classList.add("color2")
-  } else {
-    valor.classList.remove("color2")
-  }
-})
 
+function valorIncial() {
 
+  const valor = document.querySelector('#valor-inicial');
+  const valorDoJogo = valor.value
+
+  return valorDoJogo
+}
+
+function nome() {
+    
+  const nick = document.querySelector('#nick-nome');
+  const nickNome = nick.value
+
+  return nickNome
+}
 // confere  valor
 
 // coloca link da sala 
@@ -23,9 +26,9 @@ linkSala.sala()
     .then(sala => {
         sala.keyRoom
         let link = document.querySelector('#pwd_spn')
-        link.textContent = sala.keyRoom
+      link.textContent = sala.keyRoom
+      return link
     })
-
 
 // copy link para sala 
 document.getElementById("cp_btn").addEventListener("click", copy_password);
@@ -40,26 +43,7 @@ function copy_password() {
     textArea.remove();
 }
 
-// pega nome
-var nome = document.querySelector('#nick-nome');
-nome.addEventListener('input', function () {
-  const nick = this.value
-  console.log(nick);
-  if (nick.length <=2 ) {
-    nome.classList.add("color2")
-  } else {
-    nome.classList.remove("color2")
-  }
-})
-// valida nome
-
 // confere identificador
-
-const dadoSala = ['oi']
-dadoSala.unshift ()
-
-
-  console.log(dadoSala)
 
   function escolhido() {
     var res = '';
@@ -72,19 +56,43 @@ dadoSala.unshift ()
     }  
     return res;
   }
-  
-  function verificar() {
-    
-  }
-
-// iniciar gamer
-const iniciarGame = document.querySelector("#iniciar")
-iniciarGame.addEventListener("click", function() {
+  const iniciarGame = document.querySelector("#iniciar")
+  iniciarGame.addEventListener("click", function() {
     const res = escolhido();
     if (res === '') {
       alert('nenhum item foi selecionado');
       return false;
     }
-    console.log('O item selecionado foi ' + res);
     return true;
 })
+
+document.querySelector("#iniciar").addEventListener("click", enviar);
+
+function enviar() {
+  const dados = []
+  const id = escolhido();
+  dados.push(id)
+  const nick = nome();
+  dados.push(nick)
+  const valor = valorIncial();
+  dados.push(valor)
+  console.log(`valor inical ${valor}, nome do player ${nick}, e o identificador ${id}`)
+  console.log(dados)
+  }
+
+ 
+//     const iniciarGame = document.querySelector("#iniciar")
+//     iniciarGame.addEventListener("click", function() {
+//       const id = escolhido();
+//       // const nick = nick();
+    
+//     if (id === '') {
+//       alert('nenhum item foi selecionado');
+//       return false;
+//     }
+//     console.log('O item selecionado foi ' + id + nick);
+//     return true;
+// })
+    
+  
+//  validar identificador 
