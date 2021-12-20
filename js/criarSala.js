@@ -82,7 +82,18 @@ function enviar() {
 
   export const criarSala = {
     enviar
+
+    
 }
+// post para sala 
+valor 
+nome
+identificador
+chave
+//https://ffgames134.herokuapp.com/
+
+
+
 //     const iniciarGame = document.querySelector("#iniciar")
 //     iniciarGame.addEventListener("click", function() {
 //       const id = escolhido();
