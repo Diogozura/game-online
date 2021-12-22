@@ -28,7 +28,7 @@ section h2{
     text-align: center;
     
 }
-.jogadores{
+aside{
     background-color: rgb(163, 163, 163);
     width: 280px;
     height: 80px;
@@ -40,9 +40,7 @@ section h2{
 
     border-radius: 10px;
 }
-.img-player{
-   
-
+img{
     display: inline-block;
     float: left;
 }
