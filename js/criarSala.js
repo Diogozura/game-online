@@ -86,10 +86,10 @@ function enviar() {
     
 }
 // post para sala 
-valor 
-nome
-identificador
-chave
+// valor 
+// nome
+// identificador
+// chave
 //https://ffgames134.herokuapp.com/
 
 
