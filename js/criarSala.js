@@ -56,19 +56,19 @@ function copy_password() {
     }  
     return res;
   }
-  const iniciarGame = document.querySelector("#iniciar")
-  iniciarGame.addEventListener("click", function() {
-    const res = escolhido();
-    if (res === '') {
-      alert('nenhum item foi selecionado');
-      return false;
-    }
-    return true;
-})
+  // const iniciarGame = document.querySelector("#iniciar")
+  // iniciarGame.addEventListener("click", function() {
+  //   const res = escolhido();
+  //   if (res === '') {
+  //     alert('nenhum item foi selecionado');
+  //     return false;
+  //   }
+  //   return true;
+ // })
 
 document.querySelector("#iniciar").addEventListener("click", enviar);
 
-function enviar() {
+function enviar(jogador) {
   const dados = []
   const id = escolhido();
   dados.push(id)
@@ -82,24 +82,38 @@ function enviar() {
     mensagemErro()
     return
   }
+
   iniciarGame()
   console.log(`valor inical ${valor}, nome do player ${nick}, e o identificador ${id}`)
   console.log(dados)
   }
 
-  export const criarSala = {
-    enviar
+function validaJogador(jogador) {
+  let erros = []
+  if (jogador.nome.length == 0) erros.push("O jogador precisa de um nome");
+  if (jogador.nome.length == 0) erros.push("O jogador precisa de um nome");
+  if (jogador.nome.length == 0) erros.push("O jogador precisa de um nome");
+  
+}
 
-    
+function exibeMensagemDeErro(erros) {
+  var ul = document.querySelector("#mensagens-erro")
+
+  ul.innerHTML = ""
+
+
+  erros.forEach(function (erro) {
+      var li = document.createElement("li")
+      li.textContent = erro
+      ul.appendChild(li)
+  })
 }
 
 
-function validaJogador(jogador) {
-  erros = []
-  if (jogador.nome.length == 0) erros.push("O jogador precisa de um nome")
-  if (jogador.nome.length == 0) erros.push("O jogador precisa de um nome")
-  if (jogador.nome.length == 0) erros.push("O jogador precisa de um nome")
-  
+
+
+function mensagemErro() {
+  alert("você precisa completar todos os campos")
 }
 // post para sala 
 // valor 
