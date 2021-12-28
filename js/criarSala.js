@@ -76,6 +76,13 @@ function enviar() {
   dados.push(nick)
   const valor = valorIncial();
   dados.push(valor)
+
+  let erros = validaJogador() 
+  if (erros.length > 0) {
+    mensagemErro()
+    return
+  }
+  iniciarGame()
   console.log(`valor inical ${valor}, nome do player ${nick}, e o identificador ${id}`)
   console.log(dados)
   }
@@ -84,6 +91,15 @@ function enviar() {
     enviar
 
     
+}
+
+
+function validaJogador(jogador) {
+  erros = []
+  if (jogador.nome.length == 0) erros.push("O jogador precisa de um nome")
+  if (jogador.nome.length == 0) erros.push("O jogador precisa de um nome")
+  if (jogador.nome.length == 0) erros.push("O jogador precisa de um nome")
+  
 }
 // post para sala 
 // valor 
