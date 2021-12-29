@@ -10,11 +10,12 @@ botaoIniciarSala.addEventListener("click", function (event) {
 
   const jogador = dadosDaSala(form)
 
-  
   console.log(jogador)
 
   const erro = validaDados(jogador)
+
   console.log(erro)
+
   if (erro.length > 0) {
     alert("nada feito")
   } else {
@@ -27,7 +28,7 @@ botaoIniciarSala.addEventListener("click", function (event) {
 
 function dadosDaSala(form) {
 
-  let jogador = {
+  const jogador = {
     nome: form.nome.value,
     valor: form.valor.value,
     id: form.identificador.value
@@ -36,9 +37,22 @@ function dadosDaSala(form) {
   
 }
 
-function iniciaGame() {
- 
- alert(`olá `)
+function iniciaGame(jogador) {
+    
+    // fetch('http://localhost:4000/clientes/cliente', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-type': 'application/json'
+    //     },
+    //     body: json
+    // })
+    // .then(resp => {
+    //     return resp.body
+    // })
+  
+    
+  
+ alert(`olá`)
 }
 
 function validaDados(jogador) {
@@ -56,41 +70,41 @@ function validaDados(jogador) {
 
 
 
-fetch()
+
 
 // pegar link
-// -linkSala.sala()
-//     .then(sala => {
-//         sala.keyRoom
-//         let link = document.querySelector('#pwd_spn')
-//       link.textContent = sala.keyRoom
-//       return link
-//     })
+linkSala.sala()
+    .then(sala => {
+        sala.keyRoom
+        let link = document.querySelector('#pwd_spn')
+      link.textContent = sala.keyRoom
+      return link
+    })
 
 // copiar 
 
-// -document.getElementById("cp_btn").addEventListener("click", copy_password);
+document.getElementById("cp_btn").addEventListener("click", copy_password);
 
-// function copy_password() {
-//     var copyText = document.getElementById("pwd_spn");
-//     var textArea = document.createElement("textarea");
-//     textArea.value = copyText.textContent;
-//     document.body.appendChild(textArea);
-//     textArea.select();
-//     document.execCommand("Copy");
-//     textArea.remove();
-
-// validar identificador 
-function escolhido() {
-  var res = '';
-  const items = document.querySelector('.cores');
-  for (var i = 0; i < items.length; i++) {
-    if (items[i].checked) {
-      res = items[i].value
-      break;
-    }
-  }
-  return res;
+function copy_password() {
+  var copyText = document.getElementById("pwd_spn");
+  var textArea = document.createElement("textarea");
+  textArea.value = copyText.textContent;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("Copy");
+  textArea.remove();
 }
+// validar identificador 
+// function escolhido() {
+//   var res = '';
+//   const items = document.querySelector('.cores');
+//   for (var i = 0; i < items.length; i++) {
+//     if (items[i].checked) {
+//       res = items[i].value
+//       break;
+//     }
+//   }
+//   return res;
+// }
 
-console.error( "espertinho, tá querendo ver oq seu cabra safado... vai procurar oq fazer, olhar o código dos outros é feio 😒");
+  console.error("espertinho, tá querendo ver oq seu cabra safado... vai procurar oq fazer, olhar o código dos outros é feio 😒");
