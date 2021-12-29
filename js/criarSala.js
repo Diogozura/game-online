@@ -55,7 +55,7 @@ function validaDados(jogador) {
 
 
 
-
+fetch()
 
 
 
