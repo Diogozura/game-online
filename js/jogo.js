@@ -45,6 +45,7 @@ function montaValor() {
 
 dadosSala.dados()
     .then(dados => {
-        dados.forEach(element => {
-            dadosJogador.appendChild(element.player)
-        })})
+        var nome = dados.players 
+        console.log(typeof nome)
+        
+    })
