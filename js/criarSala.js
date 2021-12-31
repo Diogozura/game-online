@@ -21,8 +21,8 @@ botaoIniciarSala.addEventListener("click", function (event) {
   } else {
     iniciaGame()
   }
-  
-  
+
+
 })
 
 
@@ -34,25 +34,25 @@ function dadosDaSala(form) {
     id: form.identificador.value
   }
   return jogador;
-  
+
 }
 
 function iniciaGame(jogador) {
-    
-    // fetch('http://localhost:4000/clientes/cliente', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-type': 'application/json'
-    //     },
-    //     body: json
-    // })
-    // .then(resp => {
-    //     return resp.body
-    // })
-  
-    
-  
- alert(`olá`)
+
+  // fetch('https://ffgames134.herokuapp.com/dadosSala/?keyRoom=G0cjVXJ5bIq4yNELM98F', {
+  //     method: 'POST',
+  //     headers: {
+  //         'Content-type': 'application/json'
+  //     },
+  //     body: json
+  // })
+  // .then(resp => {
+  //     return resp.body
+  // })
+
+
+
+  alert(`olá`)
 }
 
 function validaDados(jogador) {
@@ -64,7 +64,7 @@ function validaDados(jogador) {
     erro.push("falta o nome")
   }
   escolhido()
-  
+
   return erro
 }
 
@@ -74,12 +74,12 @@ function validaDados(jogador) {
 
 // pegar link
 linkSala.sala()
-    .then(sala => {
-        sala.keyRoom
-        let link = document.querySelector('#pwd_spn')
-      link.textContent = sala.keyRoom
-      return link
-    })
+  .then(sala => {
+    sala.keyRoom
+    let link = document.querySelector('#pwd_spn')
+    link.textContent = sala.keyRoom
+    return link
+  })
 
 // copiar 
 
@@ -95,16 +95,16 @@ function copy_password() {
   textArea.remove();
 }
 // validar identificador 
-// function escolhido() {
-//   var res = '';
-//   const items = document.querySelector('.cores');
-//   for (var i = 0; i < items.length; i++) {
-//     if (items[i].checked) {
-//       res = items[i].value
-//       break;
-//     }
-//   }
-//   return res;
-// }
+function escolhido() {
+  var res = '';
+  const items = document.querySelector('.cores');
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].checked) {
+      res = items[i].value
+      break;
+    }
+  }
+  return res;
+}
 
-  console.error("espertinho, tá querendo ver oq seu cabra safado... vai procurar oq fazer, olhar o código dos outros é feio 😒");
+console.error("espertinho, tá querendo ver oq seu cabra safado... vai procurar oq fazer, olhar o código dos outros é feio 😒");

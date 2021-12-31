@@ -1,39 +1,12 @@
+import { dadosSala } from "./dadosSala.js"
 
-// function dadosJogador() {
-   
-
-    
-//     const idImg = document.createElement("img")
-    
-//     const nickH3 = document.createElement("h3")
-//     const ValorP = document.createElement("p")
-
-//     idImg.textContent = dados.img;
-//     nickH3.textContent = dados.nick;
-//     ValorP.textContent = `R$ ${dados.valor}`;
-
-//     sessaojogador.appendChild(idImg);
-//     sessaojogador.appendChild(nickH3);
-//     sessaojogador.appendChild(ValorP);
-
-    
-
-//     const section = document.querySelector("#lista")
-
-//     section.appendChild(sessaojogador)
- 
-
-
-// }
-
-
-
+const dadosJogador = document.querySelector("#lista")
 function addNaTela(jogador) {
-    const dadosJogador = document.querySelector("#lista")
+
     const jogadorAside = montaCampo(jogador)
     dadosJogador.appendChild(jogadorAside)
 
-   return dadosJogador
+    return dadosJogador
 }
 
 function montaCampo() {
@@ -43,7 +16,7 @@ function montaCampo() {
     asideJogador.appendChild(montaImg())
     asideJogador.appendChild(montaNome())
     asideJogador.appendChild(montaValor())
-    
+
 
     return asideJogador
 }
@@ -65,44 +38,13 @@ function montaValor() {
     const ValorP = document.createElement("p")
     ValorP.classList.add("valor-jogador")
 
-    ValorP.textContent = 'R$' +  '10';
+    ValorP.textContent = 'R$' + '10';
 
     return ValorP
 }
 
-
-
-
-
-var dados = [{
-    img: "roxo",
-    nick: "diogo",
-    valor: 400
-    
-
-},
-{
-    img: "roxo",
-    nick: "diogo",
-    valor: 400
-
-},
-{
-    img: "roxo",
-    nick: "Diogo",
-    valor: 300,
-
-},
-{
-    img: "roxo",
-    nick: "Diogo",
-    valor: 300,
-
-}]
-
-
-dados.forEach(function () {
-    addNaTela()
-});
-
-window.onload = addNaTela
+dadosSala.dados()
+    .then(dados => {
+        dados.forEach(element => {
+            dadosJogador.appendChild(element.player)
+        })})
