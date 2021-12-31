@@ -15,7 +15,7 @@ body{
 }
 
 section#lista{
-    width: 300px;
+    width: 400px;
     background-color: dodgerblue;
     margin-left: 30px;
 
@@ -31,7 +31,7 @@ section h2{
 aside{
     background-color: rgb(163, 163, 163);
     width: 280px;
-    height: 80px;
+    height: auto;
 
     text-align: center;
 
