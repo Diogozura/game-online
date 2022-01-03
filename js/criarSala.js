@@ -73,13 +73,21 @@ function validaDados(jogador) {
 
 
 // pegar link
-linkSala.sala()
+const gerarNovoLink = document.querySelector("#gerar-novo-link")
+gerarNovoLink.addEventListener("click", function (event) {
+
+  event.preventDefault()
+  linkSala.sala()
   .then(sala => {
     sala.keyRoom
     let link = document.querySelector('#pwd_spn')
     link.textContent = sala.keyRoom
     return link
   })
+  
+ });
+
+
 
 // copiar 
 
