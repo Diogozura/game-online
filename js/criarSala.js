@@ -10,18 +10,17 @@ botaoIniciarSala.addEventListener("click", function (event) {
 
   const jogador = dadosDaSala(form)
 
-  console.log(jogador)
-
   const erro = validaDados(jogador)
 
-  console.log(erro)
+
 
   if (erro.length > 0) {
-    alert("nada feito")
+    alert("Falta preencher " + erro)
   } else {
     iniciaGame()
   }
 
+  console.log(token)
 
 })
 
@@ -52,16 +51,16 @@ function iniciaGame(jogador) {
 
 
 
-  alert(`olá`)
+  alert(`acesso permitido`)
 }
 
 function validaDados(jogador) {
   const erro = []
   if (jogador.valor.length == " ") {
-    erro.push("Adicione um nome para o Paciente!");
+    erro.push("valor inicial  ");
   }
   if (jogador.nome.length == " ") {
-    erro.push("falta o nome")
+    erro.push(" nome do jogador ")
   }
   escolhido()
 
@@ -69,31 +68,32 @@ function validaDados(jogador) {
 }
 
 
+// gerar token
+
+  const gerarNovoLink = document.querySelector("#gerar-novo-link")
+
+  gerarNovoLink.addEventListener("click", function () {
+    event.preventDefault()
+    linkSala.sala()
+    .then(sala => {
+      sala.keyRoom
+      const link = document.querySelector('#pwd_spn')
+      link.textContent = sala.keyRoom
+      console.log(link.value)
+      localStorage.setItem("token", JSON.stringify(link))
+      
+      // localStorage.setItem("token",JSON.stringify(link))
+      return link
+    })
+    
+   });
 
 
-
-// pegar link
-const gerarNovoLink = document.querySelector("#gerar-novo-link")
-gerarNovoLink.addEventListener("click", function (event) {
-
-  event.preventDefault()
-  linkSala.sala()
-  .then(sala => {
-    sala.keyRoom
-    let link = document.querySelector('#pwd_spn')
-    link.textContent = sala.keyRoom
-    return link
-  })
-  
- });
-
-
-
-// copiar 
-
+// copiar token 
 document.getElementById("cp_btn").addEventListener("click", copy_password);
+function copy_password(event) {
+  event.preventDefault()
 
-function copy_password() {
   var copyText = document.getElementById("pwd_spn");
   var textArea = document.createElement("textarea");
   textArea.value = copyText.textContent;
