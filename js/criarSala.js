@@ -12,15 +12,13 @@ botaoIniciarSala.addEventListener("click", function (event) {
 
   const erro = validaDados(jogador)
 
-
-
   if (erro.length > 0) {
     alert("Falta preencher " + erro)
   } else {
     iniciaGame()
   }
 
-  console.log(token)
+ 
 
 })
 
@@ -76,14 +74,13 @@ function validaDados(jogador) {
     event.preventDefault()
     linkSala.sala()
     .then(sala => {
-      sala.keyRoom
+      const tokenSala = sala.keyRoom
       const link = document.querySelector('#pwd_spn')
-      link.textContent = sala.keyRoom
-      console.log(link.value)
-      localStorage.setItem("token", JSON.stringify(link))
-      
-      // localStorage.setItem("token",JSON.stringify(link))
-      return link
+      link.textContent = tokenSala
+      console.log(tokenSala)
+      localStorage.setItem("token", JSON.stringify(tokenSala))
+     
+          return link
     })
     
    });
