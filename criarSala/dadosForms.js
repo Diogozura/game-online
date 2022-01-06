@@ -1,4 +1,25 @@
-import { linkSala } from "./linkSala.js"
+import { dadosSala } from "../js/dadosSala.js"
+ 
+const formulario = document.querySelector('[form-dados]')
+
+
+formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault()
+
+    const token = evento.target.querySelector('#pwd_spn').value
+    const valor= evento.target.querySelector('[data-valor]').value
+    const id = evento.target.querySelector('[data-identificador]').value
+    const nome = evento.target.querySelector('[data-nome]').value
+
+    dadosSala.criarSala(token, valor, id, nome)
+        .then(() => {
+        console.log(token, valor, id, nome)
+    })
+}) 
+
+import { linkSala } from "../js/linkSala.js"
+
+
 
 const botaoIniciarSala = document.querySelector("#iniciar")
 
@@ -12,11 +33,14 @@ botaoIniciarSala.addEventListener("click", function (event) {
 
   const erro = validaDados(jogador)
 
-  if (erro.length > 0) {
-    alert("Falta preencher " + erro)
-  } else {
-    iniciaGame()
-  }
+  
+
+
+  // if (erro.length > 0) {
+  //   alert("Falta preencher " + erro)
+  // } else {
+  //   iniciaGame()
+  // }
 
  
 
@@ -34,9 +58,14 @@ function dadosDaSala(form) {
 
 }
 
+
+const url = "https://ffgames134.herokuapp.com/"
+const criarSala = url + "dopahfoanfoa"
+
+
 function iniciaGame(jogador) {
 
-  // fetch('https://ffgames134.herokuapp.com/dadosSala/?keyRoom=G0cjVXJ5bIq4yNELM98F', {
+  // fetch(criarSala, {
   //     method: 'POST',
   //     headers: {
   //         'Content-type': 'application/json'
@@ -68,37 +97,36 @@ function validaDados(jogador) {
 
 // gerar token
 
-  const gerarNovoLink = document.querySelector("#gerar-novo-link")
 
-  gerarNovoLink.addEventListener("click", function () {
-    event.preventDefault()
+
+ 
     linkSala.sala()
     .then(sala => {
       const tokenSala = sala.keyRoom
       const link = document.querySelector('#pwd_spn')
       link.textContent = tokenSala
-      console.log(tokenSala)
       localStorage.setItem("token", JSON.stringify(tokenSala))
-     
           return link
     })
-    
-   });
+ 
+
+
+  
 
 
 // copiar token 
-document.getElementById("cp_btn").addEventListener("click", copy_password);
-function copy_password(event) {
-  event.preventDefault()
+// document.getElementById("cp_btn").addEventListener("click", copy_password);
+// function copy_password(event) {
+//   event.preventDefault()
 
-  var copyText = document.getElementById("pwd_spn");
-  var textArea = document.createElement("textarea");
-  textArea.value = copyText.textContent;
-  document.body.appendChild(textArea);
-  textArea.select();
-  document.execCommand("Copy");
-  textArea.remove();
-}
+//   var copyText = document.getElementById("pwd_spn");
+//   var textArea = document.createElement("textarea");
+//   textArea.value = copyText.textContent;
+//   document.body.appendChild(textArea);
+//   textArea.select();
+//   document.execCommand("Copy");
+//   textArea.remove();
+// }
 // validar identificador 
 function escolhido() {
   var res = '';
