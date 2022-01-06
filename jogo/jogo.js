@@ -41,9 +41,8 @@ function montaValor(dado) {
 
     return ValorP
 }
-const id = document.querySelector("#cor")
-const nome = document.querySelector("#nome")
-const saldo = document.querySelector("#saldo")
+var tarefa = window.localStorage.getItem('token')
+console.log(tarefa)
 
 dadosSala.dados()
     .then(dados => {
