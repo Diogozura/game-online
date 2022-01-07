@@ -1,7 +1,9 @@
-const url = "https://ffgames134.herokuapp.com/"
+const urlDados = "https://ffgames134.herokuapp.com/dadosSala/?keyRoom="
+const urlSafe = "https://ffgames134.herokuapp.com/"
+const token = window.localStorage.getItem('token')
 
 const dados = () => {
-    return fetch(url + "dadosSala/?keyRoom=G0cjVXJ5bIq4yNELM98F")
+    return fetch(urlDados + token)
         .then(resposta => {
             return resposta.json()
         })
@@ -9,16 +11,16 @@ const dados = () => {
 
 }
 const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
-    return fetch(url + "SaveRoomPlayer/", {
+    return fetch(urlSafe + "SaveRoomPlayer/", {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
         },
         body: JSON.stringify({
-            token: keyRoom,
-            valor:valorInicial,
-            id:identificador,
-            nome:namePlayer
+            keyRoom: keyRoom,
+            valorInicial:valorInicial,
+            identificador:identificador,
+            namePlayer:namePlayer
         })
     })
         .then(resposta => {

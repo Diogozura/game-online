@@ -41,8 +41,6 @@ function montaValor(dado) {
 
     return ValorP
 }
-var tarefa = window.localStorage.getItem('token')
-console.log(tarefa)
 
 dadosSala.dados()
     .then(dados => {
@@ -57,18 +55,12 @@ dadosSala.dados()
         
         
     })
-// dadosSala.dados()
-//     .then(dados => {
-//         const dadoJogador = dados.players
-//         dadoJogador.forEach(element => {
-//             console.log(element.identificador, element.namePlayer, element.saldo)
 
-//             id.textContent = element.identificador;
-//             nome.textContent = element.namePlayer;
-//             saldo.textContent = "R$" + " " + element.saldo
-//         });
-        
-//         const str = JSON.stringify(dados.players)
-//         console.log(str)
-        
-//     })
+//  codigo token
+
+const tokenDoLocal = window.localStorage.getItem('token')
+console.log(tokenDoLocal)
+
+const ondeMostrar = document.querySelector("#url-sala")
+
+ondeMostrar.textContent = tokenDoLocal

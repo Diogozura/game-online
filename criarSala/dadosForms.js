@@ -14,13 +14,14 @@ linkSala.sala()
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault()
 
-    const token = evento.target.querySelector('#pwd_spn').innerText
-    const valor= evento.target.querySelector('[data-valor]').value
-    const id = evento.target.querySelector('[data-identificador]').value
-    const nome = evento.target.querySelector('[data-nome]').value
+    const keyRoom = evento.target.querySelector('#pwd_spn').innerText
+    const valorInicial= evento.target.querySelector('[data-valor]').value
+    const identificador = evento.target.querySelector('[data-identificador]').value
+    const namePlayer = evento.target.querySelector('[data-nome]').value
 
-    dadosSala.criarSala(token, valor, id, nome)
-        .then(() => {
+    dadosSala.criarSala(keyRoom, valorInicial, identificador, namePlayer)
+      .then(() => {
+          console.log(keyRoom, valorInicial, identificador, namePlayer)
         window.location.href = '../jogo/game.html'
     })
 }) 
