@@ -4,7 +4,7 @@ const criarSala = document.querySelector("#criar-sala")
 criarSala.addEventListener("click", function () {
     console.log("nhaa")
 
-    location.assign ("https://diogozura.github.io/game-online/criarSala.html")
+    location.href= "../criarSala/criarSala.html"
 })
 
 // link para criar player
