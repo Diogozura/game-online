@@ -46,19 +46,15 @@ dadosSala.dados()
     .then(dados => {
         const dadoJogador = dados.players
         console.log(dadoJogador)
-       
         dadoJogador.forEach(function (dado) {
             addNaTela(dado)
         })
-        
-        
-        
         
     })
 
 //  codigo token
 
-const tokenDoLocal = window.localStorage.getItem('token')
+const tokenDoLocal = localStorage.getItem("token")
 console.log(tokenDoLocal)
 
 const ondeMostrar = document.querySelector("#url-sala")

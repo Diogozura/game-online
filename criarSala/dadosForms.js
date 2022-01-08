@@ -7,7 +7,7 @@ linkSala.sala()
     const tokenSala = sala.keyRoom
     const link = document.querySelector('#pwd_spn')
     link.textContent = tokenSala
-    localStorage.setItem("token", JSON.stringify(tokenSala))
+    localStorage.setItem("token", tokenSala)
     return link
   })
 
@@ -17,12 +17,13 @@ formulario.addEventListener('submit', (evento) => {
     const keyRoom = evento.target.querySelector('#pwd_spn').innerText
     const valorInicial= evento.target.querySelector('[data-valor]').value
     const identificador = evento.target.querySelector('[data-identificador]').value
-    const namePlayer = evento.target.querySelector('[data-nome]').value
+    const namePlayer = evento.target.querySelector('#nome').value
 
     dadosSala.criarSala(keyRoom, valorInicial, identificador, namePlayer)
       .then(() => {
           console.log(keyRoom, valorInicial, identificador, namePlayer)
-        window.location.href = '../jogo/game.html'
+        // window.location.href = '../jogo/game.html'
     })
 }) 
+
 

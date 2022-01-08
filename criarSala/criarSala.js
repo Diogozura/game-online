@@ -2,30 +2,6 @@ import { linkSala } from "../js/linkSala.js"
 // import { dadosSala } from "../js/dadosSala.js"
 
 
-
-const botaoIniciarSala = document.querySelector("#iniciar")
-
-botaoIniciarSala.addEventListener("click", function (event) {
-
-  event.preventDefault()
-
-  const form = document.querySelector('[form-dados]')
-
-  const jogador = dadosDaSala(form)
-
-  const erro = validaDados(jogador)
-
-  const valorDeSpan = document.querySelector("#pwd_spn").innerText;
-
-  
-  if (erro.length > 0) {
-    alert("Falta preencher " + erro)
-  } else {
-    iniciaGame()
-  }
-})
-
-
 function dadosDaSala(form) {
   const jogador = {
     nome: form.nome.value,
@@ -60,20 +36,6 @@ function validaDados(jogador) {
 // gerar token
 
 
-
-
-linkSala.sala()
-  .then(sala => {
-    const tokenSala = sala.keyRoom
-    const link = document.querySelector('#pwd_spn')
-    link.textContent = tokenSala
-    localStorage.setItem("token", JSON.stringify(tokenSala))
-    return link
-  })
-
-
-
-
 // copiar token
 document.getElementById("cp_btn").addEventListener("click", copy_password);
 function copy_password(event) {
@@ -104,3 +66,6 @@ function escolhido() {
 }
 
 console.error("espertinho, tá querendo ver oq seu cabra safado... vai procurar oq fazer, olhar o código dos outros é feio 😒");
+
+const tokenDoLocal = localStorage.getItem("token")
+console.log(tokenDoLocal)
