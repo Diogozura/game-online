@@ -21,8 +21,10 @@ formulario.addEventListener('submit', (evento) => {
 
     dadosSala.criarSala(keyRoom, valorInicial, identificador, namePlayer)
       .then(() => {
-          console.log(keyRoom, valorInicial, identificador, namePlayer)
-        // window.location.href = '../jogo/game.html'
+        console.log(keyRoom, valorInicial, identificador, namePlayer)
+          window.location.href = '../jogo/game.html'
+  
+        // 
     })
 }) 
 

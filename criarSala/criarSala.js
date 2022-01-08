@@ -1,37 +1,3 @@
-import { linkSala } from "../js/linkSala.js"
-// import { dadosSala } from "../js/dadosSala.js"
-
-
-function dadosDaSala(form) {
-  const jogador = {
-    nome: form.nome.value,
-    valor: form.valor.value,
-    id: form.identificador.value,
-  }
-  return jogador;
-
-}
-
-
-function iniciaGame(jogador) {
-
-
-  alert(`acesso permitido`)
-}
-
-function validaDados(jogador) {
-  const erro = []
-  if (jogador.valor.length == " ") {
-    erro.push("valor inicial  ");
-  }
-  if (jogador.nome.length == " ") {
-    erro.push(" nome do jogador ")
-  }
-  escolhido()
-
-  return erro
-}
-
 
 // gerar token
 
