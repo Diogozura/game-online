@@ -16,9 +16,8 @@ formulario.addEventListener('submit', (evento) => {
 
     const keyRoom = evento.target.querySelector('#pwd_spn').innerText
     const valorInicial= evento.target.querySelector('[data-valor]').value
-    const identificador = evento.target.querySelector('[data-identificador]').value
+    const identificador = escolhido()
     const namePlayer = evento.target.querySelector('#nome').value
-
     dadosSala.criarSala(keyRoom, valorInicial, identificador, namePlayer)
       .then(() => {
         console.log(keyRoom, valorInicial, identificador, namePlayer)
@@ -28,4 +27,14 @@ formulario.addEventListener('submit', (evento) => {
     })
 }) 
 
-
+function escolhido() {
+  var res = '';
+  const items = document.getElementsByName('cores');
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].checked) {
+      res = items[i].value
+      break;
+    }
+  }
+  return res;
+}

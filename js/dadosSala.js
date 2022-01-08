@@ -1,13 +1,15 @@
 const token =localStorage.getItem('token')
 
+// dados da sala
 const dados = () => {
     return fetch(`https://ffgames134.herokuapp.com/dadosSala/?keyRoom=${token}`)
         .then(resposta => {
             return resposta.json()
         })
-
-
 }
+
+
+// criando sala 
 const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
     return fetch(`https://ffgames134.herokuapp.com/SaveRoomPlayer/`, {
         method: 'POST',
@@ -26,6 +28,14 @@ const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
         })
 
 }
+
+// colocando player na sala
+
+
+const criarPlayer = () => {
+return fetch(`https://ffgames134.herokuapp.com/createPlayer?keyRoom=${tokneUser}`)
+}
+
 
 export const dadosSala = {
     dados, criarSala
