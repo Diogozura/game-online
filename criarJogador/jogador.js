@@ -1,13 +1,21 @@
 // nome do jogador
-const nome = document.querySelector("#nickNome")
-const botão = document.querySelector('[criar-jogador]')
-const tokenUser = document.querySelector('[url-player]')
+import { dadosSala } from "../js/dadosSala.js"
 
-botão.addEventListener("click", function (event) {
-  event.preventDefault()
-  console.log(tokenUser.value)
-  console.log(nome.value)
-  console.log(escolhido())
+const jogador = document.querySelector('[jogador-player]')
+
+jogador.addEventListener("submit", function (evento) {
+  evento.preventDefault()
+
+  const keyRoom = evento.target.querySelector("[url-player]").value
+  const namePlayer = evento.target.querySelector('#nickNome').value
+  const identificador = escolhido()
+  console.log(keyRoom)
+  
+  dadosSala.criarPlayer(keyRoom, namePlayer, identificador)
+    .then(() => {
+      console.log(namePlayer, identificador)
+      window.location.href = '../jogo/game.html'
+    })
 })
 
 

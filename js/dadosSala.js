@@ -30,13 +30,27 @@ const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
 }
 
 // colocando player na sala
+const tokneUser = document.querySelector("[url-player]").value
 
 
-const criarPlayer = () => {
-return fetch(`https://ffgames134.herokuapp.com/createPlayer?keyRoom=${tokneUser}`)
+const criarPlayer = (identificador, namePlayer) => {
+    return fetch(`https://ffgames134.herokuapp.com/createPlayer?keyRoom=${tokneUser}`, {
+        method: "POST",
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+            identificador: identificador,
+            namePlayer: namePlayer
+        })
+    })
+        .then(resposta => {
+            return resposta.body
+        })
+
 }
 
 
 export const dadosSala = {
-    dados, criarSala
+    dados, criarSala, 
 }

@@ -20,7 +20,7 @@
     <a href="index.html">voltar</a>
 
     <main>
-        <form class="nome">
+        <form class="nome" jogador-player>
             <input type="text" name="nick" id="nickNome" class="ninkNome" placeholder="Nick nome">
             <input type="text" name="linkSala" id="link" placeholder="Coloque a URL aqui" url-player>
             <input type="radio" name="cores" id="color" value="vermelho">
@@ -31,7 +31,7 @@
             <input type="radio" name="cores" id="color" value="Azul">
             <input type="radio" name="cores" id="color" value="Roxo">
             <input type="radio" name="cores" id="color" value="Cinza">
-            <button id="iniciar" criar-jogador>iniciar game</button>
+            <button id="iniciar" type="submit" criar-jogador>iniciar game</button>
         </form>
 
        
@@ -39,7 +39,7 @@
 
     </main>
 
-    <script src="jogador.js"></script>
+    <script type="module" src="jogador.js"></script>
 </body>
 
 </html>
