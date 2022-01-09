@@ -2,6 +2,7 @@ import { dadosSala } from "../js/dadosSala.js"
 import { linkSala } from "../js/linkSala.js"
  
 const formulario = document.querySelector('[form-dados]')
+
 linkSala.sala()
   .then(sala => {
     const tokenSala = sala.keyRoom

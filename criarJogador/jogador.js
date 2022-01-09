@@ -1,18 +1,19 @@
-import { criePlayer } from '../js/criePlayer.js' 
+import { dadosSala } from "../js/dadosSala.js";
 
-const jogador = document.querySelector('[jogador-player]')
+const btnCria = document.querySelector("[jogador-player]")
 
-jogador.addEventListener("submit", (evento)=> {
-  evento.preventDefault()
+btnCria.addEventListener("submit", (event) => {
+  event.preventDefault()
 
+  const namePlayer = event.target.querySelector("#nickNome").value
   const identificador = escolhido()
-  const namePlayer = evento.target.querySelector('#nickNome').value
-        
-  criePlayer.criarJogador(namePlayer, identificador)
+  console.log(identificador, namePlayer)
+
+  dadosSala.criarJogadorPlayer(namePlayer, identificador)
     .then(() => {
-      console.log(namePlayer, identificador)
-      window.location.href = '../jogo/game.html'
-    })
+      console.log("tudo certo")
+  })
+
 })
 
 
