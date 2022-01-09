@@ -1,23 +1,38 @@
-// link para criar sala 
-const criarSala = document.querySelector("#criar-sala")
+// link para criar sala
 
-criarSala.addEventListener("click", function () {
-    console.log("nhaa")
+const criarPlayer = document.querySelector("[iniciar-player]")
 
-    window.location.href = '../criarSala/criarSala.html'
+criarPlayer.addEventListener("click", (event) => {
+    event.preventDefault()
+
+    const tokenUSer = document.querySelector("#link").value
+    localStorage.setItem("tokenUser", (tokenUSer))
+    window.location.href = '../criarJogador/jogador.html'
 })
 
-// link para criar player
+// const criarSala = document.querySelector("#criar-sala")
 
-const player = document.querySelector("#entrar-sala")
+// criarSala.addEventListener("click", function () {
+//     console.log("nhaa")
 
-player.addEventListener("click", function () {
-    location.assign ("https://diogozura.github.io/game-online/jogador.html")
-    })
+//     window.location.href = '../criarSala/criarSala.html'
+// })
 
-// monitorar o que tem dentro do campo 
-const link = document.querySelector("#link")
+// // link para criar player
 
-link.addEventListener("input", function () {
-    console.log(this.value)
-})
+// const player = document.querySelector("#entrar-sala")
+
+// player.addEventListener("click", function () {
+//     location.assign ("https://diogozura.github.io/game-online/jogador.html")
+//     })
+
+// // monitorar o que tem dentro do campo 
+// const link = document.querySelector("#link")
+
+// link.addEventListener("input", function () {
+//     console.log(this.value)
+// })
+
+
+
+
