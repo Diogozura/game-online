@@ -7,7 +7,7 @@ criarPlayer.addEventListener("click", (event) => {
 
     const tokenUSer = document.querySelector("#link").value
     localStorage.setItem("token", tokenUSer)
-    window.location.href = '../jogo/game.html'
+    window.location.href = '../criarJogador/jogador.html'
 })
 
 // const criarSala = document.querySelector("#criar-sala")
