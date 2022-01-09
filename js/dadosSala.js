@@ -1,4 +1,4 @@
-const token =localStorage.getItem('token')
+const token = localStorage.getItem('token')
 
 // dados da sala
 const dados = () => {
@@ -30,13 +30,15 @@ const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
 }
 
 // colocando player na sala
-const criarJogadorPlayer = (identificador,namePlayer) => {
-    return fetch('https://ffgames134.herokuapp.com/createPlayer?keyRoom=27W6R3ZKXE', {
+
+
+const criarJogadorPlayer = (identificador, namePlayer) => {
+    return fetch(`https://ffgames134.herokuapp.com/createPlayer/?keyRoom=${token}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: ({
+        body: JSON.stringify({
             identificador:identificador,
             namePlayer:namePlayer
         })

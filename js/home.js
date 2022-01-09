@@ -6,7 +6,7 @@ criarPlayer.addEventListener("click", (event) => {
     event.preventDefault()
 
     const tokenUSer = document.querySelector("#link").value
-    localStorage.setItem("tokenUser", (tokenUSer))
+    localStorage.setItem("token", tokenUSer)
     window.location.href = '../criarJogador/jogador.html'
 })
 

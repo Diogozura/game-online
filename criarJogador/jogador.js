@@ -7,10 +7,10 @@ btnCria.addEventListener("submit", (event) => {
 
   const namePlayer = event.target.querySelector("#nickNome").value
   const identificador = escolhido()
-  console.log(identificador, namePlayer)
-
-  dadosSala.criarJogadorPlayer(namePlayer, identificador)
+  dadosSala.criarJogadorPlayer(identificador, namePlayer)
     .then(() => {
+      console.log(identificador, namePlayer)
+      window.location.href = '../jogo/game.html'
       console.log("tudo certo")
   })
 
