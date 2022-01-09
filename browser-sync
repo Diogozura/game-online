@@ -1,0 +1,1 @@
+browser-sync start --server --file . --host --port 5400 --startPath index.html
