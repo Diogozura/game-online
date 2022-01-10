@@ -21,17 +21,17 @@ formulario.addEventListener('submit', (evento) => {
   validaCampos.validaNome()
   validaCampos.validaValor()
   validaCampos.validaIdentificador()
-    // const keyRoom = evento.target.querySelector('#pwd_spn').innerText
-    // const valorInicial= evento.target.querySelector('[data-valor]').value
-    // const identificador = validaCampos.validaIdentificador()
-    // const namePlayer = evento.target.querySelector('#nickNome').value
-    // dadosSala.criarSala(keyRoom, valorInicial, identificador, namePlayer)
-    //   .then(() => {
-    //     console.log(keyRoom, valorInicial, identificador, namePlayer)
-    //       window.location.href = '../jogo/game.html'
+    const keyRoom = evento.target.querySelector('#pwd_spn').innerText
+    const valorInicial= evento.target.querySelector('[data-valor]').value
+    const identificador = validaCampos.escolhido()
+    const namePlayer = evento.target.querySelector('#nickNome').value
+    dadosSala.criarSala(keyRoom, valorInicial, identificador, namePlayer)
+      .then(() => {
+        console.log(keyRoom, valorInicial, identificador, namePlayer)
+          // window.location.href = '../jogo/game.html'
   
-    //     // 
-    // })
+        // 
+    })
 }) 
 
 copy()

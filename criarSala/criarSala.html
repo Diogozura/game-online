@@ -23,9 +23,10 @@
     <main>
         <form action="" form-dados>
             <input type="number" id="valor" name="valor" placeholder="valor inicial" data-valor>
-            <p class="erro" id="error">valor inválido</p>
+            <span ></span>
+            <p class="erro" id="error" erro-valor>valor inválido</p>
             <input type="text" id="nickNome" name="nome"  placeholder="Nome do jogador" data-nome>
-            <p class="erro" id="error">Jogador precisa de um nome!</p>
+            <p class="erro" id="error" erro-nome>Jogador precisa de um nome!</p>
             <input type="radio" name="cores" id="color" value="Amarelo" class="cores">
                 <label for=""><img src="../img/amarelo.png" alt=""></label>
                 <input type="radio" name="cores" id="color" value="Vermelho">
@@ -35,7 +36,7 @@
                 <input type="radio" name="cores" id="color" value="Azul">
                 <input type="radio" name="cores" id="color" value="Roxo">
                 <input type="radio" name="cores" id="color" value="Cinza">
-                <p class="erro" id="error">Precisa escolher uma cor</p>
+                <p class="erro" id="error" erro-identificador>Precisa escolher uma cor</p>
 
             <p id="pwd_spn" name="token"></p>
             <!-- <button id="gerar-novo-link">gerar novo código</button> -->
