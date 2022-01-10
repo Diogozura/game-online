@@ -1,3 +1,4 @@
+import { validaCampos } from "./validaCampos.js"
 // link para criar sala
 
 const criarPlayer = document.querySelector("[iniciar-player]")
@@ -5,10 +6,14 @@ const criarPlayer = document.querySelector("[iniciar-player]")
 criarPlayer.addEventListener("click", (event) => {
     event.preventDefault()
 
-    const tokenUSer = document.querySelector("#link").value
-  
-    // localStorage.setItem("token", tokenUSer)
-    // window.location.href = '../game-online/criarJogador/jogador.html'
+    if (validaCampos.validaToken() == true) {
+        
+        window.location.href = '../criarJogador/jogador.html'
+    }
+    
+   
+    
+    
 })
 
 // const criarSala = document.querySelector("#criar-sala")
@@ -19,20 +24,11 @@ criarPlayer.addEventListener("click", (event) => {
 //     window.location.href = '../criarSala/criarSala.html'
 // })
 
-// // link para criar player
-
-// const player = document.querySelector("#entrar-sala")
-
-// player.addEventListener("click", function () {
-//     location.assign ("https://diogozura.github.io/game-online/jogador.html")
-//     })
-
 // // monitorar o que tem dentro do campo 
-// const link = document.querySelector("#link")
-
-// link.addEventListener("input", function () {
-//     console.log(this.value)
-// })
+const link = document.querySelector("#link")
+link.addEventListener("input", function () {
+    
+})
 
 
 

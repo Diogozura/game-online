@@ -32,13 +32,3 @@ function escolhido() {
 
 
 // iniciar gamer
-// const iniciarGame = document.querySelector("#iniciar")
-// iniciarGame.addEventListener("click", function() {
-//     const res = escolhido();
-//     if (res === '') {
-//       alert('nenhum item foi selecionado');
-//       return false;
-//     }
-//     console.log('O item selecionado foi ' + res);
-//     return true;
-// })

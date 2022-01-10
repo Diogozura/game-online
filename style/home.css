@@ -11,6 +11,8 @@ main{
     display: flex;
     justify-content: space-between;
 }
+input {text-transform: uppercase;}
+
 
 .card {
     display: flex;

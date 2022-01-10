@@ -18,4 +18,11 @@ h2{
 .teste{
     text-align: center;
     color: brown;
+
 }
+.erro{
+    color: rgb(189, 57, 57);
+    font-weight: bold;
+    display: none;
+}
+
