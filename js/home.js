@@ -11,7 +11,6 @@ criarPlayer.addEventListener("click", (event) => {
         // externo
         window.location.href = '../game-online/criarJogador/jogador.html' 
        
-
         // interno
         // window.location.href = '../criarJogador/jogador.html'
          
