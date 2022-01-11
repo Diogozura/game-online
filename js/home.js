@@ -6,7 +6,7 @@ const criarPlayer = document.querySelector("[iniciar-player]")
 criarPlayer.addEventListener("click", (event) => {
     event.preventDefault()
 
-    if (!validaCampos.validaToken() == false) {
+    if (!validaCampos.validaToken() == true) {
         console.log("aprovado")
         // externo
         window.location.href = '../game-online/criarJogador/jogador.html' 
