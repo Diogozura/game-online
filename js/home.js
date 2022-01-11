@@ -9,13 +9,14 @@ criarPlayer.addEventListener("click", (event) => {
     if (validaCampos.validaToken() == true) {
         console.log("aprovado")
         // externo
-        window.location.href = '../game-online/criarJogador/jogador.html' 
-       
+        window.location.href = '../game-online/criarJogador/jogador.html'
+        const token = document.querySelector("[url-player]").value
+        localStorage.setItem("token", token)
         // interno
         // window.location.href = '../criarJogador/jogador.html'
-         
+
     }
-    
+
 })
 
 // const criarSala = document.querySelector("#criar-sala")
@@ -29,7 +30,7 @@ criarPlayer.addEventListener("click", (event) => {
 // // monitorar o que tem dentro do campo 
 const link = document.querySelector("#link")
 link.addEventListener("input", function () {
-    
+
 })
 
 
