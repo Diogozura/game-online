@@ -1,9 +1,10 @@
 const validaToken = () => {
     const tokenUSer = document.querySelector("#link").value
+    localStorage.setItem("token", tokenUSer)
     if (tokenUSer.length == 10) {
         const erroValor = document.querySelector("[erro-token]")
         erroValor.style.display = "none"
-        return true
+        
     } else {
         const erroValor = document.querySelector("[erro-token]")
         erroValor.className = "hide"

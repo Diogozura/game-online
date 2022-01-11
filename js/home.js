@@ -8,8 +8,11 @@ criarPlayer.addEventListener("click", (event) => {
 
     if (validaCampos.validaToken() == true) {
         console.log("aprovado")
-        window.location.href = '../game-online/criarJogador/jogador.html'
-        localStorage.setItem("token" , validaToken())
+        // window.location.href = '../game-online/criarJogador/jogador.html' externo
+
+        // interno
+        // window.location.href = '../criarJogador/jogador.html'
+         
     }
     
 })
