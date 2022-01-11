@@ -13,7 +13,7 @@ function montaCampo(jogador) {
     const asideJogador = document.createElement("aside")
     asideJogador.classList.add("jogador")
 
-    asideJogador.appendChild(montaImg(jogador.identificadorHexadecimal))
+    asideJogador.appendChild(montaImg(jogador.indicadorHexadecimal))
     asideJogador.appendChild(montaNome(jogador.namePlayer))
     asideJogador.appendChild(montaValor(jogador.saldo))
 
