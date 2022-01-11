@@ -11,10 +11,12 @@ h2{
     font-size: 2em;
 }
 .color2{
-    background-color: rgb(247, 60, 60);
+    background-color: #f73c3c;
     color:#f7f7f7;
 }
-
+.identificador{
+    width: 90px;
+}
 .teste{
     text-align: center;
     color: brown;

@@ -1,9 +1,14 @@
 const validaToken = () => {
     const tokenUSer = document.querySelector("#link").value
     if (tokenUSer.length == 10) {
+        const erroValor = document.querySelector("[erro-token]")
+        erroValor.style.display = "none"
         return true
     } else {
-        console.log("não aprovado")
+        const erroValor = document.querySelector("[erro-token]")
+        erroValor.className = "hide"
+        console.log("valor inválido")
+        return false
     }
 
 }
@@ -12,10 +17,13 @@ const validaToken = () => {
 const validaValor = () => {
     const valor = document.querySelector("#valor").value
     
-    if (valor <= 0) {
+    if (!valor >= 1) {
         const erroValor = document.querySelector("[erro-valor]")
         erroValor.className = "hide"
         console.log("valor inválido")
+        return false
+    } else {
+        return valor
     }
 
 }
@@ -24,8 +32,12 @@ const validaNome = () => {
     if (nome <= 0) {
         const erroValor = document.querySelector("[erro-nome]")
         erroValor.className = "hide"
-        console.log("valor inválido")
+        console.log("nome inválido")
+        return false
+    } else {
+        return nome
     }
+   
 }
 const escolhido = () => {
     let res = '';
@@ -43,16 +55,13 @@ const validaIdentificador = () => {
     if (res === '') {
         const erroValor = document.querySelector("[erro-identificador]")
         erroValor.className = "hide"
-        console.log("valor inválido")
+        console.log("precisa escolher uma cor")
         return false;
     }
     console.log('O item selecionado foi ' + res);
-    return true;
+    return escolhido();
 }
 
-const erroValor = document.querySelector("[erro-valor]")
-const erroNome = document.querySelector("[erro-nome]")
-const erroIdentificador = document.querySelector("[erro-id]")
 
 
 export const validaCampos = {

@@ -1,34 +1,24 @@
 import { dadosSala } from "../js/dadosSala.js";
+import { validaCampos } from "../js/validaCampos.js";
 
 const btnCria = document.querySelector("[jogador-player]")
 
 btnCria.addEventListener("submit", (event) => {
   event.preventDefault()
 
-  const namePlayer = event.target.querySelector("#nickNome").value
-  const identificador = escolhido()
+  const namePlayer = validaCampos.validaNome()
+  const identificador = validaCampos.validaIdentificador()
   dadosSala.criarJogadorPlayer(identificador, namePlayer)
     .then(() => {
       console.log(identificador, namePlayer)
-      window.location.href = '../jogo/game.html'
-      console.log("tudo certo")
+      if ( !identificador, !namePlayer == false) {
+        return window.location.href = '../jogo/game.html'
+        
+      }
+
+     
   })
 
 })
 
 
-// escolher 
-function escolhido() {
-  var res = '';
-  const items = document.getElementsByName('cores');
-  for (var i = 0; i < items.length; i++) {
-    if (items[i].checked) {
-      res = items[i].value
-      break;
-    }
-  }
-  return res;
-}
-
-
-// iniciar gamer

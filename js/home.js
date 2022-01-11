@@ -7,7 +7,7 @@ criarPlayer.addEventListener("click", (event) => {
     event.preventDefault()
 
     if (validaCampos.validaToken() == true) {
-        
+        console.log("aprovado")
         window.location.href = '../criarJogador/jogador.html'
     }
     
