@@ -1,53 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <link rel="stylesheet" href="../style/index.css">
     <link rel="stylesheet" href="game.css">
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="img/site.webmanifest">
+
     <title>SALA</title>
 </head>
+
 <body>
     <header>
         <h1>Seja bem vindo à sala </h1>
         <p class="link" id="url-sala">Diogo falhou</p>
     </header>
-   <main>
-       <section id="lista">
-        <h2>Rank dos jogadores</h2>
+    <main>
+        <section class="lista">
+            <h2>Rank dos jogadores</h2>
+        </section>
 
-       </section>
-       
+        <form class="trasfe" trasferir>
+            <h2>Transferência</h2>
+            <label for="">para quem?</label>
+            <input type="search" required="required" name="praQuem" id="praQuem" quem>
 
-       <section class="extrato">
-           <h3>Meu extrato</h3>
-               <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Valor</th>
-                    </tr>
-                    <tr>
-                        <td>casa</td>
-                        <td>R$5k</td>
-                    </tr>
-                    <tr>
-                        <td>carro</td>
-                        <td>R$40k</td>
-                    </tr>
-               </table>
-                   
-       </section>
-       
+            <label for="">quem é? </label>
+                <div>
+                    <label for="">user1</label>
+                    <input type="radio" name="" id="">
+                    <label for="">user2</label>
+                    <input type="radio" name="" id="">
+                    <label for="">user3 😎</label>
+                    <input type="radio" name="" id="">
+                    <label for="">user4</label>
+                    <input type="radio" name="" id="">
+                    <label for="">user5</label>
+                    <input type="radio" name="" id="">
+                    <label for="">user6 😎</label>
+                    <input type="radio" name="" id="">
+                </div>
+               
 
-       <section class="extrato">
-           <h3>Extrato geral</h3>
-           <table>
+            <label for="">Valor</label>
+            <input type="number" required="required" valor>
+            <button type="submit" class="btn">transferir</button>
+        </form>
+
+
+        <section class="extrato">
+            <h3>Meu extrato</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>casa</td>
+                    <td>R$5k</td>
+                </tr>
+                <tr>
+                    <td>carro</td>
+                    <td>R$40k</td>
+                </tr>
+            </table>
+
+        </section>
+
+
+        <section class="extrato">
+            <h3>Extrato geral</h3>
+            <table>
                 <tr>
                     <th>Name</th>
                     <th>Valor</th>
@@ -60,9 +92,11 @@
                     <td>Azul</td>
                     <td>R$30k</td>
                 </tr>
-           </table>
-       </section>
-   </main>
-   <script type="module" src="jogo.js"></script>
+            </table>
+        </section>
+    </main>
+    <script src="trasnferencia.js"></script>
+    <script type="module" src="jogo.js"></script>
 </body>
+
 </html>

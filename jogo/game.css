@@ -14,7 +14,7 @@ body{
    
 }
 
-section#lista{
+section.lista{
     width: 400px;
     background-color: dodgerblue;
     margin-left: 30px;
@@ -24,6 +24,23 @@ section#lista{
     margin-bottom: 20px;
 
 }
+form.trasfe{
+    width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+  
+    padding: 20px;
+    background-color: rgb(61, 49, 221);
+    margin-top: 10px;
+
+    margin-left: 50px;
+    border-radius: 50px;
+
+    margin-bottom: 20px;
+}
+
 section h2{
     text-align: center;
     
@@ -40,6 +57,7 @@ aside{
 
     border-radius: 10px;
 }
+
 img{
     display: inline-block;
     float: left;

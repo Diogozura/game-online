@@ -27,4 +27,17 @@ h2{
     font-weight: bold;
     display: none;
 }
+.btn{
+    margin-top: 5px;
+    background-color: crimson;;
+    padding: 10px;
+    border-radius: 10px;
 
+    color: #FFFFFF;
+    text-decoration: initial;
+    text-align: center;
+}
+.input-radio{
+    color: rgb(255, 0, 0);
+    background-color: #ce2b2b;
+}
