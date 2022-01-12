@@ -6,3 +6,19 @@ transeferir.addEventListener("submit", (event) => {
 
     alert("ainnnn me clicou seu safado" + valor + praQuem)
 })
+
+const btnTransfe = document.querySelector("[btn-transfere]")
+btnTransfe.addEventListener("click", (event) => {
+    event.preventDefault()
+    pop()
+    console.log("sai de mim desgraça")
+})
+
+function pop() {
+    const onde = document.querySelector("[aqui]")
+    const card = document.createElement("aside")
+    onde.appendChild(card)
+    card.textContent = "boa mlk"
+
+    return onde
+}

@@ -1,6 +1,15 @@
 body{
     margin: 0px;
-    background-color: rgb(167, 231, 167);
+    background-color: rgb(92, 221, 200);
+}
+header{
+    background-color: rgb(123, 250, 150);
+}
+header>p{
+    margin-bottom: 0;
+}
+main{
+   background-color: rgb(138, 205, 243);
 }
 .link{
     text-align: center;
@@ -10,15 +19,14 @@ body{
     margin-right: auto;
 
     border-radius: 20px;
-
-   
+  
 }
 
 section.lista{
     width: 400px;
     background-color: dodgerblue;
     margin-left: 30px;
-
+    
     border-radius: 10px;
 
     margin-bottom: 20px;
@@ -39,8 +47,13 @@ form.trasfe{
     border-radius: 50px;
 
     margin-bottom: 20px;
-}
 
+    text-align: center;
+}
+.trafere{
+    margin-left: auto;
+    display: grid;
+}
 section h2{
     text-align: center;
     
@@ -58,7 +71,7 @@ aside{
     border-radius: 10px;
 }
 
-img{
+svg{
     display: inline-block;
     float: left;
 }
