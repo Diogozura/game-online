@@ -18,6 +18,7 @@ function pop() {
     const onde = document.querySelector("[aqui]")
     const card = document.createElement("aside")
     onde.appendChild(card)
+    card.classList.add("trafere")
     card.textContent = "boa mlk"
 
     return onde
