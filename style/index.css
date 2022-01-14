@@ -10,6 +10,14 @@ h2{
     text-align: center;
     font-size: 2em;
 }
+h2.titulo2{
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Bungee Shade', cursive;
+}
+label{
+    font-family: 'Ubuntu', sans-serif;;
+}
 .color2{
     background-color: #f73c3c;
     color:#f7f7f7;
@@ -36,6 +44,10 @@ h2{
     color: #FFFFFF;
     text-decoration: initial;
     text-align: center;
+}
+.btn-close{
+    padding: 0;
+    text-decoration: none;
 }
 .input-radio{
     color: rgb(255, 0, 0);

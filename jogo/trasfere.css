@@ -19,16 +19,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-popup {
   display: none;
   bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
+  margin-left: 25px;
+  background-color: aquamarine;
+  border: 3px solid #ffffff;
   z-index: 9;
 }
 
 /* Add styles to the form container */
 .form-container {
   max-width: 300px;
-  padding: 10px;
-  background-color: white;
+  padding: 7px;
+  background-color: rgba(255, 255, 255, 0.644);
 }
 
 /* Full-width input fields */
@@ -53,17 +54,38 @@ body {font-family: Arial, Helvetica, sans-serif;}
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: rgb(72, 255, 0);
+  background-color: rgb(255, 51, 0);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
 }
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
 }

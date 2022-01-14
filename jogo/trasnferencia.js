@@ -1,15 +1,15 @@
 const transeferir = document.querySelector('[trasferir]')
 transeferir.addEventListener("submit", (event) => {
-    const praQuem = event.target.querySelector("[quem]").value
+    event.preventDefault()
     const valor = event.target.querySelector("[valor]").value
+    openForm()
 
-
-    alert("ainnnn me clicou seu safado" + valor + praQuem)
+    alert("ainnnn me clicou seu safado" + valor )
 })
 
 const btnTransfe = document.querySelector("[btn-transfere]")
 btnTransfe.addEventListener("click", (event) => {
-    event.preventDefault()
+    
     openForm()
     
     console.log("sai de mim desgraça")
@@ -20,6 +20,8 @@ function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
   
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
+const fechaForm = document.querySelector("[close]")  
+fechaForm.addEventListener("click", (event) => {
+  event.preventDefault()
+  document.getElementById("myForm").style.display = "none";
+})
