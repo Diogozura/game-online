@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="../style/index.css">
     <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="trasfere.css">
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -46,10 +47,22 @@
                         </svg>
                         <h3 class="nome-jogador">a</h3>
                         <p class="valor-jogador">R$50</p>
-                        <button class="btn" btn-transfere>Tranferir</button>
+                        <button class="btn" btn-transfere >Tranferir</button>
                     </aside>
                 </article>
-                <article aqui class="bloco-transfere" >
+                <article aqui class=" form-popup"  id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                        <h1>transferir</h1>
+                    
+                        <label for="name"><b>para quem</b></label>
+                        <input type="text" placeholder="Enter name" name="name" required>
+                    
+                        <label for="valor"><b>valor</b></label>
+                        <input type="number" placeholder="valor" name="valor" required>
+                    
+                    
+                        <button type="button" class="btn cancel" onclick="closeForm()">enviar</button>
+                      </form>
                 </article>
             </div>
             

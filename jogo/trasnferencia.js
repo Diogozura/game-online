@@ -10,16 +10,16 @@ transeferir.addEventListener("submit", (event) => {
 const btnTransfe = document.querySelector("[btn-transfere]")
 btnTransfe.addEventListener("click", (event) => {
     event.preventDefault()
-    pop()
+    openForm()
+    
     console.log("sai de mim desgraça")
 })
 
-function pop() {
-    const onde = document.querySelector("[aqui]")
-    const card = document.createElement("aside")
-    onde.appendChild(card)
-    card.classList.add("trafere")
-    card.textContent = "boa mlk"
 
-    return onde
-}
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
