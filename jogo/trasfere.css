@@ -3,8 +3,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-  background-color: #555;
-  color: white;
+  background-color: rgb(110, 238, 98);
+  color: rgb(59, 59, 59);
   padding: 16px 20px;
   border: none;
   cursor: pointer;

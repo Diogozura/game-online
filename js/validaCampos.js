@@ -66,5 +66,5 @@ const validaIdentificador = () => {
 
 
 export const validaCampos = {
-    validaToken, validaValor, validaNome, validaIdentificador,escolhido
+    validaToken, validaValor, validaNome, validaIdentificador, escolhido
 }
