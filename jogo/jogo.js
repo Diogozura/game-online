@@ -47,6 +47,8 @@ function montaValor(dado) {
     return ValorP
 }
 
+
+
 dadosSala.dados()
     .then(dados => {
         const dadoJogador = dados.players
