@@ -40,36 +40,7 @@ main{
     
     margin-bottom: 20px;
 }
-form.trasfe{
-    width: 280px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-around;
-  
-    padding: 20px;
-    background-color: rgb(61, 49, 221);
-    margin-top: 10px;
 
-    margin-left: 50px;
-    border-radius: 50px;
-
-    margin-bottom: 20px;
-
-    text-align: center;
-}
-.bloco-transfere{
-    margin-left: 30px;
-    width: 300px;
-    height: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 10px;
-}
-.trafere{
-   margin-bottom: 50px;
-   margin-bottom: 100px;
-}
 section h2{
     text-align: center;
     
