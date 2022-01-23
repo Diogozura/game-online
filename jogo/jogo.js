@@ -16,7 +16,7 @@ function montaCampo(jogador) {
     asideJogador.appendChild(montaImg(jogador.identificadorHexadecimal))
     asideJogador.appendChild(montaNome(jogador.namePlayer))
     asideJogador.appendChild(montaValor(jogador.saldo))
-
+    
 
     return asideJogador
 }
@@ -55,10 +55,12 @@ dadosSala.dados()
         console.log(dadoJogador)
         dadoJogador.forEach(function (dado) {
             addNaTela(dado)
+            
         })
         
     })
 
+    
 //  codigo token
 
 const tokenDoLocal = localStorage.getItem("token")
@@ -67,3 +69,5 @@ console.log(tokenDoLocal)
 const ondeMostrar = document.querySelector("#url-sala")
 
 ondeMostrar.textContent = tokenDoLocal
+
+export{montaNome, montaImg}

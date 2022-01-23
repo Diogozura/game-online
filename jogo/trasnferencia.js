@@ -1,21 +1,69 @@
+import { dadosSala } from "../js/dadosSala.js"
+import { montaNome, montaImg } from "./jogo.js"
+
+
+
+
+function jogadoresDisponiveis(dadu) {
+  const jogadoresDis = document.querySelector("[jogadores-disponiveis]")
+  jogadoresDis.appendChild(montaNome(dadu.namePlayer))
+  jogadoresDis.appendChild(montaImg(dadu.identificadorHexadecimal))
+  console.log(dadu.idPlayer)
+  montaImg()
+  montaNome()
+
+  return jogadoresDis 
+}
+
+dadosSala.dados()
+    .then(dados => {
+        const dadoJogador = dados.players
+        console.log(dadoJogador)
+        dadoJogador.forEach(function (dado) {
+          jogadoresDisponiveis(dado)
+        })
+        
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const tranferir = document.querySelector("[trasferir]")
-console.log(tranferir)
+
 tranferir.addEventListener("submit", (event) => {
   event.preventDefault()
-  validaValor()
+
+  valor()
 })
 
 
-const validaValor = () => {
-  const valor = document.querySelector("[valor]").value
 
-  if (!valor >= 1) {
-      const erroValor = document.querySelector("[erro-valor]")
-      erroValor.className = "hide"
-      console.log("valor inválido")
-      return false
+function valor() {
+  const pegaValor = document.querySelector("[valor]").value
+  const errorValor = document.querySelector("[erro-valor]")
+  if (pegaValor <= 1) {
+    errorValor.className = "hide"
+    console.log("erro")
   } else {
-      return console.log("valor" + valor)
+    errorValor.style.display = "none"
+    console.log("acerto")
   }
-
 }
+
+
+// function imgJogador() {
+//   const imgJogador = document.createElement("img")
+// }
+
