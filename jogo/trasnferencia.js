@@ -1,5 +1,5 @@
 const tranferir = document.querySelector("[trasferir]")
-
+console.log(tranferir)
 tranferir.addEventListener("submit", (event) => {
   event.preventDefault()
   validaValor()
@@ -15,7 +15,7 @@ const validaValor = () => {
       console.log("valor inválido")
       return false
   } else {
-      return valor
+      return console.log("valor" + valor)
   }
 
 }
