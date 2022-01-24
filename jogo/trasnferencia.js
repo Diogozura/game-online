@@ -6,13 +6,29 @@ import { montaNome, montaImg } from "./jogo.js"
 
 function jogadoresDisponiveis(dadu) {
   const jogadoresDis = document.querySelector("[jogadores-disponiveis]")
-  jogadoresDis.appendChild(montaNome(dadu.namePlayer))
-  jogadoresDis.appendChild(montaImg(dadu.identificadorHexadecimal))
-  console.log(dadu.idPlayer)
-  montaImg()
-  montaNome()
+  const jogadores = criarInputJogadorPlayerDisponivel()
+  const label = criarLabel()
+  jogadoresDis.appendChild(jogadores)
+  jogadoresDis.appendChild(label)
 
-  return jogadoresDis 
+  return jogadoresDis
+}
+
+function criarInputJogadorPlayerDisponivel() {
+  const input = document.createElement("input")
+  input.type = "radio"
+  input.id = "user1"
+  input.value = "user"
+  input.name = "players"
+  
+
+  return input
+}
+
+function criarLabel() {
+  const label = document.createElement("label")
+  label.textContent = "userPlayer cu"
+  return label
 }
 
 dadosSala.dados()
@@ -20,22 +36,10 @@ dadosSala.dados()
         const dadoJogador = dados.players
         console.log(dadoJogador)
         dadoJogador.forEach(function (dado) {
-          jogadoresDisponiveis(dado)
+          criarLabel(dado)
         })
         
     })
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -47,7 +51,7 @@ tranferir.addEventListener("submit", (event) => {
 
   valor()
 })
-
+jogadoresDisponiveis()
 
 
 function valor() {
@@ -62,8 +66,4 @@ function valor() {
   }
 }
 
-
-// function imgJogador() {
-//   const imgJogador = document.createElement("img")
-// }
 

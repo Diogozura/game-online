@@ -1,8 +1,8 @@
 const token = localStorage.getItem('token')
-
+const url = "https://ffgames134.herokuapp.com/"
 // dados da sala
 const dados = () => {
-    return fetch(`https://ffgames134.herokuapp.com/dadosSala/?keyRoom=${token}`)
+    return fetch(`${url}dadosSala/?keyRoom=${token}`)
         .then(resposta => {
             return resposta.json()
         })
@@ -11,7 +11,7 @@ const dados = () => {
 
 // criando sala 
 const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
-    return fetch(`https://ffgames134.herokuapp.com/SaveRoomPlayer/`, {
+    return fetch(`${url}SaveRoomPlayer/`, {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -33,7 +33,7 @@ const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
 
 
 const criarJogadorPlayer = (identificador, namePlayer) => {
-    return fetch(`https://ffgames134.herokuapp.com/createPlayer/?keyRoom=${token}`, {
+    return fetch(`${url}createPlayer/?keyRoom=${token}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -47,6 +47,10 @@ const criarJogadorPlayer = (identificador, namePlayer) => {
         return resposta.body
     })
 }
+
+// const trasfereJogador = (identificador, namePlayer, idPlayer) => {
+//     return fetch(`${url}`)
+// }
 
 
 
