@@ -49,6 +49,7 @@ const escolhido = () => {
             break;
         }
     }
+    console.log(res)
     return res;
 }
 const validaIdentificador = () => {

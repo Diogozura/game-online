@@ -8,6 +8,12 @@ const dados = () => {
         })
 }
 
+const temCor = () => {
+    return fetch(`${url}api/coresRestantes?keyroom=${token}`)
+        .then(resposta => {
+            return resposta.json()
+        })
+}
 
 // criando sala 
 const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
@@ -33,7 +39,7 @@ const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
 
 
 const criarJogadorPlayer = (identificador, namePlayer) => {
-    return fetch(`${url}createPlayer/?keyRoom=${token}`, {
+    return fetch(`${url}api/coresRestantes?keyroom=${token}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -55,5 +61,5 @@ const criarJogadorPlayer = (identificador, namePlayer) => {
 
 
 export const dadosSala = {
-    dados, criarSala, criarJogadorPlayer
+    dados, criarSala,temCor, criarJogadorPlayer
 }

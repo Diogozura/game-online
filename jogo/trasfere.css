@@ -6,7 +6,7 @@ form.trasfe{
   align-content: space-around;
 
   padding: 20px;
-  background-color: rgb(61, 49, 221);
+  background-color: rgb(245, 222, 94);
   margin-top: 10px;
 
   margin-left: 50px;
@@ -66,4 +66,9 @@ h3.valor{
 input{
   border-radius: 10px;
   
+}
+.trasferapranois{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
 }
