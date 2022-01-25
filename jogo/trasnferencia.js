@@ -4,7 +4,7 @@ import { montaNome, montaImg } from "./jogo.js"
 
 
 
-function jogadoresDisponiveis(dadu) {
+function jogadoresDisponiveis(dado) {
   const jogadoresDis = document.querySelector("[jogadores-disponiveis]")
   const jogadores = criarInputJogadorPlayerDisponivel()
   const label = criarLabel()
@@ -21,13 +21,12 @@ function criarInputJogadorPlayerDisponivel() {
   input.value = "user"
   input.name = "players"
   
-
   return input
 }
 
 function criarLabel() {
   const label = document.createElement("label")
-  label.textContent = "userPlayer cu"
+  label.textContent = "afaf"
   return label
 }
 
@@ -36,7 +35,7 @@ dadosSala.dados()
         const dadoJogador = dados.players
         console.log(dadoJogador)
         dadoJogador.forEach(function (dado) {
-          criarLabel(dado)
+          jogadoresDisponiveis(dado)
         })
         
     })
