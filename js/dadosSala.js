@@ -58,8 +58,27 @@ const criarJogadorPlayer = (identificador, namePlayer) => {
 //     return fetch(`${url}`)
 // }
 
+// trasfere 
+const trafereDinheiroParaOsAmigos = () => {
+    return fetch(`${url}api/transferencia`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify({
+            flagPlayerBank,
+            dPlayerDe,
+            idPlayerPara,
+            valor,
+            keyRoom,
+        })
+            .then(resposta => {
+            return resposta.body
+        })
+})
+}
 
 
 export const dadosSala = {
-    dados, criarSala,temCor, criarJogadorPlayer
+    dados, criarSala,temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos
 }

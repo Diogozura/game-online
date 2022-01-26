@@ -6,7 +6,8 @@ const tranferir = document.querySelector("[trasferir]")
 tranferir.addEventListener("submit", (event) => {
   event.preventDefault()
   validaCampos.escolhido()
-  valor()
+  dinheiro()
+  tranfere()
 })
 
 function criarPlayerTrasfere(player) {
@@ -48,7 +49,7 @@ function label(dado) {
 
 }
 
-function valor() {
+function dinheiro() {
   const pegaValor = document.querySelector("[valor]").value
   const errorValor = document.querySelector("[erro-valor]")
   if (pegaValor <= 1) {
@@ -70,5 +71,8 @@ dadosSala.dados()
 
 
 function tranfere() {
-
+  dadosSala.trafereDinheiroParaOsAmigos( flagPlayerBank,dPlayerDe,idPlayerPara,valor,keyRoom,)
+    .then(() => {
+    
+  })
 }
