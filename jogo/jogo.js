@@ -16,7 +16,10 @@ function montaCampo(jogador) {
     asideJogador.appendChild(montaImg(jogador.identificadorHexadecimal))
     asideJogador.appendChild(montaNome(jogador.namePlayer))
     asideJogador.appendChild(montaValor(jogador.saldo))
-    
+    const playerBank = jogador.playerBank
+    localStorage.setItem("playBank", playerBank)
+    const idPlayer = jogador.idPlayer
+    localStorage.setItem("idPlayer", idPlayer)
 
     return asideJogador
 }

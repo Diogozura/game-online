@@ -20,7 +20,6 @@ dadosSala.temCor()
 
 
 
-
 const btnCria = document.querySelector("[jogador-player]")
 
 btnCria.addEventListener("submit", (event) => {

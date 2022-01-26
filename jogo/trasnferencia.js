@@ -1,12 +1,13 @@
 import { dadosSala } from "../js/dadosSala.js"
-import { montaNome, montaImg } from "./jogo.js"
+
 import { validaCampos } from "../js/validaCampos.js"
 
 const tranferir = document.querySelector("[trasferir]")
 tranferir.addEventListener("submit", (event) => {
   event.preventDefault()
   validaCampos.escolhido()
-  dinheiro()
+  console.log(dinheiro())
+  
   tranfere()
 })
 
@@ -61,18 +62,26 @@ function dinheiro() {
 dadosSala.dados()
     .then(dados => {
         const dadoJogador = dados.players
-        console.log(dadoJogador)
-        dadoJogador.forEach(function (dado) {
-          criarPlayerTrasfere(dado)
-          label(dado)
-        })
         
+      dadoJogador.forEach(function (dado) {
+          criarPlayerTrasfere(dado)
+        })   
     })
 
 
 function tranfere() {
-  dadosSala.trafereDinheiroParaOsAmigos( flagPlayerBank,dPlayerDe,idPlayerPara,valor,keyRoom,)
+  
+ 
+  const flagPlayerBank =  localStorage.getItem("playBank")
+  const idPlayerDe = localStorage.getItem("idPlayer")
+  const idPlayerPara = 78
+  const valor = dinheiro()
+
+  const keyRoom = localStorage.getItem("token")
+
+  dadosSala.trafereDinheiroParaOsAmigos(flagPlayerBank,idPlayerDe,idPlayerPara,valor,keyRoom)
     .then(() => {
-    
+     
+      console.log(`valor da sala ${flagPlayerBank} , quem ${idPlayerDe} para ${idPlayerPara} o valor ${valor} e a chave ${keyRoom}`)
   })
 }

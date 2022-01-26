@@ -4,6 +4,7 @@ const url = "https://ffgames134.herokuapp.com/"
 const dados = () => {
     return fetch(`${url}dadosSala/?keyRoom=${token}`)
         .then(resposta => {
+           
             return resposta.json()
         })
 }
@@ -59,22 +60,22 @@ const criarJogadorPlayer = (identificador, namePlayer) => {
 // }
 
 // trasfere 
-const trafereDinheiroParaOsAmigos = () => {
-    return fetch(`${url}api/transferencia`, {
+const trafereDinheiroParaOsAmigos = (flagPlayerBank, dPlayerDe, idPlayerPara,valor,keyRoom) => {
+    return fetch(`${url}api/transferencia/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body:JSON.stringify({
-            flagPlayerBank,
-            dPlayerDe,
-            idPlayerPara,
-            valor,
-            keyRoom,
+        body: JSON.stringify({
+            flagPlayerBank:flagPlayerBank,
+            dPlayerDe: dPlayerDe,
+            idPlayerPara: idPlayerPara,
+            valor:valor,
+            keyRoom:keyRoom
         })
-            .then(resposta => {
-            return resposta.body
-        })
+    })
+    .then(resposta => {
+        return resposta.body
 })
 }
 
