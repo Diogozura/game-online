@@ -6,7 +6,13 @@ const tranferir = document.querySelector("[trasferir]")
 tranferir.addEventListener("submit", (event) => {
   event.preventDefault()
   validaCampos.escolhido()
-  console.log(dinheiro())
+  
+  const flagPlayerBank =  localStorage.getItem("playBank")
+    const idPlayerDe = localStorage.getItem("idPlayer")
+    const idPlayerPara = 78
+    const valor = dinheiro()
+  
+  console.log(`Foi o ${idPlayerDe} para o ${idPlayerPara}, valor foi ${valor} e ele é o ${flagPlayerBank}`)
   
   tranfere()
 })
@@ -51,14 +57,19 @@ function label(dado) {
 }
 
 function dinheiro() {
-  const pegaValor = document.querySelector("[valor]").value
+  const pegaValor = document.querySelector("[valor-transfere]").value
   const errorValor = document.querySelector("[erro-valor]")
+  
   if (pegaValor <= 1) {
     errorValor.className = "hide"
   } else {
     errorValor.style.display = "none"
   }
+
+  return pegaValor
 }
+
+
 dadosSala.dados()
     .then(dados => {
         const dadoJogador = dados.players
@@ -69,19 +80,19 @@ dadosSala.dados()
     })
 
 
-function tranfere() {
+  function tranfere() {
+    
   
- 
-  const flagPlayerBank =  localStorage.getItem("playBank")
-  const idPlayerDe = localStorage.getItem("idPlayer")
-  const idPlayerPara = 78
-  const valor = dinheiro()
+    const flagPlayerBank =  localStorage.getItem("playBank")
+    const idPlayerDe = localStorage.getItem("idPlayer")
+    const idPlayerPara = 78
+    const valor = dinheiro()
 
-  const keyRoom = localStorage.getItem("token")
+    const keyRoom = localStorage.getItem("token")
 
-  dadosSala.trafereDinheiroParaOsAmigos(flagPlayerBank,idPlayerDe,idPlayerPara,valor,keyRoom)
-    .then(() => {
-     
-      console.log(`valor da sala ${flagPlayerBank} , quem ${idPlayerDe} para ${idPlayerPara} o valor ${valor} e a chave ${keyRoom}`)
-  })
-}
+    dadosSala.trafereDinheiroParaOsAmigos(flagPlayerBank,idPlayerDe,idPlayerPara,valor,keyRoom)
+      .then(() => {
+      
+        console.log(`valor da sala ${flagPlayerBank} , quem ${idPlayerDe} para ${idPlayerPara} o valor ${valor} e a chave ${keyRoom}`)
+    })
+  }
