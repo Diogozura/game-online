@@ -61,17 +61,16 @@ const criarJogadorPlayer = (identificador, namePlayer) => {
 
 // trasfere 
 const trafereDinheiroParaOsAmigos = (flagPlayerBank, dPlayerDe, idPlayerPara,valor,keyRoom) => {
-    return fetch(`${url}api/transferencia/`, {
+    return fetch(`${url}api/transferencia/?keyRoom=${token}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             flagPlayerBank:flagPlayerBank,
-            dPlayerDe: dPlayerDe,
+            idPlayerDe: dPlayerDe,
             idPlayerPara: idPlayerPara,
             valor:valor,
-            keyRoom:keyRoom
         })
     })
     .then(resposta => {

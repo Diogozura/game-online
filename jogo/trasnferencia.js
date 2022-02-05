@@ -88,11 +88,10 @@ dadosSala.dados()
     const idPlayerPara = 78
     const valor = dinheiro()
 
-    const keyRoom = localStorage.getItem("token")
 
-    dadosSala.trafereDinheiroParaOsAmigos(flagPlayerBank,idPlayerDe,idPlayerPara,valor,keyRoom)
+    dadosSala.trafereDinheiroParaOsAmigos(flagPlayerBank,idPlayerDe,idPlayerPara,valor)
       .then(() => {
       
-        console.log(`valor da sala ${flagPlayerBank} , quem ${idPlayerDe} para ${idPlayerPara} o valor ${valor} e a chave ${keyRoom}`)
+        console.log(`valor da sala ${flagPlayerBank} , quem ${idPlayerDe} para ${idPlayerPara} o valor ${valor} `)
     })
   }
