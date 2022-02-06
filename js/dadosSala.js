@@ -10,7 +10,7 @@ const dados = () => {
 }
 
 const temCor = () => {
-    return fetch(`${url}api/coresRestantes?keyroom=${token}`)
+    return fetch(`${url}api/coresRestantes?keyRoom=${token}`)
         .then(resposta => {
             return resposta.json()
         })
@@ -61,7 +61,7 @@ const criarJogadorPlayer = (identificador, namePlayer, playerBank) => {
 // }
 
 // trasfere 
-const trafereDinheiroParaOsAmigos = (flagPlayerBank, dPlayerDe, idPlayerPara,valor,keyRoom) => {
+const trafereDinheiroParaOsAmigos = (flagPlayerBank, dPlayerDe, idPlayerPara,valor) => {
     return fetch(`${url}api/transferencia/?keyRoom=${token}`, {
         method: 'POST',
         headers: {
