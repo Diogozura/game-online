@@ -12,6 +12,7 @@ function addNaTela(jogador) {
 function montaCampo(jogador) {
     const asideJogador = document.createElement("aside")
     asideJogador.classList.add("jogador")
+    asideJogador.id = jogador.idPlayer
 
     asideJogador.appendChild(montaImg(jogador.identificadorHexadecimal))
     asideJogador.appendChild(montaNome(jogador.namePlayer))

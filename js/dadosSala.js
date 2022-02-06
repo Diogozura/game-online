@@ -39,15 +39,16 @@ const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
 // colocando player na sala
 
 
-const criarJogadorPlayer = (identificador, namePlayer) => {
-    return fetch(`${url}api/coresRestantes?keyroom=${token}`, {
+const criarJogadorPlayer = (identificador, namePlayer, playerBank) => {
+    return fetch(`${url}createPlayer/?keyRoom=${token}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             identificador:identificador,
-            namePlayer:namePlayer
+            namePlayer: namePlayer,
+            playerBank: playerBank
         })
     })
         .then(resposta => {

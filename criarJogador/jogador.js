@@ -2,25 +2,28 @@ import { dadosSala } from "../js/dadosSala.js";
 import { validaCampos } from "../js/validaCampos.js";
 
 
-
-
 dadosSala.temCor()
   .then(temCor => {
     const dadoJogador = temCor.coresRestante
     console.log(dadoJogador)
     dadoJogador.forEach(function(cor)  {
-      criaInputCor(cor)
+      criaInputCor(cor.identificador)
       criarLabelCor(cor.identificadorHexadecimal)
     });
   })
 
+
+
 function criaInputCor(cor) {
   const botaInputCor = document.querySelector("[jogador-player]")
   const input = document.createElement("input")
-  input.type = "radio"
+  input.type = "radio" 
+  input.value = cor
+  input.name= "cores"
   botaInputCor.appendChild(input)
   return input
 }
+
 function criarLabelCor(cor) {
   const svg = ` <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
   class="bi bi-person" viewBox="0 0 16 16">
@@ -47,12 +50,12 @@ btnCria.addEventListener("submit", (event) => {
   const namePlayer = validaCampos.validaNome()
   const identificador = validaCampos.validaIdentificador()
   dadosSala.criarJogadorPlayer(identificador, namePlayer)
-     
+    
     .then(() => {
       console.log(identificador, namePlayer)
       if ( !identificador, !namePlayer == false) {
         return window.location.href = '../jogo/game.html'
-        
+        console.log(identificador , namePlayer)        
       }
 
   })

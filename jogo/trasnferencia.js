@@ -6,13 +6,7 @@ const tranferir = document.querySelector("[trasferir]")
 tranferir.addEventListener("submit", (event) => {
   event.preventDefault()
   validaCampos.escolhido()
-  
-  const flagPlayerBank =  localStorage.getItem("playBank")
-    const idPlayerDe = localStorage.getItem("idPlayer")
-    const idPlayerPara = 78
-    const valor = dinheiro()
-  
-  console.log(`Foi o ${idPlayerDe} para o ${idPlayerPara}, valor foi ${valor} e ele é o ${flagPlayerBank}`)
+
   
   tranfere()
 })
@@ -82,11 +76,11 @@ dadosSala.dados()
 
   function tranfere() {
     
-  
-    const flagPlayerBank =  localStorage.getItem("playBank")
-    const idPlayerDe = localStorage.getItem("idPlayer")
-    const idPlayerPara = 78
-    const valor = dinheiro()
+  // TRASNFORMAR EM INTEIRO 
+    const flagPlayerBank =  parseInt(localStorage.getItem("playBank"))
+    const idPlayerDe = parseInt(localStorage.getItem("idPlayer"))
+    const idPlayerPara = validaCampos.escolhido()
+    const valor = parseInt(dinheiro())
 
 
     dadosSala.trafereDinheiroParaOsAmigos(flagPlayerBank,idPlayerDe,idPlayerPara,valor)
