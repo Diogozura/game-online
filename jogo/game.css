@@ -61,7 +61,9 @@ aside{
     
     border-radius: 10px;
 }
-
+aside.eu{
+    background-color: #e54d42;
+}
 svg{
     display: inline-block;
     float: left;

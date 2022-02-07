@@ -11,8 +11,8 @@ function addNaTela(jogador) {
 
 function montaCampo(jogador) {
     const asideJogador = document.createElement("aside")
-    asideJogador.classList.add("jogador")
     asideJogador.id = jogador.idPlayer
+   
 
     asideJogador.appendChild(montaImg(jogador.identificadorHexadecimal))
     asideJogador.appendChild(montaNome(jogador.namePlayer))
@@ -21,6 +21,15 @@ function montaCampo(jogador) {
     localStorage.setItem("playBank", playerBank)
     const idPlayer = jogador.idPlayer
     localStorage.setItem("idPlayer", idPlayer)
+
+    const idlocal = localStorage.getItem("idPlayer")
+    console.log(idlocal)
+    if (idlocal == jogador.idPlayer) {
+        asideJogador.classList.add("eu")
+    }else {
+        asideJogador.classList.add("jogador")
+    }
+    
 
     return asideJogador
 }
