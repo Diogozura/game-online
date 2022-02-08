@@ -71,4 +71,5 @@ input{
   display: flex;
   align-items: flex-end;
   flex-direction: row;
+  flex-wrap: wrap;
 }

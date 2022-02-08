@@ -85,7 +85,7 @@ dadosSala.dados()
 
     dadosSala.trafereDinheiroParaOsAmigos(flagPlayerBank,idPlayerDe,idPlayerPara,valor)
       .then(() => {
-      
+        location.reload()
         console.log(`valor da sala ${flagPlayerBank} , quem ${idPlayerDe} para ${idPlayerPara} o valor ${valor} `)
     })
   }
