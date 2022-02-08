@@ -1,29 +1,50 @@
 body{
     margin: 0;
+    padding: 0;
     background-image: url(../img/fundoHome.png);
+}
+h1{
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.555);
+    width: 100%;
+    
 }
 
 main{
-    width: 700px;
+    /* width: 700px;
     margin-left: auto;
     margin-right: auto;
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; */
 }
 input {text-transform: uppercase;}
 
-
-.card {
+.cards{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-bottom: 4em;
+}
+
+.card {
+    /* display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-content: space-around;
+    align-content: space-around; */
   
     padding: 50px;
     background-color: rgb(90, 241, 85);
     margin-top: 100px;
+    width: 350px;
     border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
 .color1{
     background-color: rgb(109, 80, 238);
@@ -32,4 +53,28 @@ input {text-transform: uppercase;}
 .color2{
     background-color: rgb(247, 60, 60);
     color:#f7f7f7;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 0;
+    color: #f7f7f7;
+    background-color: rgb(36, 36, 36);
+}
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 1.5em;
+    }
+    .card{
+        width: 250px;
+    }
+    footer{
+        position: initial;
+        margin: 0;
+
+    }
 }

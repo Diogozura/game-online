@@ -23,20 +23,26 @@
     
 
     <main>
-        <section class="card color1">
-            <h2>Iniciar um novo jogo</h2>
-
-            <a href="criarSala/criarSala.html" class="btn">criar sala</a>
+        <section class="cards">
+            <section class="card color1">
+                <h2>Iniciar um novo jogo</h2>
+    
+                <a href="criarSala/criarSala.html" class="btn">criar sala</a>
+            </section>
+    
+            <section class="card color2">
+                <h2>Link da sala</h2>
+                <input type="text" name="linkSala" required="required" id="link" placeholder="Coloque a URL aqui" url-player>
+                <p class="erro" erro-token> Token inválido</p>
+                <button type="submit" class="btn" iniciar-player> Entra em sala</button>
+            </section>
+    
         </section>
-
-        <section class="card color2">
-            <h2>Link da sala</h2>
-            <input type="text" name="linkSala" required="required" id="link" placeholder="Coloque a URL aqui" url-player>
-            <p class="erro" erro-token> Token inválido</p>
-            <button type="submit" class="btn" iniciar-player> Entra em sala</button>
-        </section>
-
+        
     </main>
+    <footer>
+        <p>Desenvolvido por Diogo Zura</p>
+    </footer>
 
     <script type="module" src="js/home.js"></script>
 </body>
