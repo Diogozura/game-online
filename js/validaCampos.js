@@ -1,16 +1,30 @@
+import { dadosSala } from "./dadosSala.js"
+
 const validaToken = () => {
-    const tokenUSer = document.querySelector("#link").value
-    
-    if (tokenUSer.length == 10) {
-        const erroValor = document.querySelector("[erro-token]")
-        erroValor.style.display = "none"
-        return true
-    } else {
-        const erroValor = document.querySelector("[erro-token]")
-        erroValor.className = "hide"
-        console.log("valor inválido")
-        return false
-    }
+    // const tokenUSer = document.querySelector("#link").value
+    dadosSala.dados()
+        .then(dados => {
+            console.log(dados.status)
+
+            if (dados.erro === "chave invalida") {
+                const erroValor = document.querySelector("[erro-token]")
+                erroValor.className = "hide"
+                console.log("valor inválido")
+                return false
+            } else {
+                const erroValor = document.querySelector("[erro-token]")
+                erroValor.style.display = "none"
+                // console.log("aiaiai")
+                return true
+            }
+    })
+    // .then(dados => {
+    //     // console.log(dados)
+    //     if (dados.erro != "Sala nao encontrada" && dados.erro != "chave invalida") {
+    //        console.log("deu bom"
+
+
+  
 
 }
 

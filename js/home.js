@@ -8,45 +8,46 @@ import { validaCampos } from "./validaCampos.js"
 
 const criarPlayer = document.querySelector("[iniciar-player]")
 
-criarPlayer.addEventListener("click",function (event)  {
+criarPlayer.addEventListener("click", function (event) {
     event.preventDefault()
-    
-    // dadosSala.dados()
-    // .then(dados => {
-    //     // console.log(dados)
-    //     if (dados.erro != "Sala nao encontrada" && dados.erro != "chave invalida") {
-    //        console.log("deu bom")
-           
-    //     }
-    if (validaCampos.validaToken() == true) {
-        const token = document.querySelector("[url-player]").value
-        localStorage.setItem("token", token)
-        // window.location.href = '../jogo/game.html'
-    // externo
-    // window.location.href = '../game-online/criarJogador/jogador.html'
-    
-    // interno
-    window.location.href = '../criarJogador/jogador.html'
-    // 
+    const token = document.querySelector("[url-player]").value
+    const idTem = localStorage.getItem("idPlayer")
+    localStorage.setItem("token", token)
+    const dados = () => {
+        return fetch(`https://ffgames134.herokuapp.com/dadosSala/?keyRoom=${token}`)
+            .then(resposta => {
+                const status = resposta.status
+                console.log(status)
 
-} 
-        
+                // validando dados direto que vem e aprovando , caso ele tenha as informçãoes de dadosSala, vai ser redirecionado para pagina do game
+
+                if (resposta.status == 200 && idTem != null) {
+                    console.log("Passou")
+                    window.location.href = '../jogo/game.html'
+                    // return true
+                }
+                // caso ele não tenha o id , vou ter certeza que ele ainda não registrou um criarPlayer
+                else {
+                    console.log("você não passou")
+                    window.location.href = '../criarJogador/jogador.html'
+
+                }
+                return resposta.json()
+
+            })
+
+    }
+
+
+
+    console.log("clicou home")
+
+    dados()
+       
+
+
 })
-   
 
-// const criarSala = document.querySelector("#criar-sala")
-
-// criarSala.addEventListener("click", function () {
-//     console.log("nhaa")
-
-//     window.location.href = '../criarSala/criarSala.html'
-// })
-
-// // monitorar o que tem dentro do campo 
-const link = document.querySelector("#link")
-link.addEventListener("input", function () {
-
-})
 
 
 
