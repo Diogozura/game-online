@@ -63,6 +63,7 @@ aside{
 }
 aside.eu{
     background-color: #e54d42;
+    width: 350px;
 }
 svg{
     display: inline-block;

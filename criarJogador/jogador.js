@@ -53,7 +53,8 @@ btnCria.addEventListener("submit", (event) => {
     
     .then(() => {
       console.log(identificador, namePlayer)
-      if ( !identificador, !namePlayer == false) {
+      if (!identificador, !namePlayer == false) {
+        
         return window.location.href = '../jogo/game.html'
         console.log(identificador , namePlayer)        
       }
