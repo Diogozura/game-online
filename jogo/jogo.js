@@ -22,17 +22,20 @@ function montaCampo(jogador) {
     const idPlayer = jogador.idPlayer
     localStorage.setItem("idPlayer", idPlayer)
 
-    const idlocal = localStorage.getItem("idPlayer")
-    console.log(idlocal)
+   
+    console.log( jogador.idPlayer)
     if (idlocal == jogador.idPlayer) {
-        asideJogador.classList.add("eu")
-    }else {
         asideJogador.classList.add("jogador")
+        
+    }else {
+        asideJogador.classList.add("eu")
     }
     
 
     return asideJogador
 }
+const idlocal = localStorage.getItem("idPlayer")
+console.log(idlocal)
 function montaImg(dado) {
     const svg = ` <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
     class="bi bi-person" viewBox="0 0 16 16">
