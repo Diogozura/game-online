@@ -54,18 +54,7 @@ input {text-transform: uppercase;}
     background-color: rgb(247, 60, 60);
     color:#f7f7f7;
 }
-footer{
-    position: fixed;
-    font-family: 'Ubuntu', sans-serif;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    display: block;
-    margin-bottom: 0;
-    color: #f7f7f7;
-    background-color: rgb(36, 36, 36);
-}
+
 footer>p{
     padding: 10px;
     margin: 0;
@@ -77,9 +66,5 @@ footer>p{
     .card{
         width: 250px;
     }
-    footer{
-        position: initial;
-        margin: 0;
-
-    }
+   
 }

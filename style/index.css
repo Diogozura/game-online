@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Ubuntu:ital,wght@1,300&display=swap');
 
+header{
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.555);
+    width: 100%;
+}
 
 h1{
     font-family: 'Bungee Shade', cursive;
     text-align: center;
+    font-size: 1.5em;
 }
 h2{
     font-family: 'Ubuntu', sans-serif;
@@ -49,7 +55,39 @@ label{
     padding: 0;
     text-decoration: none;
 }
+button{
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+
+   box-shadow:  0px 5px 14px 1px #828282;
+}
+.btn-inicia{
+    background-color: greenyellow;
+}
+.btn-copia{
+    background-color: wheat;
+}
 .input-radio{
     color: rgb(255, 0, 0);
     background-color: #ce2b2b;
+}
+footer{
+    position: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 0;
+    color: #f7f7f7;
+    background-color: rgb(36, 36, 36);
+}
+@media only screen and (max-width: 600px){
+    footer{
+        position: initial;
+        margin: 0;
+
+    }
 }

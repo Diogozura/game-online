@@ -3,7 +3,7 @@ import { validaCampos } from "./validaCampos.js"
 
 // token valido 
 
-
+alert("esse jogo está em fase de teste, caso encontre um erro mande mensagem para os desenvolvedores, link sempre no rodapé da pagina")
 // link para criar sala
 
 const criarPlayer = document.querySelector("[iniciar-player]")

@@ -1,15 +1,16 @@
 import { dadosSala } from "../js/dadosSala.js"
 import { linkSala } from "../js/linkSala.js"
 import { validaCampos } from "../js/validaCampos.js"
-import { copy } from "../js/copy.js"
+// import { copia } from "../js/copy.js"
 
 const formulario = document.querySelector('[form-dados]')
 
 linkSala.sala()
   .then(sala => {
     const tokenSala = sala.keyRoom
-    const link = document.querySelector('#pwd_spn')
-    link.textContent = tokenSala
+    const link = document.querySelector('[token]')
+    link.value = tokenSala
+    link.placeholder = tokenSala
     localStorage.setItem("token", tokenSala)
     return link
   })
@@ -20,7 +21,7 @@ formulario.addEventListener('submit', (evento) => {
 
 
 
-  const keyRoom = evento.target.querySelector('#pwd_spn').innerText
+  const keyRoom = document.querySelector('[token]').value
   const valorInicial = validaCampos.validaValor()
   const identificador = validaCampos.validaIdentificador()
   const namePlayer = validaCampos.validaNome()
@@ -31,7 +32,7 @@ formulario.addEventListener('submit', (evento) => {
 
         console.log(keyRoom, valorInicial, identificador, namePlayer)
         if (!valorInicial, !identificador, !namePlayer == false) {
-          return window.location.href = '../jogo/game.html'
+          return  window.location.href = '../jogo/game.html'
 
         }
         
@@ -41,7 +42,7 @@ formulario.addEventListener('submit', (evento) => {
 
 )
 
-copy()
+// copia()
 const tokenDoLocal = localStorage.getItem("token")
 
 

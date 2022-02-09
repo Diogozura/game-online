@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/index.css">
     <link rel="stylesheet" href="criarPlayer.css">
+    <link rel="stylesheet" href="/criarSala/sala.css">
 
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
@@ -21,16 +22,21 @@
     <a href="../index.html">voltar</a>
 
     <main>
-        <form class="nome" jogador-player>
+        <section>
+            <form class=" form-cria-sala " >
          
-            <input type="text" name="nick" id="nickNome" required="required" class="ninkNome" placeholder="Nick nome">
-            <p class="erro" id="error" erro-nome>Jogador precisa de um nome!</p>
-            <p class="erro" id="error" erro-identificador>Precisa escolher uma cor</p>
-            <button id="iniciar" type="submit" criar-jogador>iniciar game</button>
-        </form>
+                <input type="text" name="nick" id="nickNome" required="required" class="ninkNome" placeholder="nome Jogador">
+               <aside jogador-player>
+               <h3> Icons disponíveis </h3>
+               </aside>
+                <p class="erro" id="error" erro-nome>Jogador precisa de um nome!</p>
+                <p class="erro" id="error" erro-identificador>Precisa escolher uma cor</p>
+                <button id="iniciar" type="submit" criar-jogador>iniciar game</button>
+            </form>
+    
+        </section>
+       
 
-
-        <a href="game.html">Iniciar game</a>
 
     </main>
 

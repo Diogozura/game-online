@@ -3,23 +3,11 @@ body {
     background-color: rgb(141, 220, 223);
 }
 
-h1 {
-    text-align: center;
-}
 
-main {
-    background-color: rgb(134, 134, 134);
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    border-radius: 30px;
-}
 
-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+aside{
+    width: 380px;
+    margin: auto;
 }
 
 h2 {

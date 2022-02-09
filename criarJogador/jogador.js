@@ -37,8 +37,7 @@ function criarLabelCor(cor) {
   botaLabelCor.appendChild(idImg)
   return idImg
 }
-criaInputCor()
-criarLabelCor()
+
 
 
 
@@ -50,13 +49,13 @@ btnCria.addEventListener("submit", (event) => {
   const namePlayer = validaCampos.validaNome()
   const identificador = validaCampos.validaIdentificador()
   dadosSala.criarJogadorPlayer(identificador, namePlayer)
-    
+  console.log(identificador , namePlayer)
     .then(() => {
       console.log(identificador, namePlayer)
       if (!identificador, !namePlayer == false) {
-        
+          
         return window.location.href = '../jogo/game.html'
-        console.log(identificador , namePlayer)        
+              
       }
 
   })
