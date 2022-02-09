@@ -23,7 +23,7 @@ criarPlayer.addEventListener("click", function (event) {
 
                 if (resposta.status == 200 && idTem != null) {
                     console.log("Passou")
-                    window.location.href = '../jogo/game.html'
+                    window.location.href = '../game-online/jogo/game.html'
                     // return true
                 }
                 // caso ele não tenha o id , vou ter certeza que ele ainda não registrou um criarPlayer
