@@ -18,7 +18,7 @@ function montaCampo(jogador) {
     asideJogador.appendChild(montaImg(jogador.identificadorHexadecimal))
     asideJogador.appendChild(montaNome(jogador.namePlayer))
     asideJogador.appendChild(montaValor(jogador.saldo))
-    
+    asideJogador.appendChild(montaBtn())
 
    
     console.log( jogador.idPlayer)
@@ -58,7 +58,19 @@ function montaValor(dado) {
 
     return ValorP
 }
+function montaBtn() {
+    const botao = document.createElement("button")
+    botao.type = "button"
+    botao.className = "btn-inicia"
+    // botao.setAttribute('data-toggle',modal)
+    // botao.setAttribute('#data-toggle', #modalExemplo)
+    botao.dataset.toggle = "modal"
+    botao.dataset.target = "#modalExemplo"
+    
+    botao.innerText = "teste uau";
 
+    return botao
+}
 
 
 dadosSala.dados()

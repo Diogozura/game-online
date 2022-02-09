@@ -18,8 +18,9 @@ h2{
 }
 h2.titulo2{
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-family: 'Bungee Shade', cursive;
+    background-color: #f7f7f791;
 }
 label{
     font-family: 'Ubuntu', sans-serif;;
@@ -86,7 +87,7 @@ footer{
 }
 @media only screen and (max-width: 600px){
     footer{
-        position: initial;
+        
         margin: 0;
 
     }
