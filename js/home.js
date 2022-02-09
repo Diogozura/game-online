@@ -29,7 +29,7 @@ criarPlayer.addEventListener("click", function (event) {
                 // caso ele não tenha o id , vou ter certeza que ele ainda não registrou um criarPlayer
                 else {
                     console.log("você não passou")
-                    window.location.href = '../criarJogador/jogador.html'
+                    window.location.href = '../game-online/criarJogador/jogador.html'
 
                 }
                 return resposta.json()
