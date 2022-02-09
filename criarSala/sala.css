@@ -2,8 +2,7 @@ body{
     background-color: burlywood;
 }
 main{
-    width: 800px;
-    background-color: aqua;
+   
     margin-left: auto;
     margin-right: auto;
 
@@ -18,7 +17,16 @@ input#link{
 section#link{
     margin-bottom: 20px;
 }
-
+section{
+    background-color: aqua;
+}
+aside{
+    width: 310px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
 
 .link{
   background-color: rgba(59, 59, 59, 0.534);
