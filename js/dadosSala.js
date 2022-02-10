@@ -6,7 +6,6 @@ const dados = () => {
         
         .then(resposta => {
             console.log(resposta.status)
-            
             return resposta.json()
         })
     
