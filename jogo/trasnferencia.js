@@ -88,4 +88,5 @@ dadosSala.dados()
         location.reload()
         console.log(`valor da sala ${flagPlayerBank} , quem ${idPlayerDe} para ${idPlayerPara} o valor ${valor} `)
     })
-  }
+}
+  

@@ -18,14 +18,18 @@ function montaCampo(jogador) {
     asideJogador.appendChild(montaValor(jogador.saldo))
     asideJogador.appendChild(montaBtn())
     const id = asideJogador.id = jogador.idPlayer
+
+   
+        localStorage.setItem("idPlayer", id)
+       
+        if (!localStorage.getItem("idPlayer") == null) {
+            localStorage.setItem("idPlayer", id) 
+            console.log(localStorage.getItem("idPlayer"))
+        } else {
+           
+        }
     
-    if (localStorage.getItem('idPlayer') != null) {
-        console.log("existe" + localStorage.getItem("idPlayer"))
-        
-        
-    } else {
-        localStorage.setItem("idPlayer", jogador.idPlayer)
-    }
+  
     if (localStorage.getItem("idPlayer") == id) {
         asideJogador.className = "eu"
     }
@@ -35,9 +39,6 @@ function montaCampo(jogador) {
 
 
 }
-
-const idlocal = localStorage.getItem("idPlayer")
-console.log(idlocal)
 
 
 function montaImg(dado) {
