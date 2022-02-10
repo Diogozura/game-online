@@ -18,9 +18,11 @@ function montaCampo(jogador) {
     asideJogador.appendChild(montaValor(jogador.saldo))
     asideJogador.appendChild(montaBtn())
     const id = asideJogador.id = jogador.idPlayer
+    const idPlayer = localStorage.getItem('idPlayer');
     
-    if (localStorage.getItem('idPlayer') !== null) {
+    if (idPlayer) {
         console.log("existe" + localStorage.getItem("idPlayer"))
+        
         
     } else {
         localStorage.setItem("idPlayer", jogador.idPlayer)
