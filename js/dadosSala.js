@@ -1,12 +1,15 @@
-const token = localStorage.getItem('token')
+const token = localStorage.getItem("token")
 const url = "https://ffgames134.herokuapp.com/"
 // dados da sala
 const dados = () => {
     return fetch(`${url}dadosSala/?keyRoom=${token}`)
+        
         .then(resposta => {
             console.log(resposta.status)
+            
             return resposta.json()
         })
+    
 }
 
 const temCor = () => {
