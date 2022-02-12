@@ -33,7 +33,7 @@ const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
         })
     })
         .then(resposta => {
-            return resposta.body
+            return resposta.json()
         })
 
 }
@@ -54,7 +54,7 @@ const criarJogadorPlayer = (identificador, namePlayer, playerBank) => {
         })
     })
         .then(resposta => {
-        return resposta.body
+        return resposta.json()
     })
 }
 

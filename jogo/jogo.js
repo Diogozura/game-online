@@ -20,14 +20,6 @@ function montaCampo(jogador) {
     const id = asideJogador.id = jogador.idPlayer
 
    
-        localStorage.setItem("idPlayer", id)
-       
-        if (!localStorage.getItem("idPlayer") == null) {
-            localStorage.setItem("idPlayer", id) 
-            console.log(localStorage.getItem("idPlayer"))
-        } else {
-           
-        }
     
   
     if (localStorage.getItem("idPlayer") == id) {

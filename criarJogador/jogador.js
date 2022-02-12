@@ -49,10 +49,13 @@ btnCria.addEventListener("submit", (event) => {
   const namePlayer = validaCampos.validaNome()
   const identificador = validaCampos.validaIdentificador()
   dadosSala.criarJogadorPlayer(identificador, namePlayer)
-    .then(() => {
+    .then(id => {
+     console.log(id.idPlayer) 
 
       if (!identificador, !namePlayer == false) {
-        return window.location.href = '../jogo/game.html'
+        localStorage.setItem("idPlayer", id.idPlayer)
+        return
+        // window.location.href = '../jogo/game.html'
               
       }
 

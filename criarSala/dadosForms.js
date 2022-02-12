@@ -31,11 +31,13 @@ formulario.addEventListener('submit', function (evento) {
   const identificador = validaCampos.validaIdentificador()
   const namePlayer = validaCampos.validaNome()
 
- dadosSala.criarSala(keyRoom, valorInicial, identificador, namePlayer)
-      .then(() => {
-
+  dadosSala.criarSala(keyRoom, valorInicial, identificador, namePlayer)
+   
+      .then(id => {
+       console.log(id.idPlayer) 
         console.log(keyRoom, valorInicial, identificador, namePlayer)
         if (!valorInicial, !identificador, !namePlayer == false) {
+          localStorage.setItem("idPlayer", id.idPlayer)
           return window.location.href = '../jogo/game.html'
 
         } // 

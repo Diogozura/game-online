@@ -13,6 +13,7 @@ criarPlayer.addEventListener("click", function (event) {
     const token = document.querySelector("[url-player]").value
     const idTem = localStorage.getItem("idPlayer")
     localStorage.setItem("token", token)
+    
     const dados = () => {
         return fetch(`https://ffgames134.herokuapp.com/dadosSala/?keyRoom=${token}`)
             .then(resposta => {
