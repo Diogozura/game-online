@@ -54,8 +54,7 @@ btnCria.addEventListener("submit", (event) => {
 
       if (!identificador, !namePlayer == false) {
         localStorage.setItem("idPlayer", id.idPlayer)
-        return
-        // window.location.href = '../jogo/game.html'
+        return window.location.href = '../jogo/game.html'
               
       }
 
