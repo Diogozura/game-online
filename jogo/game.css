@@ -47,7 +47,7 @@ section h2{
     
 }
 aside{
-    background-color: rgb(163, 163, 163);
+    background-color: rgb(247, 142, 142);
     width: 280px;
     height: auto;
 
@@ -63,7 +63,7 @@ aside{
     border-radius: 10px;
 }
 aside.eu{
-    background-color: #e54d42;
+    background-color: #c0f163;
     width: 350px;
 }
 svg{

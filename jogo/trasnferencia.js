@@ -17,6 +17,7 @@ function criarPlayerTrasfere(player) {
   jogadoresDis.appendChild(input(player.idPlayer))
   jogadoresDis.appendChild(label(player.identificadorHexadecimal))
   
+  
 }
 
 
