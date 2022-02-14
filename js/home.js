@@ -28,7 +28,7 @@ criarPlayer.addEventListener("click", function (event) {
                     // window.location.href = '../game-online/jogo/game.html'
 
                     // local
-                    window.location.href = '..//jogo/game.html'
+                    window.location.href = '../jogo/game.html'
                     
                     // return true
                 }

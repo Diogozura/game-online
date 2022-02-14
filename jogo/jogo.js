@@ -1,6 +1,7 @@
 import { dadosSala } from "../js/dadosSala.js"
 
 
+
 function addNaTela(jogador) {
     const dadosJogador = document.querySelector("[lista-jogadores]")
     const jogadorAside = montaCampo(jogador)
@@ -85,7 +86,7 @@ dadosSala.dados()
         
     })
 
-    
+
 //  codigo token
 
 const tokenDoLocal = localStorage.getItem("token")

@@ -1,5 +1,4 @@
 import { dadosSala } from "../js/dadosSala.js"
-
 import { validaCampos } from "../js/validaCampos.js"
 
 const tranferir = document.querySelector("[trasferir]")
