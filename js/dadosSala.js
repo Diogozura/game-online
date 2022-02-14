@@ -6,8 +6,30 @@ const dados = () => {
 
         .then(resposta => {
             console.log(resposta.status)
+            if (resposta.status != 200) {
+                location.reload()
+            }
             return resposta.json()
         })
+}
+const visao = (idPlayer) => {
+    return fetch(`${url}dadosSala/?keyRoom=${token}`, {
+        method: 'GET',
+        headers: {
+            "Accept": "*/*",
+            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+            "Content-type":"application/json;charset=utf-8"
+        },
+        body: JSON.stringify({
+            idPlayer: idPlayer
+        })
+    })
+    .then(function(response) {
+        return response.text();
+      }).then(function(data) {
+        console.log(data);
+      })
+
 }
 
 
@@ -84,5 +106,5 @@ const trafereDinheiroParaOsAmigos = (flagPlayerBank, dPlayerDe, idPlayerPara, va
 
 
 export const dadosSala = {
-    dados,  criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos
+    dados,visao,  criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos
 }
