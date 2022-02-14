@@ -53,7 +53,11 @@ btnCria.addEventListener("submit", (event) => {
      console.log(id.idPlayer) 
 
       if (!identificador, !namePlayer == false) {
+        if (localStorage.getItem("flag") == null) {
+          localStorage.setItem("flag", 0)
+      }
         localStorage.setItem("idPlayer", id.idPlayer)
+       
         return window.location.href = '../jogo/game.html'
               
       }

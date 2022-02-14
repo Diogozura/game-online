@@ -38,6 +38,7 @@ formulario.addEventListener('submit', function (evento) {
         console.log(keyRoom, valorInicial, identificador, namePlayer)
         if (!valorInicial, !identificador, !namePlayer == false) {
           localStorage.setItem("idPlayer", id.idPlayer)
+          localStorage.setItem("flag", 1)
           return window.location.href = '../jogo/game.html'
 
         } // 
