@@ -1,7 +1,5 @@
 import { dadosSala } from "../js/dadosSala.js"
 
-
-
 function addNaTela(jogador) {
     const dadosJogador = document.querySelector("[lista-jogadores]")
     const jogadorAside = montaCampo(jogador)
@@ -28,11 +26,7 @@ function montaCampo(jogador) {
     }
     return asideJogador
 
-
-
-
 }
-
 
 function montaImg(dado) {
     const svg = ` <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
@@ -74,7 +68,6 @@ function montaBtn() {
     return botao
 }
 
-
 dadosSala.dados()
     .then(dados => {
         const dadoJogador = dados.players
@@ -92,8 +85,9 @@ dadosSala.dados()
 const tokenDoLocal = localStorage.getItem("token")
 console.log(tokenDoLocal)
 
-const ondeMostrar = document.querySelector("#url-sala")
+const ondeMostrar = document.querySelector("[token]")
 
-ondeMostrar.textContent = tokenDoLocal
+
+ondeMostrar.value = tokenDoLocal
 
 export{montaNome, montaImg}

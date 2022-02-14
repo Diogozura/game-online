@@ -20,4 +20,17 @@
 //     })
 // const id = localStorage.getItem("idPlayer")
 
-
+let headersList = {
+    "Content-Type": "application/json"
+   }
+   
+   let bodyContent = JSON.stringify({
+     "idPlayer": localStorage.getItem("idPlayer")
+   });
+   
+   fetch("https://ffgames134.herokuapp.com/dadosSala/?keyRoom=ND1IPVCAT4", { 
+     body: bodyContent,
+     headers: headersList
+   }).then(function(data) {
+     console.log(data);
+   })

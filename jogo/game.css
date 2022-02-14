@@ -7,6 +7,7 @@ body{
 header{
     background-image: linear-gradient(to right, #5cddc8 , yellow);
     margin-bottom: 0;
+    text-align: end;
 }
 header>p{
     margin-bottom: 0;
