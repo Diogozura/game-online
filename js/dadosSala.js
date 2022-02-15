@@ -22,6 +22,14 @@ const visao = () => {
     })
 
 }
+const extrato = () => {
+    return fetch(`${url}api/extrato/?keyRoom=${token}`)
+    .then(resposta => {
+        // console.log(resposta.status)
+        return resposta.json()
+    })
+
+}
 
 
 
@@ -97,5 +105,5 @@ const trafereDinheiroParaOsAmigos = (flagPlayerBank, dPlayerDe, idPlayerPara, va
 
 
 export const dadosSala = {
-    dados,visao,  criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos
+    dados,visao,extrato,  criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos
 }

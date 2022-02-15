@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="game.css">
     <link rel="stylesheet" href="trasfere.css">
     <link rel="stylesheet" href="../style/copia.css">
+    <link rel="stylesheet" href="bank.css">
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -27,8 +28,8 @@
     <header>
         <h1>Seja bem vindo à sala </h1>
         <div class="copy">
-            <input type="text" id="token" class="token" name="token" token readonly></input>
-            <p class="link" id="url-sala">Diogo falhou</p>
+            <input type="text" id="token" class="token " name="token" token readonly></input>
+          
             <div class="copia">
                 <button id="myInput" copia  class="btn-copia" pooper>
                     <span class="tooltiptext" id="myTooltip">Click para copiar o código</span>
@@ -38,6 +39,10 @@
         <button type="button" class="btn btn-close" data-toggle="modal" data-target="#exampleModalCenter">
             Sair
           </button>
+          <label class="switch">
+            <input type="checkbox" ativa checked>
+            <span class="slider round"></span>
+          </label>
 
           <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -140,42 +145,34 @@
 
 
 
-        <section class="extrato">
-            <h3>Meu extrato</h3>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Valor</th>
-                </tr>
-                <tr>
-                    <td>casa</td>
-                    <td>R$5k</td>
-                </tr>
-                <tr>
-                    <td>carro</td>
-                    <td>R$40k</td>
-                </tr>
-            </table>
-
-        </section>
-
-
-        <section class="extrato">
-            <h3>Extrato geral</h3>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Valor</th>
-                </tr>
-                <tr>
-                    <td>Verde</td>
-                    <td>R$40</td>
-                </tr>
-                <tr>
-                    <td>Azul</td>
-                    <td>R$30k</td>
-                </tr>
-            </table>
+        <section class="extra">
+            <!-- <article class="extrato">
+                <h3>Meu extrato</h3>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Valor</th>
+                    </tr>
+                    <tr>
+                        <td>casa</td>
+                        <td>R$5k</td>
+                    </tr>
+                    <tr>
+                        <td>carro</td>
+                        <td>R$40k</td>
+                    </tr>
+                </table>
+            </article> -->
+           
+            <article class="extrato">
+                <h3>Extrato geral</h3>
+                <table  extrato>
+                  
+                    </tr>
+                </table>
+            </article>
+           
+            
         </section>
 
         
@@ -189,7 +186,8 @@
     <script type="module" src="jogo.js"></script>
     <script type="module" src="visãoJogador.js"></script>
     <script src="sair.js"></script>
-    <script type="module" src="../js/copy.js"></script>
+    <scrip type="module" src="../js/copy.js"></script>
+    <script type="module"src="extrato.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -1,6 +1,7 @@
 import { dadosSala } from "../js/dadosSala.js"
 
 
+
 function addNaTela(jogador) {
     const dadosJogador = document.querySelector("[lista-jogadores]")
     const jogadorAside = montaCampo(jogador)
@@ -94,5 +95,17 @@ const ondeMostrar = document.querySelector("[token]")
 
 
 ondeMostrar.value = tokenDoLocal
+
+// flag bank 
+const ativa = document.querySelector("[ativa]")
+ativa.addEventListener("click",() => {
+    // console.log("fui ativado")
+    if(ativa.checked) {
+        console.log("O cliente marcou o checkbox");
+    } else {
+        console.log("O cliente não marcou o checkbox");
+    }
+})
+
 
 export{montaNome, montaImg, montaBtn, montaValor}

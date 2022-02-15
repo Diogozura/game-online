@@ -17,8 +17,8 @@ function criarPlayerTrasfere(player) {
   jogadoresDis.appendChild(botaaside)
   botaaside.appendChild(input(player.idPlayer))
   botaaside.appendChild(label(player.identificadorHexadecimal))
-  console.log(botaaside.id)
-  console.log(localStorage.getItem("idPlayer"))
+  // console.log(botaaside.id)
+  // console.log(localStorage.getItem("idPlayer"))
 
   if (localStorage.getItem("idPlayer") == botaaside.id) {
     botaaside.className = "none"

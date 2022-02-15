@@ -74,7 +74,7 @@ button{
     background-color: #ce2b2b;
 }
 footer{
-    position: fixed;
+    /* position: fixed; */
     font-family: 'Ubuntu', sans-serif;
     left: 0;
     bottom: 0;
