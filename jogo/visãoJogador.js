@@ -1,36 +1,24 @@
-// import { dadosSala } from "../js/dadosSala.js"
+import { dadosSala } from "../js/dadosSala.js"
+import {montaBtn} from "../jogo/jogo.js"
+import {montaImg} from "../jogo/jogo.js"
+import {montaNome} from "../jogo/jogo.js"
+import {montaValor} from "../jogo/jogo.js"
 
-// function jogador(id) {
-//     const icon = document.querySelector("[icon]")
-//     console.log(id.namePlayer)
-//     const name = document.querySelector("#nome")
-//     name.textContent = id.namePlayer
-//     const valor = document.querySelector("[valor]")
-//     valor.textContent = id.saldo
-// }
+function jogador(id) {
+  const asideJogador = document.querySelector("[jogador]")
+  asideJogador.appendChild(montaImg(id.identificadorHexadecimal))
+  asideJogador.appendChild(montaNome(id.namePlayer))
+  asideJogador.appendChild(montaValor(id.saldo))
+  asideJogador.appendChild(montaBtn())
 
 
-// const idPlayer = localStorage.getItem("idPlayer")
-// console.log(idPlayer)
+}
 
-// dadosSala.visao()
-//     .then((id) => {
-//        console.log(id)
+dadosSala.visao()
+  .then((id) => {
+      
+    jogador(id)
         
-//     })
-// const id = localStorage.getItem("idPlayer")
+    })
 
-let headersList = {
-    "Content-Type": "application/json"
-   }
-   
-   let bodyContent = JSON.stringify({
-     "idPlayer": localStorage.getItem("idPlayer")
-   });
-   
-   fetch("https://ffgames134.herokuapp.com/dadosSala/?keyRoom=ND1IPVCAT4", { 
-     body: bodyContent,
-     headers: headersList
-   }).then(function(data) {
-     console.log(data);
-   })
+

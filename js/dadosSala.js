@@ -1,34 +1,25 @@
 const token = localStorage.getItem("token")
 const url = "https://ffgames134.herokuapp.com/"
+const idPlayer = localStorage.getItem("idPlayer")
 // dados da sala
 const dados = () => {
     return fetch(`${url}dadosSala/?keyRoom=${token}`)
 
         .then(resposta => {
-            console.log(resposta.status)
+            // console.log(resposta.status)
             if (resposta.status != 200) {
                 location.reload()
             }
             return resposta.json()
         })
 }
-const visao = (idPlayer) => {
-    return fetch(`${url}dadosSala/?keyRoom=${token}`, {
-        method: 'GET',
-        headers: {
-            "Accept": "*/*",
-            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-            "Content-type":"application/json;charset=utf-8"
-        },
-        body: JSON.stringify({
-            idPlayer: idPlayer
-        })
+const visao = () => {
+    return fetch(`${url}dadosSala/?keyRoom=${token}&idPlayer=${idPlayer}`)
+
+    .then(resposta => {
+        // console.log(resposta.status)
+        return resposta.json()
     })
-    .then(function(response) {
-        return response.text();
-      }).then(function(data) {
-        console.log(data);
-      })
 
 }
 

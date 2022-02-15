@@ -19,10 +19,10 @@ function montaCampo(jogador) {
     const id = asideJogador.id = jogador.idPlayer
 
    
-    
+
   
     if (localStorage.getItem("idPlayer") == id) {
-        asideJogador.className = "eu"
+        asideJogador.className = "none"
     }
     return asideJogador
 
@@ -71,7 +71,7 @@ function montaBtn() {
 dadosSala.dados()
     .then(dados => {
         const dadoJogador = dados.players
-        console.log(dadoJogador)
+        // console.log(dadoJogador)
         dadoJogador.forEach(function (dado) {
             addNaTela(dado)
             
@@ -83,11 +83,11 @@ dadosSala.dados()
 //  codigo token
 
 const tokenDoLocal = localStorage.getItem("token")
-console.log(tokenDoLocal)
+// console.log(tokenDoLocal)
 
 const ondeMostrar = document.querySelector("[token]")
 
 
 ondeMostrar.value = tokenDoLocal
 
-export{montaNome, montaImg}
+export{montaNome, montaImg, montaBtn, montaValor}

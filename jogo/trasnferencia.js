@@ -12,11 +12,17 @@ tranferir.addEventListener("submit", (event) => {
 
 function criarPlayerTrasfere(player) {
   const jogadoresDis = document.querySelector("[jogadores-disponiveis]")
+  const botaaside = document.createElement("aside")
+  botaaside.id = player.idPlayer
+  jogadoresDis.appendChild(botaaside)
+  botaaside.appendChild(input(player.idPlayer))
+  botaaside.appendChild(label(player.identificadorHexadecimal))
+  console.log(botaaside.id)
+  console.log(localStorage.getItem("idPlayer"))
 
-  jogadoresDis.appendChild(input(player.idPlayer))
-  jogadoresDis.appendChild(label(player.identificadorHexadecimal))
-  
-  
+  if (localStorage.getItem("idPlayer") == botaaside.id) {
+    botaaside.className = "none"
+}
 }
 
 
