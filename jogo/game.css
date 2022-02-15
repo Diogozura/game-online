@@ -16,6 +16,12 @@ main{
     background-color: #9f5cdd;
    text-align: center;
 }
+.banco{
+    background-color: brown;
+}
+.off{
+    background-color: #9f5cdd;
+}
 .link{
     text-align: center;
     background-color: chartreuse;

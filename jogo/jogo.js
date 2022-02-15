@@ -101,9 +101,11 @@ const ativa = document.querySelector("[ativa]")
 ativa.addEventListener("click",() => {
     // console.log("fui ativado")
     if(ativa.checked) {
-        console.log("O cliente marcou o checkbox");
+        const main = document.querySelector("main")
+        main.classList = "banco"
     } else {
-        console.log("O cliente não marcou o checkbox");
+        const main = document.querySelector("main")
+        main.classList = "off"
     }
 })
 
