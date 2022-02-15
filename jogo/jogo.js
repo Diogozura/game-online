@@ -5,8 +5,9 @@ function addNaTela(jogador) {
     const dadosJogador = document.querySelector("[lista-jogadores]")
     const jogadorAside = montaCampo(jogador)
     dadosJogador.appendChild(jogadorAside)
-    
-   
+
+
+    console.log("atualizou")
 
     return dadosJogador
 }
@@ -49,15 +50,13 @@ function montaNome(dado) {
 
     return nickH3
 }
+setInterval(montaValor, 2000)
 
-const  set = setInterval(montaValor, 10000)
 function montaValor(dado) {
     const ValorP = document.createElement("p")
     ValorP.classList.add("valor-jogador")
     ValorP.textContent = 'R$' + dado;
-    set
-
-    console.log("atualizou")
+    
     return ValorP
 }
 function montaBtn() {
