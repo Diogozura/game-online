@@ -1,15 +1,15 @@
 import { dadosSala } from "../js/dadosSala.js"
 
-const atualiza = setTimeout(addNaTela, 2000)
 
 function addNaTela(jogador) {
     const dadosJogador = document.querySelector("[lista-jogadores]")
     const jogadorAside = montaCampo(jogador)
     dadosJogador.appendChild(jogadorAside)
+    
+   
 
     return dadosJogador
 }
-atualiza
 
 function montaCampo(jogador) {
     const asideJogador = document.createElement("aside")
@@ -50,12 +50,14 @@ function montaNome(dado) {
     return nickH3
 }
 
-
+const  set = setInterval(montaValor, 10000)
 function montaValor(dado) {
     const ValorP = document.createElement("p")
     ValorP.classList.add("valor-jogador")
     ValorP.textContent = 'R$' + dado;
+    set
 
+    console.log("atualizou")
     return ValorP
 }
 function montaBtn() {
