@@ -47,6 +47,8 @@ function montaNome(dado) {
 
     return nickH3
 }
+
+const atualiza = setTimeout(montaValor, 2000)
 function montaValor(dado) {
     const ValorP = document.createElement("p")
     ValorP.classList.add("valor-jogador")
