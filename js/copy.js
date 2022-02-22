@@ -15,7 +15,9 @@
 // }
 const copiar = document.querySelector("[copia]")
 copiar.addEventListener("click", copia)
-function copia () {
+
+function copia() {
+  console.log("clicou")
   /* Get the text field */
   var copyText = document.getElementById("token");
   copyText.select();
@@ -28,6 +30,7 @@ function copia () {
 const pooper = document.querySelector("[pooper]")
 pooper.addEventListener("click", outFunc)
 function outFunc() {
+  
   var tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "copiado";
 }
