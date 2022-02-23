@@ -1,6 +1,7 @@
 import { dadosSala } from "../js/dadosSala.js"
+import { playerBank } from "./banco.js"
 
-
+playerBank()
 
 function addNaTela(jogador) {
     const dadosJogador = document.querySelector("[lista-jogadores]")
@@ -15,6 +16,7 @@ function addNaTela(jogador) {
 
 function montaCampo(jogador) {
     const asideJogador = document.createElement("aside")
+    asideJogador.className = "players"
     
     asideJogador.appendChild(montaImg(jogador.identificadorHexadecimal))
     asideJogador.appendChild(montaNome(jogador.namePlayer))

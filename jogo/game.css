@@ -53,7 +53,7 @@ section h2{
     text-align: center;
     
 }
-aside{
+aside.players{
     background-color: rgb(247, 142, 142);
     width: 280px;
     height: auto;
@@ -68,6 +68,11 @@ aside{
     margin-bottom: 10px;
     
     border-radius: 10px;
+}
+aside.banco{
+    display: none;
+
+    padding: 30px 30px;
 }
 aside.eu{
     background-color: #c0f163;

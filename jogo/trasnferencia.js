@@ -1,6 +1,7 @@
 import { dadosSala } from "../js/dadosSala.js"
 import { validaCampos } from "../js/validaCampos.js"
 
+
 const tranferir = document.querySelector("[trasferir]")
 tranferir.addEventListener("submit", (event) => {
   event.preventDefault()
@@ -10,29 +11,7 @@ tranferir.addEventListener("submit", (event) => {
   tranfere()
 })
 
-function playerBank() {
-  const flag = localStorage.getItem("flag")
-  console.log(flag)
-  if (flag == 1) {
-    const banco = document.querySelector(".bank")
-    banco.style.display = "block"
 
-
-    const ativa = document.querySelector("[ativa]")
-    ativa.addEventListener("click", () => {
-      // console.log("fui ativado")
-      if (ativa.checked) {
-        const main = document.querySelector("main")
-        main.classList = "banco"
-      } else {
-        const main = document.querySelector("main")
-        main.classList = "off"
-      }
-    })
-  }
-  // if()
-}
-playerBank()
 
 function criarPlayerTrasfere(player) {
   const jogadoresDis = document.querySelector("[jogadores-disponiveis]")
@@ -107,7 +86,7 @@ dadosSala.dados()
 function tranfere() {
 
   // TRASNFORMAR EM INTEIRO 
-  const flagPlayerBank = parseInt(localStorage.getItem("playBank"))
+  const flagPlayerBank = parseInt(localStorage.getItem("flag"))
   const idPlayerDe = parseInt(localStorage.getItem("idPlayer"))
   const idPlayerPara = validaCampos.escolhido()
   const valor = parseInt(dinheiro())
@@ -115,7 +94,7 @@ function tranfere() {
 
   dadosSala.trafereDinheiroParaOsAmigos(flagPlayerBank, idPlayerDe, idPlayerPara, valor)
     .then(() => {
-      location.reload()
+      // location.reload()
       console.log(`valor da sala ${flagPlayerBank} , quem ${idPlayerDe} para ${idPlayerPara} o valor ${valor} `)
     })
 }
