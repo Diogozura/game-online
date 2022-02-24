@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/home.css">
-    <link rel="stylesheet" href="style/index.css">
+    <!-- <link rel="stylesheet" href="style/index.css"> -->
     
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -19,11 +19,34 @@
 </head> 
 
 <body>
-    <h1>Seja bem vindo a jogo de banco</h1>
-    
-
+    <header>
+        <h1>Easy Bank</h1>
+       
+    </header>
+    <nav>
+        <a href="#" class="home">Home</a>
+        <a href="#" class="regras">Regras</a>
+        <a href="#" class="contatos">Contatos</a>
+    </nav>
     <main>
-        <section class="cards">
+        <section class="titulo">
+            <h1>O FUTURO É EASY</h1>
+            <h2>Seja bem vindo!</h2>
+            <h2>Você está a um passo de conhecer o futuro</h2>
+        </section>
+
+        <section class="card">
+            <h2>Olá, para começar coloque o código da sala ou crie sua própria sala</h2>
+
+            <aside class="link-sala">
+                <h3>Código da sala</h3>
+                <input type="text" name="linkSala" required="required" id="link" placeholder="" url-player>
+                <button type="submit" class="btn" iniciar-player> Entra em sala</button>
+            </aside>
+            
+            <a href="criarSala/criarSala.html" class="criar">Criar sala</a>
+        </section>
+        <!-- <section class="cards">
             <section class="card color1">
                 <h2>Iniciar um novo jogo</h2>
     
@@ -34,10 +57,10 @@
                 <h2>Link da sala</h2>
                 <input type="text" name="linkSala" required="required" id="link" placeholder="Coloque a URL aqui" url-player>
                 <p class="erro" erro-token> Token inválido</p>
-                <button type="submit" class="btn" iniciar-player> Entra em sala</button>
+                
             </section>
     
-        </section>
+        </section> -->
         
     </main>
     <footer>
