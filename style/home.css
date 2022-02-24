@@ -37,9 +37,14 @@ header{
     font-size: 700;
     color: #000;
 }
-img.logo{
+.logo1{
     margin-top: 10px;
+    width: 100px;
+}
+img.logo{
     width: 250px;
+    margin-top: 10px;
+    text-align: center;
 }
 h1{
     margin: 0;
@@ -173,6 +178,12 @@ input {text-transform: uppercase;}
     }
     header{
         border-radius: 0;
+        text-align: center;
+        height: 100%;
+    }
+    img.logo{
+        width: 120px;
+        padding: 1em 0;
     }
    
 }
