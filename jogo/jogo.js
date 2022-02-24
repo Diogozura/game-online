@@ -1,7 +1,7 @@
 import { dadosSala } from "../js/dadosSala.js"
 import { playerBank } from "./banco.js"
+import { sair } from "./sair.js"
 
-playerBank()
 
 function addNaTela(jogador) {
     const dadosJogador = document.querySelector("[lista-jogadores]")
@@ -110,6 +110,8 @@ ativa.addEventListener("click",() => {
         main.classList = "off"
     }
 })
+playerBank()
+sair()
 
 
 export{montaNome, montaImg, montaBtn, montaValor}

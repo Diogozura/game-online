@@ -1,5 +1,6 @@
 import { dadosSala } from "../js/dadosSala.js"
 import { validaCampos } from "../js/validaCampos.js"
+import { playerBank } from "./banco.js"
 
 
 const tranferir = document.querySelector("[trasferir]")
@@ -82,20 +83,32 @@ dadosSala.dados()
     })
   })
 
+function quem() {
+  let quem = " "
+  const normal = parseInt(localStorage.getItem("idPlayer"))
+  const banco = localStorage.getItem("banco")
+  if (banco == 1) {
+      quem = "0"
+  } else {
+    quem = normal
+    }
+  return quem
+
+}
+
 
 function tranfere() {
 
   // TRASNFORMAR EM INTEIRO 
-  const flagPlayerBank = parseInt(localStorage.getItem("flag"))
-  const idPlayerDe = parseInt(localStorage.getItem("idPlayer"))
+  const idPlayerDe =  quem()
   const idPlayerPara = validaCampos.escolhido()
   const valor = parseInt(dinheiro())
 
 
-  dadosSala.trafereDinheiroParaOsAmigos(flagPlayerBank, idPlayerDe, idPlayerPara, valor)
+  dadosSala.trafereDinheiroParaOsAmigos(idPlayerDe, idPlayerPara, valor)
     .then(() => {
       // location.reload()
-      console.log(`valor da sala ${flagPlayerBank} , quem ${idPlayerDe} para ${idPlayerPara} o valor ${valor} `)
+      console.log(`Quem enviou ${idPlayerDe}, para ${idPlayerPara} o valor ${valor} `)
     })
 }
 
