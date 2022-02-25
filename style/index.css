@@ -60,6 +60,26 @@ input.dados{
 .erro{
     display: none;
 }
+.btn1{
+    
+    background-color: var(--Azul-Marinho);
+    color: white;
+    padding: 10px;
+    margin: 1em 0;
+    font-size: 1.2em;
+   border-radius: 20px;
+}
+.btn1:hover{
+    background-color: #22192cee;
+}
+.btn2{
+    background-color: #E6332A;
+    color: white;
+    padding: 10px;
+    margin: 1em 0;
+    font-size: 1.2em;
+   border-radius: 20px;
+}
 
 aside.avatar{
     width: 400px;
