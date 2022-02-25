@@ -1,94 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Ubuntu:ital,wght@1,300&display=swap');
+@font-face {
+    font-family: 'Museo300';
+    src: url(Museo300-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Museo700';
+    src: url(Museo700-Regular.otf) format('opentype');
+}
+
+:root{
+    --Cinza: #737176;
+    --Roxo: #951B81;
+    --Laranja:#E6332A;
+    --Azul-Marinho : #22192C;
+
+    --fonte-padrao: 'Museo300', sans-serif;
+    --fonte-destaque:'Museo700', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-padrao);
+    font-size: 300;
+}
 
 header{
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.555);
-    width: 100%;
+    background-image: linear-gradient(to right, #951B81, #E6332A);
+    height: 100px;
+    border-radius: 0 0 50px 0;
+    font-family: var(--fonte-destaque);
+    font-size: 700;
+    color: #000;
+}
+.logo1{
+    margin-top: 10px;
+    width: 100px;
+}
+img.logo{
+    width: 250px;
+    margin-top: 10px;
+    text-align: center;
 }
 
-h1{
-    font-family: 'Bungee Shade', cursive;
-    text-align: center;
-    font-size: 1.5em;
+.cor-2{
+    color: var(--Cinza);
 }
-h2{
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    font-size: 2em;
-}
-h2.titulo2{
-    text-align: center;
-    font-size: 1.8em;
-    font-family: 'Bungee Shade', cursive;
-    background-color: #f7f7f791;
-}
-label{
-    font-family: 'Ubuntu', sans-serif;;
-}
-.color2{
-    background-color: #f73c3c;
-    color:#f7f7f7;
-}
-.identificador{
-    width: 90px;
-}
-.teste{
-    text-align: center;
-    color: brown;
 
+input.dados{
+    background-color: #E1DDDD;
+    border: 0;
+    border-radius: 12px;
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 1em;
+    text-align: center;
+
+    box-shadow: 1px 1px 5px 1px #000000e1;
 }
 .erro{
-    color: rgb(189, 57, 57);
-    font-weight: bold;
     display: none;
 }
-.btn{
-    margin-top: 5px;
-    background-color: crimson;;
-    padding: 10px;
-    border-radius: 10px;
 
-    color: #FFFFFF;
-    text-decoration: initial;
-    text-align: center;
+aside.avatar{
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
-.btn-close{
-    padding: 0;
-    text-decoration: none;
-}
-button{
-    border-radius: 10px;
-    text-align: center;
-    padding: 5px;
 
-   box-shadow:  0px 5px 14px 1px #828282;
-}
-.btn-inicia{
-    background-color: greenyellow;
-}
-.btn-copia{
-    background-color: wheat;
-}
-.input-radio{
-    color: rgb(255, 0, 0);
-    background-color: #ce2b2b;
-}
-footer{
-    /* position: fixed; */
-    font-family: 'Ubuntu', sans-serif;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    display: block;
-    margin-bottom: 0;
-    color: #f7f7f7;
-    background-color: rgb(36, 36, 36);
-}
-@media only screen and (max-width: 600px){
-    footer{
-        
-        margin: 0;
 
+@media only screen and (max-width: 650px){
+    header{
+        border-radius: 0;
+        text-align: center;
+        height: 100%;
+    }
+    img.logo{
+        width: 120px;
     }
 }

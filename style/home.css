@@ -29,23 +29,7 @@ body{
     background-color: aliceblue;
 }
 
-header{
-    background-image: linear-gradient(to right, #951B81, #E6332A);
-    height: 100px;
-    border-radius: 0 0 50px 0;
-    font-family: var(--fonte-destaque);
-    font-size: 700;
-    color: #000;
-}
-.logo1{
-    margin-top: 10px;
-    width: 100px;
-}
-img.logo{
-    width: 250px;
-    margin-top: 10px;
-    text-align: center;
-}
+
 h1{
     margin: 0;
 }
@@ -176,15 +160,7 @@ input {text-transform: uppercase;}
     .link-sala>input{
         width: 300px;
     }
-    header{
-        border-radius: 0;
-        text-align: center;
-        height: 100%;
-    }
-    img.logo{
-        width: 120px;
-        padding: 1em 0;
-    }
+   
    
 }
 @media only screen and (max-width: 470px){
