@@ -81,13 +81,20 @@ input.dados{
    border-radius: 20px;
 }
 
-aside.avatar{
-    width: 400px;
+article.avatar{
+    width: 300px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+img.icone{
+    width: 64px;
+    height: 100%;
+
+    margin: 5px;
 }
 
 

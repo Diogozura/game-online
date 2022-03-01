@@ -27,6 +27,7 @@ function criaInputCor(cor) {
 function criarLabelCor(cor) {
   const svg = document.createElement("IMG")
 svg.src =  `../img/avatar/${cor}.svg`
+svg.classList.add("icone")
       
   // ` <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
   // class="bi bi-person" viewBox="0 0 16 16">

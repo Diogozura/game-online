@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
 
-    
+
     <title>criar sala</title>
 </head>
 
@@ -24,68 +24,58 @@
             <source media="(max-width:650px)" srcset="../img/grupo.svg" type="Image/png">
             <img src="../img/logo.svg" class="logo" alt="imagem grande">
         </picture>
-        </header>
+    </header>
 
     <main>
         <h2 class="cor-2">Preencha os dados necessários para a criação da sala</h2>
         <section class="form-criar-sala">
             <form action="" class="form-cria-sala" form-dados>
-                <input type="number" id="valor" class="dados" name="valor" required="required" placeholder="Valor inicial de cada jogador" data-valor>
+                <input type="number" id="valor" class="dados" name="valor" required="required"
+                    placeholder="Valor inicial de cada jogador" data-valor>
                 <p class="erro" id="error" erro-valor>valor inválido</p>
-                <input type="text" id="nickNome" class="dados" name="nome" required="required" placeholder="Nome do jogador"
-                    data-nome>
+                <input type="text" id="nickNome" class="dados" name="nome" required="required"
+                    placeholder="Nome do jogador" data-nome>
                 <p class="erro" id="error" erro-nome>Jogador precisa de um nome!</p>
                 <h2 class="cor-2">Escolha seu avatar</h2>
 
-               <aside class="avatar">
-                <input type="radio" name="cores" id="color" value="Azul">
-                <label for=""><img src="../img/avatar/Azul.svg" alt=""></label>
+                <article class="avatar">
+                    <aside class="icon">
+                        <input type="radio" name="cores" id="color" value="Azul">
+                        <label for=""><img class="icone" src="../img/avatar/Azul.svg" alt=""></label>
+                    </aside>
 
-                <input type="radio" name="cores" id="color" value="Vermelho">
-                <label for=""><img src="../img/avatar/vermelho.svg" alt=""></label>
+                    <aside class="icon">
+                        <input type="radio" name="cores" id="color" value="Vermelho">
+                        <label for=""><img class="icone" src="../img/avatar/vermelho.svg" alt=""></label>
+                    </aside>
 
-                <input type="radio" name="cores" id="color" value="Roxo">
-                <label for=""><img src="../img/avatar/Roxo.svg" alt=""></label>
+                    <aside class="icon">
+                        <input type="radio" name="cores" id="color" value="Verde">
+                        <label for=""><img class="icone" src="../img/avatar/verde.svg" alt=""></label>
+                    </aside>
 
-                <input type="radio" name="cores" id="color" value="Verde">
-                <label for=""><img src="../img/avatar/verde.svg" alt=""></label>
+                    <aside class="icon">
+                        <input type="radio" name="cores" id="color" value="Preto">
+                        <label for=""><img class="icone" src="../img/avatar/Preto.svg" alt=""></label>
+                    </aside>
 
-                <input type="radio" name="cores" id="color" value="Preto">
-                <label for=""><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                        class="bi bi-person" viewBox="0 0 16 16">
-                        <path
-                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
-                            fill="#00000" />
-                    </svg></i></label>
+                    <aside class="icon">
+                        <input type="radio" name="cores" id="color" value="Amarelo" class="cores">
+                        <label for=""><img class="icone" src="../img/avatar/Amarelo.svg" alt=""></label>
+                    </aside>
 
-                    <input type="radio" name="cores" id="color" value="Amarelo" class="cores">
-                <label for=""><img src="../img/avatar/Amarelo.svg" alt=""></label>
+                    <aside class="icon">
+                        <input type="radio" name="cores" id="color" value="Cinza">
+                        <label for=""><img class="icone" src="../img/avatar/Cinza.svg" alt=""></label>
+                    </aside>
 
-                <input type="radio" name="cores" id="color" value="Branco">
-                <label for=""><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                        class="bi bi-person" viewBox="0 0 16 16">
-                        <path
-                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
-                            fill="#FFFFFF" />
-                    </svg></i></label>
+                </article>
 
-               
+                <p class="erro" id="error" erro-identificador>Precisa escolher uma cor</p>
 
-              
-                <input type="radio" name="cores" id="color" value="Cinza">
-                <label for=""><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                        class="bi bi-person" viewBox="0 0 16 16">
-                        <path
-                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
-                            fill="#B0C4DE" />
-                    </svg></i></label>
-               </aside>
-                  
-                    <p class="erro" id="error" erro-identificador>Precisa escolher uma cor</p>
 
-               
 
-             
+
                 <button type="submit" id="iniciar" class="btn1">Iniciar game</button>
 
             </form>
@@ -95,12 +85,12 @@
             <button gerar class="btn1">Gerar link</button>
 
             <!-- <button id="gerar-novo-link">gerar novo código</button> -->
-             <div class="copia">
-                <button id="myInput " copia  class="btn-copia btn2" pooper>
+            <div class="copia">
+                <button id="myInput " copia class="btn-copia btn2" pooper>
                     <span class="tooltiptext " id="myTooltip">Click para copiar o código</span>
                     copiar</button>
             </div>
-            
+
         </section>
 
     </main>
