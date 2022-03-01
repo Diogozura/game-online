@@ -11,18 +11,21 @@ export function playerBank() {
       const main = document.querySelector("main")
       const icon = document.querySelector("#banco")
       const bancoTrans = document.querySelector("#bancoTras")
+      const jogador = document.querySelector(".transfere-jogador") 
+
       // console.log("fui ativado")
       if (ativa.checked) {
-
         icon.style.display = "block"
         main.classList = "banco"
         bancoTrans.style.display = "none"
+        jogador.style.display = "block"
         localStorage.setItem("banco", 1)
         return true
       } else {
         icon.style.display = "none"
         main.classList = "off"
         bancoTrans.style.display = "block"
+        jogador.style.display = "none"
         localStorage.setItem("banco", 0)
 
         return false

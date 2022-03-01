@@ -18,6 +18,7 @@ function criarPlayerTrasfere(player) {
   const jogadoresDis = document.querySelector("[jogadores-disponiveis]")
   const botaaside = document.createElement("aside")
   botaaside.id = player.idPlayer
+  botaaside.className = "transfere-jogador"
   jogadoresDis.appendChild(botaaside)
   botaaside.appendChild(input(player.idPlayer))
   botaaside.appendChild(label(player.identificadorHexadecimal))
@@ -25,7 +26,7 @@ function criarPlayerTrasfere(player) {
   // console.log(localStorage.getItem("idPlayer"))
 
   if (localStorage.getItem("idPlayer") == botaaside.id) {
-    botaaside.className = "none"
+    botaaside.style.display = "none"
   }
 }
 
@@ -107,7 +108,7 @@ function tranfere() {
 
   dadosSala.trafereDinheiroParaOsAmigos(idPlayerDe, idPlayerPara, valor)
     .then(() => {
-      // location.reload()
+      location.reload()
       console.log(`Quem enviou ${idPlayerDe}, para ${idPlayerPara} o valor ${valor} `)
     })
 }

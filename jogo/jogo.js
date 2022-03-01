@@ -28,7 +28,7 @@ function montaCampo(jogador) {
 
   
     if (localStorage.getItem("idPlayer") == id) {
-        asideJogador.className = "none"
+        asideJogador.style.display = "none"
     }
     return asideJogador
 
