@@ -101,8 +101,8 @@ function quem() {
 function tranfere() {
 
   // TRASNFORMAR EM INTEIRO 
-  const idPlayerDe =  quem()
-  const idPlayerPara = validaCampos.escolhido()
+  const idPlayerDe =  parseInt(quem())
+  const idPlayerPara = parseInt(validaCampos.escolhido())
   const valor = parseInt(dinheiro())
 
 

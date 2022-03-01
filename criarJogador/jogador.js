@@ -48,7 +48,7 @@ svg.classList.add("icone")
 
 
 
-const btnCria = document.querySelector("[jogador-player]")
+const btnCria = document.querySelector("[jogador]")
 
 btnCria.addEventListener("submit", (event) => {
   event.preventDefault()
@@ -57,15 +57,15 @@ btnCria.addEventListener("submit", (event) => {
   const identificador = validaCampos.validaIdentificador()
   dadosSala.criarJogadorPlayer(identificador, namePlayer)
     .then(id => {
-     console.log(id.idPlayer) 
-
+     console.log(id.idPlayer)
+     localStorage.setItem("idPlayer", id.idPlayer)
       if (!identificador, !namePlayer == false) {
         if (localStorage.getItem("flag") == null) {
           localStorage.setItem("flag", 0)
       }
-        localStorage.setItem("idPlayer", id.idPlayer)
        
         return window.location.href = '../jogo/game.html'
+        
               
       }
 

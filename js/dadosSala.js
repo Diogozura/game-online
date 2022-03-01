@@ -3,7 +3,7 @@ const url = "https://ffgames134.herokuapp.com/"
 const idPlayer = localStorage.getItem("idPlayer")
 // dados da sala
 const dados = () => {
-    return fetch(`${url}dadosSala/?keyRoom=${token}`)
+    return fetch(`${url}api/dadosSala/?keyRoom=${token}`)
 
         .then(resposta => {
             // console.log(resposta.status)
@@ -42,7 +42,7 @@ const temCor = () => {
 
 // criando sala 
 const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
-    return fetch(`${url}SaveRoomPlayer/`, {
+    return fetch(`${url}api/SaveRoomPlayer/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -63,8 +63,8 @@ const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
 // colocando player na sala
 
 
-const criarJogadorPlayer = (identificador, namePlayer, playerBank) => {
-    return fetch(`${url}createPlayer/?keyRoom=${token}`, {
+const criarJogadorPlayer = (identificador, namePlayer) => {
+    return fetch(`${url}api/createPlayer/?keyRoom=${token}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -72,7 +72,6 @@ const criarJogadorPlayer = (identificador, namePlayer, playerBank) => {
         body: JSON.stringify({
             identificador: identificador,
             namePlayer: namePlayer,
-            playerBank: playerBank
         })
     })
         .then(resposta => {
@@ -105,5 +104,5 @@ const trafereDinheiroParaOsAmigos = (idPlayerDe, idPlayerPara, valor) => {
 
 
 export const dadosSala = {
-    dados,visao,extrato,  criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos
+    dados,visao, extrato,  criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos
 }

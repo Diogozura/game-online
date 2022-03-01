@@ -21,7 +21,7 @@ function montaCampo(jogador) {
     asideJogador.appendChild(montaImg(jogador.identificadorHexadecimal))
     asideJogador.appendChild(montaNome(jogador.namePlayer))
     asideJogador.appendChild(montaValor(jogador.saldo))
-    asideJogador.appendChild(montaBtn())
+    // asideJogador.appendChild(montaBtn())
     const id = asideJogador.id = jogador.idPlayer
 
    
@@ -62,19 +62,19 @@ function montaValor(dado) {
     
     return ValorP
 }
-function montaBtn() {
-    const botao = document.createElement("button")
-    botao.type = "button"
-    botao.className = "btn-inicia"
-    // botao.setAttribute('data-toggle',modal)
-    // botao.setAttribute('#data-toggle', #modalExemplo)
-    botao.dataset.toggle = "modal"
-    botao.dataset.target = "#modalExemplo"
+// function montaBtn() {
+//     const botao = document.createElement("button")
+//     botao.type = "button"
+//     botao.className = "btn-inicia"
+//     // botao.setAttribute('data-toggle',modal)
+//     // botao.setAttribute('#data-toggle', #modalExemplo)
+//     botao.dataset.toggle = "modal"
+//     botao.dataset.target = "#modalExemplo"
     
-    botao.innerText = "teste uau";
+//     botao.innerText = "teste uau";
 
-    return botao
-}
+//     return botao
+// }
 
 dadosSala.dados()
     .then(dados => {
@@ -114,4 +114,4 @@ playerBank()
 sair()
 
 
-export{montaNome, montaImg, montaBtn, montaValor}
+export{montaNome, montaImg, montaValor}
