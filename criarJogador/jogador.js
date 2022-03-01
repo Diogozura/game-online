@@ -12,6 +12,7 @@ dadosSala.temCor()
     });
   })
 
+  
 
 
 function criaInputCor(cor) {
