@@ -6,7 +6,7 @@ form.trasfe{
   align-content: space-around;
 
   padding: 20px;
-  background-color: rgb(245, 222, 94);
+
   margin-top: 10px;
 
   
@@ -15,6 +15,24 @@ form.trasfe{
   margin-bottom: 20px;
 
   text-align: center;
+}
+.trasnfere-cor-fundo{
+  background-color: #C9E0E5;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  /* background-color: #fff; */
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 30px;
+  outline: 0;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 .bloco-transfere{
   margin-left: 30px;
@@ -34,15 +52,21 @@ form.trasfe{
 
 h3.valor{
   text-align: center;
-  font-family: 'Bungee Shade', cursive;
-  background-color: rgba(240, 248, 255, 0.438);
-
-  border-radius: 20px;
+  font-family: var(--fonte-destaque);
+  color: var( --Cinza);
+ 
+  
   padding: 3px;
+}
+hr{
+  background-color: black;
+  size: 5px;
+   width: 70%;
+   text-align: center;
 }
 
 .quem{
-  font-family: 'Ubuntu', sans-serif;
+  
   text-align: center;
   font-size: 1.4em;
 
@@ -50,7 +74,7 @@ h3.valor{
 }
 
 .user{
-  font-family: 'Ubuntu', sans-serif;
+  
   text-align: center;
   font-size: 1.4em;
   padding: 0.5em;

@@ -27,7 +27,10 @@
 <body>
     <header>
         <aside class="banco" id="banco"><img src="https://img.icons8.com/color/64/000000/bank-building.png"/></aside>
-        <h1>Seja bem vindo à sala </h1>
+        <picture>
+            <source media="(max-width:650px)" srcset="../img/grupo.svg" type="Image/png">
+            <img src="../img/logo.svg" class="logo" alt="imagem grande">
+        </picture>
         
         <div class="copy">
             <input type="text" id="token" class="token" name="token" token readonly></input>
@@ -108,12 +111,14 @@
                 <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                     <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header justify-content-around bg-info">
+                      <div class=" trasnfere-cor-fundo">
+                        <div class="modal-header justify-content-around flex-lg-wrap">
                           <h3 class="modal-title valor" id="exampleModalLabel">Transferência</h3>
-                           
+                          <hr > 
                           </button>
+                            
                         </div>
+                       
                         <div class="modal-body">
                             <form class="trasfe" trasferir>
                                
@@ -129,8 +134,8 @@
             
                                 <label for="" class="text-valor">Valor</label>
                                 <p class="erro" erro-valor>Valor inválido</p>
-                                <input type="number" valor-transfere>
-                                <button type="submit" class="btn" trasferir>transferir</button>
+                                <input type="number"  min="1" step="0.01" valor-transfere>
+                                <button type="submit" class="btn1" trasferir>transferir</button>
                             </form>
             
                         </div>

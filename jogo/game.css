@@ -2,26 +2,19 @@
     margin: 0;
 }
 body{
-   
+    background-image: url("../img/fundo.svg");
 }
-header{
-    background-image: linear-gradient(to right, #5cddc8 , yellow);
-    margin-bottom: 0;
-    text-align: end;
-}
+
 header>p{
     margin-bottom: 0;
 }
 main{
-    background-color: #9f5cdd;
    text-align: center;
 }
 .banco{
     background-color: brown;
 }
-.off{
-    background-color: #9f5cdd;
-}
+
 .link{
     text-align: center;
     background-color: chartreuse;
