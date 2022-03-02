@@ -10,7 +10,7 @@
     font-family: var(--fonte-destaque);
 }
 .dados-banco{
-    width: 100%;
+    width: 600px;
     display: flex;
     background-color: #F4F4F4;;
     padding: 20px;
@@ -51,17 +51,15 @@ svg{
 
 
 .lista{
-    width: 600px;
-    
     margin-left: 60px;
-    
+    margin-top: 1em;
 
 }
 .ranking{
     display: flex;
-    margin-left: 30px;
-    
-    border-radius: 10px;
-    
-    margin-bottom: 20px;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    align-content: space-between;
+    margin: 10px;
+    padding: 10px;   
 }

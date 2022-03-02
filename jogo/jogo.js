@@ -88,6 +88,11 @@ dadosSala.dados()
     })
 
 
+const jogadores = document.querySelector("#jogador-nome").innerHTML
+jogadores.textContent = "unm"
+console.log(jogadores)
+
+
 //  codigo token
 
 const tokenDoLocal = localStorage.getItem("token")

@@ -36,7 +36,21 @@ section h2{
     text-align: center;
     
 }
+.cor1{
+    background-color: black;
+}
+.cor2{
+    background-color: blue;
+}
 
+.bloco{
+    width: 500px;
+    height: 400px;
+}
+.teste{
+    display: flex;
+    justify-content: space-around;
+}
 
 
 

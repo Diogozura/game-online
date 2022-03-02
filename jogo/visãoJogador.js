@@ -1,37 +1,35 @@
 import { dadosSala } from "../js/dadosSala.js"
 
-import {montaImg} from "../jogo/jogo.js"
-import {montaNome} from "../jogo/jogo.js"
-import {montaValor} from "../jogo/jogo.js"
+
 
 function jogador(id) {
   const asideJogador = document.querySelector("[jogador]")
-  asideJogador.appendChild(montaImg(id.identificadorHexadecimal))
-  asideJogador.appendChild(montaNome(id.namePlayer))
-  asideJogador.appendChild(montaValor(id.saldo))
-  asideJogador.appendChild(montaBtn())
+  asideJogador.appendChild(criaImg(id.identificador))
+
+  const nome = document.querySelector("[nome]")
+  nome.textContent = id.namePlayer
+
+  const valor = document.querySelector("[valor]")
+  valor.textContent = "R$" + id.saldo
 }
 
-function montaBtn() {
-  const botao = document.createElement("button")
-  botao.type = "button"
-  botao.className = "btn-inicia"
-  // botao.setAttribute('data-toggle',modal)
-  // botao.setAttribute('#data-toggle', #modalExemplo)
-  botao.dataset.toggle = "modal"
-  botao.dataset.target = "#modalExemplo"
+function criaImg(cor) {
+  const svg = document.createElement("IMG")
+  svg.src = `../img/avatar/${cor}.svg`
+  svg.classList.add("icone")
   
-  botao.innerText = "teste uau";
-
-  return botao
+  const aside = document.querySelector("[img]")
+  aside.appendChild(svg)
+  
+  return 
 }
 
 
 dadosSala.visao()
   .then((id) => {
-      
+
     jogador(id)
-        
-    })
+    console.log(id)
+  })
 
 
