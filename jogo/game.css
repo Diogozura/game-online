@@ -11,9 +11,14 @@ header>p{
 main{
    text-align: center;
 }
-.banco{
-    background-color: brown;
+.sair{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 20px;
 }
+
 
 .link{
     text-align: center;
@@ -26,55 +31,12 @@ main{
   
 }
 
-.lista{
-    width: 600px;
-    background-color: rgba(209, 201, 132, 0.274);
-    margin-left: 60px;
-    
-
-}
-.ranking{
-    display: flex;
-    margin-left: 30px;
-    
-    border-radius: 10px;
-    
-    margin-bottom: 20px;
-}
 
 section h2{
     text-align: center;
     
 }
-aside.players{
-    background-color: rgb(247, 142, 142);
-    width: 280px;
-    height: auto;
 
-
-    padding: 10px;
-
-    text-align: center;
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    
-    border-radius: 10px;
-}
-aside.banco{
-    display: none;
-
-    padding: 30px 30px;
-}
-aside.eu{
-    background-color: #c0f163;
-    width: 350px;
-}
-svg{
-    display: inline-block;
-    float: left;
-}
 
 
 

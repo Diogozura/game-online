@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="trasfere.css">
     <link rel="stylesheet" href="../style/copia.css">
     <link rel="stylesheet" href="bank.css">
+    <link rel="stylesheet" href="jogadores.css">
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -19,73 +20,94 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>SALA</title>
 </head>
 
 <body>
     <header>
-        <aside class="banco" id="banco"><img src="https://img.icons8.com/color/64/000000/bank-building.png"/></aside>
+        <aside class="banco" id="banco"><img src="https://img.icons8.com/color/64/000000/bank-building.png" /></aside>
         <picture>
             <source media="(max-width:650px)" srcset="../img/grupo.svg" type="Image/png">
             <img src="../img/logo.svg" class="logo" alt="imagem grande">
         </picture>
-        
+
         <div class="copy">
             <input type="text" id="token" class="token" name="token" token readonly></input>
-          
+
             <div class="copia">
-                <button id="myInput"   class="btn-copia" copia pooper>
+                <button id="myInput" class="btn-copia" copia pooper>
                     <span class="tooltiptext" id="myTooltip">Click para copiar o código</span>
                     copiar</button>
             </div>
         </div>
-        
-        <button type="button" class="btn btn-close" data-toggle="modal" data-target="#exampleModalCenter">
-            Sair
-          </button>
-          <h4>banco</h4>
-          <aside class="bank">
-            <span>OFF</span> 
-            <label class="switch"> 
-                <input type="checkbox" ativa >
-                <span class="slider round"></span>
-              </label>
-              <span>ON</span>
-          </aside>
-         
+        <div class="sair">
+            <button type="button" class="btn1 btn-close" data-toggle="modal" data-target="#exampleModalCenter">
+                Sair
+            </button>
+        </div>
 
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header justify-content-around">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Sair e apagar meus dados</h5>
-                
+                <div class="modal-content">
+                    <div class="modal-header justify-content-around">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Sair e apagar meus dados</h5>
+
+                    </div>
+
+                    <div class="modal-footer justify-content-around">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancelar</button>
+                        <button type="button" class="btn btn-close" sair>Sair</button>
+                    </div>
                 </div>
-               
-                <div class="modal-footer justify-content-around">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">cancelar</button>
-                  <button type="button" class="btn btn-close" sair>Sair</button>
-                </div>
-              </div>
             </div>
-          </div>
-       
+        </div>
+
     </header>
     <main>
         <section class="lista">
             <h2 class="titulo2">Rank dos jogadores</h2>
-            <article class="jogagor-tela" jogador-eu>
-                <aside class="eu players" jogador> 
-
+            <article class=""  jogador-eu>
+                <aside icone-nome class="nome-icone">
+               <img src="../img/avatar/Amarelo.svg" alt="">
+                <h3 class="nome-jogador text-left">abcde</h3>
                 </aside>
+               
+                <div class="dados-banco justify-content-sm-around align-items-center">
+                    <aside >
+                        <!--jogador    -->
+
+                       
+                        <p class="valor-jogador">R$50</p>
+                        <button class="open-button btn1" btn-transfere>Tranferir</button>
+
+
+                    </aside>
+
+                    <aside> <img src="../img/Banco icon.svg" alt="">
+                        <aside class="bank">
+                            <span>OFF</span>
+                            <label class="switch">
+                                <input type="checkbox" ativa>
+                                <span class="slider round"></span>
+                            </label>
+                            <span>ON</span>
+                        </aside>
+                    </aside>
+                </div>
+
             </article>
             <div class="ranking">
-               
+
                 <article lista-jogadores>
 
-                    <!-- <aside class="jogador">
+                    <aside class="players">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
                             class="bi bi-person" viewBox="0 0 16 16">
                             <path
@@ -96,56 +118,62 @@
                         <button class="open-button" btn-transfere>Tranferir</button>
                     </aside>
 
-                    <aside class="jogador">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                            class="bi bi-person" viewBox="0 0 16 16">
-                            <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                        </svg>
-                        <h3 class="nome-jogador">Diogo</h3>
-                        <p class="valor-jogador">R$50</p>
-                        <button class="open-button" name="DIogo"  btn-transfere >Tranferir</button>
-                    </aside> -->
+                    <article>
+                        <aside class="players">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            </svg>
+                            <h3 class="nome-jogador">Diogo</h3>
+                            <p class="valor-jogador">R$50</p>
+
+
+                    </article>
+
+                    </aside>
 
                 </article>
-                <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                     <div class="modal-dialog" role="document">
-                      <div class=" trasnfere-cor-fundo">
-                        <div class="modal-header justify-content-around flex-lg-wrap">
-                          <h3 class="modal-title valor" id="exampleModalLabel">Transferência</h3>
-                          <hr > 
-                          </button>
-                            
+                        <div class=" trasnfere-cor-fundo">
+                            <div class="modal-header justify-content-around flex-lg-wrap">
+                                <h3 class="modal-title valor" id="exampleModalLabel">Transferência</h3>
+                                <hr>
+                                </button>
+
+                            </div>
+
+                            <div class="modal-body">
+                                <form class="trasfe" trasferir>
+
+                                    <label for="" class="quem">para quem?</label>
+                                    <div jogadores-disponiveis class="trasferapranois">
+                                        <aside id="bancoTras">
+                                            <input type="radio" id="user1" name="cores" value="0" players>
+                                            <label for="html"><img
+                                                    src="https://img.icons8.com/color/48/000000/bank-building.png" /></label>
+                                        </aside>
+
+                                    </div>
+
+
+                                    <label for="" class="text-valor">Valor</label>
+                                    <p class="erro" erro-valor>Valor inválido</p>
+                                    <input type="number" min="1" step="0.01" valor-transfere>
+                                    <button type="submit" class="btn1" trasferir>transferir</button>
+                                </form>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            </div>
                         </div>
-                       
-                        <div class="modal-body">
-                            <form class="trasfe" trasferir>
-                               
-                                <label for="" class="quem">para quem?</label>
-                                <div jogadores-disponiveis class="trasferapranois" >
-                                    <aside id="bancoTras">
-                                        <input type="radio" id="user1" name="cores" value="0" players>
-                                        <label for="html"><img src="https://img.icons8.com/color/48/000000/bank-building.png"/></label>
-                                    </aside>
-                                       
-                                </div>
-            
-            
-                                <label for="" class="text-valor">Valor</label>
-                                <p class="erro" erro-valor>Valor inválido</p>
-                                <input type="number"  min="1" step="0.01" valor-transfere>
-                                <button type="submit" class="btn1" trasferir>transferir</button>
-                            </form>
-            
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-               
+                </div>
+
             </div>
 
         </section>
@@ -168,19 +196,19 @@
                     </tr>
                 </table>
             </article> -->
-           
-            <article class="extrato">
+
+            <!-- <article class="extrato">
                 <h3>Extrato geral</h3>
                 <table  extrato>
                   
                     </tr>
                 </table>
-            </article>
-           
-            
+            </article> -->
+
+
         </section>
 
-        
+
     </main>
 
     <footer>
@@ -191,12 +219,18 @@
     <script type="module" src="jogo.js"></script>
     <script type="module" src="visãoJogador.js"></script>
     <script type="module" src="../js/copy.js"></script>
-    
-    <script type="module"src="extrato.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="module" src="extrato.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
 </body>
 
