@@ -68,6 +68,8 @@ input.dados{
 }
 .erro{
     display: none;
+    color: var(--Laranja);
+    font-weight: bold;
 }
 .btn1{
     
