@@ -9,6 +9,11 @@
     color: var(--Cinza);
     font-family: var(--fonte-destaque);
 }
+
+.nome-banco{
+    display: none;
+}
+
 .dados-banco{
     width: 600px;
     display: flex;
@@ -16,9 +21,6 @@
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 2em;
-}
-.banco{
-    background-color: brown;
 }
 
 
@@ -35,7 +37,8 @@ aside.players{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-    
+    align-items: center;
+    justify-content: space-around;
     border-radius: 10px;
 }
 aside.banco{
@@ -52,8 +55,11 @@ svg{
 
 .lista{
     margin-left: 60px;
-    margin-top: 1em;
 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 .ranking{
     display: flex;
@@ -62,4 +68,20 @@ svg{
     align-content: space-between;
     margin: 10px;
     padding: 10px;   
+}
+
+@media only screen and (max-width: 690px){
+    .dados-banco{
+        width: 500px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .dados-banco{
+        width: 300px;
+    }
+    .lista{
+        margin-left: 0;
+
+        margin: auto;
+    }
 }

@@ -1,16 +1,20 @@
 import { dadosSala } from "../js/dadosSala.js"
 
 
-
 function jogador(id) {
   const asideJogador = document.querySelector("[jogador]")
-  asideJogador.appendChild(criaImg(id.identificador))
 
   const nome = document.querySelector("[nome]")
+  
   nome.textContent = id.namePlayer
+
+  criaImg(id.identificador)
 
   const valor = document.querySelector("[valor]")
   valor.textContent = "R$" + id.saldo
+
+  return asideJogador
+
 }
 
 function criaImg(cor) {
@@ -27,9 +31,7 @@ function criaImg(cor) {
 
 dadosSala.visao()
   .then((id) => {
-
     jogador(id)
-    console.log(id)
   })
 
 

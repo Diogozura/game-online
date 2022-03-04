@@ -11,14 +11,21 @@ header>p{
 main{
    text-align: center;
 }
-.sair{
+.btn-sair{
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 20px;
-}
 
+    margin-right: 1em;
+    margin-top: 1em;
+}
+.imgs-icon{
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: 0.5em
+}
 
 .link{
     text-align: center;

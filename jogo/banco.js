@@ -8,25 +8,41 @@ export function playerBank() {
 
     const ativa = document.querySelector("[ativa]")
     ativa.addEventListener("click", () => {
-      const main = document.querySelector("main")
-      const icon = document.querySelector("#banco")
+      const icon = document.querySelector("[banco]")
+      const iconePlayer = document.querySelector(".icone")
+      const nomePlayer = document.querySelector("[nome]")
+      const nomeBanco = document.querySelector(".nome-banco")
       const bancoTrans = document.querySelector("#bancoTras")
       const jogador = document.querySelector(".transfere-jogador") 
 
-      // console.log("fui ativado")
+
+
+      console.log("fui ativado")
       if (ativa.checked) {
-        icon.style.display = "block"
-        main.classList = "banco"
-        bancoTrans.style.display = "none"
-        jogador.style.display = "block"
-        localStorage.setItem("banco", 1)
-        return true
-      } else {
+
         icon.style.display = "none"
-        main.classList = "off"
+        iconePlayer.style.display = "block"
+
+        nomeBanco.style.display = "none"
+        nomePlayer.style.display = "block"
+        
+
         bancoTrans.style.display = "block"
         jogador.style.display = "none"
         localStorage.setItem("banco", 0)
+        return true
+
+      } else {
+
+        nomePlayer.style.display = "none"
+        nomeBanco.style.display = "block"
+
+        iconePlayer.style.display = "none"
+        icon.style.display = "block"
+
+        bancoTrans.style.display = "none"
+        jogador.style.display = "block"
+        localStorage.setItem("banco", 1)
 
         return false
       }

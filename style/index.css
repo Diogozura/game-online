@@ -46,6 +46,15 @@ img.logo{
     color: var(--Cinza);
 }
 
+.sair{
+    background-color: var(--Laranja);
+    
+}
+
+.cancelar{
+    background-color: var(--Azul-Marinho);
+}
+
 input.dados{
     background-color: #E1DDDD;
     border: 0;

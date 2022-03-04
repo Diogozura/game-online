@@ -34,15 +34,16 @@
             <img src="../img/logo.svg" class="logo" alt="imagem grande">
         </picture>
 
-     
-        <div class="sair">
+
+        
+
+    </header>
+    <main>
+        <div class="btn-sair">
             <button type="button" class="btn1 btn-close" data-toggle="modal" data-target="#exampleModalCenter">
                 Sair
             </button>
         </div>
-
-
-
 
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -54,43 +55,50 @@
                     </div>
 
                     <div class="modal-footer justify-content-around">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancelar</button>
-                        <button type="button" class="btn btn-close" sair>Sair</button>
+                        <button type="button" class="btn cancelar text-white" data-dismiss="modal">cancelar</button>
+                        <button type="button" class="btn sair text-white" sair>Sair</button>
                     </div>
                 </div>
             </div>
         </div>
 
-    </header>
-    <main>
-        <section class="lista">
 
-            <article class="" jogador jogador-eu>
-                <aside icone-nome class="nome-icone">
-                    <picture img>
-                        <img src="" img alt="">
+        <section class="lista">
+            <article class="" jogador-eu>
+                <aside icone-nome class="nome-icone" jogador>
+                    <picture class="imgs-icon m-1" img>
+                        <img src="../img/Bancoicon.svg" class="icone-banco" banco alt="">
+
                     </picture>
-                    
-                    <h3 class="nome-jogador text-left" nome>abcde</h3>
+
+                    <h3 class="nome-jogador text-left" nome></h3>
+                    <h3 class="nome-banco text-left">Banco</h3>
                 </aside>
 
-                <div class="dados-banco justify-content-sm-around align-items-center">
+                <div class="dados-banco  justify-content-around align-items-center">
                     <aside>
                         <!--jogador    -->
-                        <p class="valor-jogador" valor>R$50</p>
-                        <button class="open-button btn1" data-toggle="modal" data-target="#modalExemplo" btn-transfere>Tranferir</button>
+                        <p class="valor-jogador" valor>R$</p>
+                        <button class="open-button btn1" data-toggle="modal" data-target="#modalExemplo"
+                            btn-transfere>Tranferir</button>
 
 
                     </aside>
 
-                    <aside> <img src="../img/Banco icon.svg" alt="">
+                    <aside>
+                        <img src="../img/Bancoicon.svg" alt="">
                         <aside class="bank">
-                            <span>OFF</span>
-                            <label class="switch">
+
+                            <!-- <label class="switch">
                                 <input type="checkbox" ativa>
                                 <span class="slider round"></span>
+                            </label> -->
+
+                            <label class="switch">
+                                <input type="checkbox" checked ativa id="togBtn">
+                                <div class="slider round"></div>
                             </label>
-                            <span>ON</span>
+
                         </aside>
                     </aside>
                 </div>
@@ -115,6 +123,7 @@
                                             <input type="radio" id="user1" name="cores" value="0" players>
                                             <label for="html"><img
                                                     src="https://img.icons8.com/color/48/000000/bank-building.png" /></label>
+                                            <label for="">Banco</label>
                                         </aside>
 
                                     </div>
@@ -134,70 +143,37 @@
                     </div>
                 </div>
             </article>
+
+            <aside class="copy">
+                <input type="text" id="token" class="token text-center" name="token" token readonly></input>
+    
+                <div class="copia">
+                    <button id="myInput" class="btn-copia btn1" copia pooper>
+                        <span class="tooltiptext" id="myTooltip">Click para copiar o código</span>
+                        copiar</button>
+                </div>
+            </aside>
         </section>
+       
+        <section class="ranking" id="lista-jogadores" lista-jogadores>
+          
 
-        <section class="ranking" id="lista-jogadores" >
-            <article  >
-                <aside class="nome-icone">
-            
-                <h3 class="jogador-nome">Vazio</h3>
-                </aside>
-                <aside class="players">
-                    <p class="valor-jogador">R$0,00</p>
-                </aside>
-            </article>
-           
-
-            <article >
-                <aside class="nome-icone">
-                    
-                <h3 class="jogador-nome">Vazio</h3>
-                </aside>
-                <aside class="players">
-                    <p class="valor-jogador">R$0,00</p>
-                </aside>
-            </article>
-
-           <article>
-                <aside class="nome-icone">
-                    
-                <h3 id="jogador-nome">Vazio</h3>
-                </aside>
-                <aside class="players">
-                    <p class="valor-jogador">R$0,00</p>
-                </aside>
-            </article>
 
             <article>
                 <aside class="nome-icone">
-                    
-                <h3 class="nome-jogador">Vazio</h3>
+                    <img src="../img/avatar/Amarelo.svg" class="imgs-icon"  alt="">
+                    <h3 class="jogador-nome">Vazio</h3>
                 </aside>
                 <aside class="players">
                     <p class="valor-jogador">R$0,00</p>
                 </aside>
             </article>
 
-           <article>
-                <aside class="nome-icone">
-                    
-                <h3 class="nome-jogador">Vazio</h3>
-                </aside>
-                <aside class="players">
-                    <p class="valor-jogador">R$0,00</p>
-                </aside>
-            </article>
+          
+
         </section>
 
-        <div class="copy">
-            <input type="text" id="token" class="token" name="token" token readonly></input>
 
-            <div class="copia">
-                <button id="myInput" class="btn-copia" copia pooper>
-                    <span class="tooltiptext" id="myTooltip">Click para copiar o código</span>
-                    copiar</button>
-            </div>
-        </div>
         <section class="extra">
             <!-- <article class="extrato">
                 <h3>Meu extrato</h3>
@@ -219,8 +195,8 @@
 
             <article class="extrato">
                 <h3>Extrato geral</h3>
-                <table  extrato>
-                  
+                <table extrato>
+
                     </tr>
                 </table>
             </article>
