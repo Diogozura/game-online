@@ -75,3 +75,7 @@ input:checked + .slider:after
     margin: 5px;
 
   }
+
+.bank{
+  display: none;
+}

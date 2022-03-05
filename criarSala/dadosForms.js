@@ -24,24 +24,30 @@ const formulario = document.querySelector('[form-dados]')
 formulario.addEventListener('submit', function (evento) {
   evento.preventDefault()
 
-
+  console.log("clicou")
   const keyRoom = localStorage.getItem("token")
-  console.log(keyRoom)
-  const valorInicial = validaCampos.validaValor()
+  // console.log(keyRoom)
+
+  const valorInicial = document.querySelector("#valor").value
   const identificador = validaCampos.validaIdentificador()
-  const namePlayer = validaCampos.validaNome()
+  const namePlayer = document.querySelector("#nickNome").value
 
   dadosSala.criarSala(keyRoom, valorInicial, identificador, namePlayer)
    
-      .then(id => {
-       console.log(id.idPlayer) 
-        console.log(keyRoom, valorInicial, identificador, namePlayer)
-        if (!valorInicial, !identificador, !namePlayer == false) {
+    .then(id => {
+      // console.log(id)
+
+      console.log(valorInicial, identificador, namePlayer)
+    
+      if (identificador != false) {
+          
           localStorage.setItem("idPlayer", id.idPlayer)
           localStorage.setItem("flag", 1)
-          return window.location.href = '../jogo/game.html'
-
-        } // 
+          
+        return 
+        window.location.href = '../jogo/game.html'
+      } 
+   
       })
     
 })

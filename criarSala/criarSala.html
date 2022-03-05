@@ -30,11 +30,13 @@
         <h2 class="cor-2">Preencha os dados necessários para a criação da sala</h2>
         <section class="form-criar-sala">
             <form action="" class="form-cria-sala" form-dados>
-                <input type="number" id="valor" class="dados" name="valor" required="required"
+                <input type="number" id="valor" class="dados nome-valor" min="1" step="0.01" name="valor" required="required"
                     placeholder="Valor inicial de cada jogador" data-valor>
                 <p class="erro" id="error" erro-valor>valor inválido</p>
-                <input type="text" id="nickNome" class="dados" name="nome" required="required"
+
+                <input type="text" id="nickNome" class="dados nome-valor" name="nome" required="required"
                     placeholder="Nome do jogador" data-nome>
+
                 <p class="erro" id="error" erro-nome>Jogador precisa de um nome!</p>
                 <h2 class="cor-2">Escolha seu avatar</h2>
 
@@ -88,13 +90,13 @@
 
 
 
-                <button type="submit" id="iniciar" class="btn1">Iniciar game</button>
+                <button type="submit" id="iniciar" class="btn1 entry">Iniciar game</button>
 
             </form>
 
-            <p>Código da sala</p>
+            <h3 class="cor-2" >Código da sala</p>
             <input type="text" id="token" class="token dados" name="token" token readonly></input>
-            <button gerar class="btn1">Gerar link</button>
+            <!-- <button gerar class="btn1">Gerar link</button> -->
 
             <!-- <button id="gerar-novo-link">gerar novo código</button> -->
             <div class="copia">

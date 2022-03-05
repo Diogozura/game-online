@@ -53,18 +53,24 @@ const btnCria = document.querySelector("[jogador]")
 btnCria.addEventListener("submit", (event) => {
   event.preventDefault()
 
-  const namePlayer = validaCampos.validaNome()
+  const namePlayer = document.querySelector("#nickNome").value
   const identificador = validaCampos.validaIdentificador()
+
   dadosSala.criarJogadorPlayer(identificador, namePlayer)
     .then(id => {
-     console.log(id.idPlayer)
+     console.log(id)
      localStorage.setItem("idPlayer", id.idPlayer)
-      if (!identificador, !namePlayer == false) {
+      if (identificador != false) {
+
         if (localStorage.getItem("flag") == null) {
           localStorage.setItem("flag", 0)
-      }
-       
-        return window.location.href = '../jogo/game.html'
+        }
+        const MensagemErro = document.querySelector("[qual-erro]")
+        MensagemErro.textContent = id.erro
+        MensagemErro.style.display = "block"
+        console.log(id.erro) 
+        return 
+        window.location.href = '../jogo/game.html'
         
               
       }

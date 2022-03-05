@@ -55,6 +55,12 @@ const criarSala = (keyRoom, valorInicial, identificador, namePlayer) => {
         })
     })
         .then(resposta => {
+            if (resposta.status == 201) {
+                window.location.href = '../jogo/game.html'
+            } else {
+                console.log("não passou")
+            }
+            
             return resposta.json()
         })
 
@@ -75,6 +81,13 @@ const criarJogadorPlayer = (identificador, namePlayer) => {
         })
     })
         .then(resposta => {
+            if (resposta.status == 201) {
+                // console.log("que cheiro de pika")
+                window.location.href = '../jogo/game.html'
+            } else {
+                
+                console.log("não passou")
+            }
             return resposta.json()
         })
 }
