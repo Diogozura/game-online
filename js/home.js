@@ -31,10 +31,10 @@ criarPlayer.addEventListener("click", function (event) {
                     console.log("Passou")
 
                     // externo 
-                    // window.location.href = '../game-online/criarJogador/jogador.html'
+                    window.location.href = '../game-online/criarJogador/jogador.html'
 
                     // local 
-                    window.location.href = '../criarJogador/jogador.html'
+                    // window.location.href = '../criarJogador/jogador.html'
 
 
 
@@ -44,10 +44,10 @@ criarPlayer.addEventListener("click", function (event) {
                 if (resposta.status == 200 && idTem != null) {
                     console.log("você não passou")
                     // externo 
-                    // window.location.href = '../game-online/jogo/game.html'
+                    window.location.href = '../game-online/jogo/game.html'
 
                     // local
-                    window.location.href = '../jogo/game.html'
+                    // window.location.href = '../jogo/game.html'
 
                 }
                 return resposta.json()
