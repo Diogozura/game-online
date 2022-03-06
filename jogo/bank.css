@@ -70,12 +70,20 @@ input:checked + .slider:after
   .icone-banco{
     display: none;
    
-    width: 64px;
-    height: 100%;
+
     margin: 5px;
 
+  }
+  .icone-bank{
+    width: 64px;
+    height: 64px;
   }
 
 .bank{
   display: none;
+}
+
+#bancoTras{
+  width: 64px;
+  text-align: center;
 }

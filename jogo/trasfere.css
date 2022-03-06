@@ -47,6 +47,17 @@ form.trasfe{
 }
 .transfere-jogador{
   display: block;
+
+  width: 64px;
+  height: auto;
+
+  margin: 0 1em;
+
+  text-align: center;
+}
+.p-trasfere{
+  margin-bottom: 0;
+
 }
 
 

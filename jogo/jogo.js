@@ -45,7 +45,7 @@ function montaCampo(jogador) {
 
 }
 
-function montaImg(dado) {
+ function montaImg(dado) {
     // const svg = ` <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
     // class="bi bi-person" viewBox="0 0 16 16">
     // <path
@@ -70,7 +70,7 @@ function montaNome(dado) {
 
     return nickH3
 }
-setInterval(montaValor, 2000)
+
 
 function montaValor(dado) {
     const ValorP = document.createElement("p")
