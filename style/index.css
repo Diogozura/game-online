@@ -111,6 +111,11 @@ img.icone{
 
     margin: 5px;
 }
+aside.icon{
+    width: 64px;
+    margin: 15px;
+    text-align: center;
+}
 
 
 @media only screen and (max-width: 650px){
