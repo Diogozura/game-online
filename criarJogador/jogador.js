@@ -7,23 +7,43 @@ dadosSala.temCor()
     const dadoJogador = temCor.coresRestante
     console.log(dadoJogador)
     dadoJogador.forEach(function(cor)  {
-      criaInputCor(cor.identificador)
-      criarLabelCor(cor.identificador)
+      criaAside(cor.identificador)
+      // criarLabelCor(cor.identificador)
     });
   })
 
+
+
+function criaAside(cor) {
+  const aside = document.createElement("aside")
+  aside.className = "icon"
+
+  const input = criaInputCor(cor)
+  const label = criarLabelCor(cor)
+
+  
+  aside.appendChild(label)
+  aside.appendChild(input)
+
+  const bloco = document.querySelector("[jogador-player]")
+
+  bloco.appendChild(aside)
+
+  return aside
+  }
   
 
 
 function criaInputCor(cor) {
-  const botaInputCor = document.querySelector("[jogador-player]")
   const input = document.createElement("input")
   input.type = "radio" 
   input.value = cor
   input.name= "cores"
-  botaInputCor.appendChild(input)
+
   return input
 }
+
+
 
 function criarLabelCor(cor) {
   const svg = document.createElement("IMG")
@@ -40,8 +60,7 @@ svg.classList.add("icone")
   idImg.classList.add("img-jogador")
   idImg.appendChild(svg)
  
-  const botaLabelCor = document.querySelector("[jogador-player]")
-  botaLabelCor.appendChild(idImg)
+
   return idImg
 }
 
