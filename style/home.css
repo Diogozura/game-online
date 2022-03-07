@@ -33,12 +33,10 @@ body{
 h1{
     margin: 0;
 }
-
-nav{
-    display: flex;
-    justify-content: space-evenly;
+ul{
+    justify-content: space-around !important;
 }
-nav>a{
+li>a{
     text-decoration: none;
     color: #000;
     border: #000;
@@ -49,27 +47,35 @@ nav>a{
     padding: 10px;
     border-radius: 0 0 10px 10px;
 }
-nav>a:hover{
+li>a:hover{
     background-color: var(--Laranja);
 }
 a.home:hover{
+    text-decoration: none;
+    color: #000;
     background-color: #a7206c;
 }
 a.regras:hover{
+    text-decoration: none;
+    color: #000;
     background-color: #bc2656;
 }
 a.contatos:hover{
+    text-decoration: none;
+    color: #000;
     background-color: #d22d3f;
 }
 main{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: flex-start; */
 }
 section.titulo{
     padding-top: 4em;
     text-align: center;
+    width: 600px;
+    padding: 15px;
 }
 .titulo>h1{
     font-family: var(--fonte-destaque);
@@ -80,6 +86,22 @@ section.titulo{
     color: var(--Cinza);
     padding: 10px;
 }
+.titulo>p{
+    color: var(--Cinza);
+    font-size: 1.4em;
+}
+h2{
+    font-family: var(--fonte-destaque);
+    text-align: center;
+}
+
+.regras{
+    width: 500px;
+}
+.regra-bloco{
+    margin: 3em 0;
+}
+
 section.card{
     background-color: white;
     width: 95%;
@@ -95,7 +117,9 @@ section.card{
     color: var(--Cinza);
     text-align:center;
 }
-
+a:hover{
+    text-decoration: none;
+}
 .link-sala{
     max-width: 400px;
     width: 95%;
@@ -132,6 +156,16 @@ section.card{
     text-decoration: underline;
 }
 
+.borda-regras{
+    border: 1px solid rgba(0, 0, 0, 0.63);
+
+    border-radius: 20px;
+}
+
+.contatos{
+    width: 200px;
+    height: 400px;
+}
 
 
 
@@ -139,7 +173,11 @@ section.card{
 
 input {text-transform: uppercase;}
 
-
+@media only screen and (max-width: 650px){
+    nav{
+        justify-content: space-around;
+    }
+}
 
 @media only screen and (max-width: 650px){
    
@@ -155,10 +193,10 @@ input {text-transform: uppercase;}
 @media only screen and (max-width: 470px){
    
     section.card{
-        width: 270px;
+        width: 350px;
     }
     .link-sala>input{
-        width: 300px;
+        width: 200px;
     }
   
 }
