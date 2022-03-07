@@ -16,10 +16,10 @@ function criaTr(dado){
     Tr.appendChild(criaTdDescrcao(dado.descricao))
 
     if (dado.idPlayerDe == idPlayer) {
-        Tr.style.color = "red"
+        Tr.style.backgroundColor = "rgb(255 195 195 / 75%)"
     }
     if (dado.idPlayerPara == idPlayer) {
-        Tr.style.color = "green"
+        Tr.style.backgroundColor = "#c3ffc3bf"
     }
   
     return Tr
