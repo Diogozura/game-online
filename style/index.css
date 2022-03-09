@@ -116,6 +116,15 @@ aside.icon{
     margin: 15px;
     text-align: center;
 }
+footer{
+/* position: fixed; */
+
+background-color: var(--Azul-Marinho);
+color: white;
+text-align: center;
+
+padding: 5px;
+}
 
 
 @media only screen and (max-width: 650px){

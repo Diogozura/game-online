@@ -14,7 +14,7 @@ label {
   }
   .contatos{
     width: 200px;
-    height: 200px;
+    height: 100%;
 }
 
   .card {
@@ -32,12 +32,12 @@ label {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #fff;
+    background: #89e971;
     text-align: center;
     line-height: 200px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 2px;
+    border-radius: 20px;
   }
   
   .card .back {
@@ -47,8 +47,8 @@ label {
     transform: rotateY(180deg);
   }
   
-  input {
-    /* display: none; */
+  .input-flip-card {
+    display: none;
   }
   
   :checked + .card {
