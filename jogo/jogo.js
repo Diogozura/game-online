@@ -75,7 +75,7 @@ function montaNome(dado) {
 function montaValor(dado) {
     const ValorP = document.createElement("p")
     ValorP.classList.add("valor-jogador")
-    ValorP.textContent = 'R$' + dado;
+    ValorP.textContent =  dado;
 
     return ValorP
 }

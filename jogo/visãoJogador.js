@@ -11,7 +11,7 @@ function jogador(id) {
   criaImg(id.identificador)
 
   const valor = document.querySelector("[valor]")
-  valor.textContent = "R$" + id.saldo
+  valor.textContent = id.saldo
 
   return asideJogador
 
