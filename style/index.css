@@ -96,6 +96,10 @@ input.dados{
    border-radius: 20px;
 }
 
+.input1{
+    width: 500px;
+}
+
 article.avatar{
     width: 370px;
     margin: auto;
