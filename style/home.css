@@ -47,9 +47,7 @@ li>a{
     padding: 10px;
     border-radius: 0 0 10px 10px;
 }
-li>a:hover{
-    background-color: var(--Laranja);
-}
+
 a.home:hover{
     text-decoration: none;
     color: #000;
