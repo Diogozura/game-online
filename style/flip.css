@@ -1,57 +1,92 @@
 body { font-family: 'Roboto'; background: #f17563; }
 label {
-    color: #222;
-    font-size: 50px;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    display: block;
-    width: 200px;
-    height: 200px;
-    margin: 50px auto;
-    cursor: pointer;
-  }
-  .contatos{
-    width: 200px;
-    height: 100%;
+  color: #222;
+  font-size: 50px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: block;
+  width: 300px;
+  height: 455px;
+  margin: 50px auto;
+  cursor: pointer;
 }
 
-  .card {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition: all 600ms;
-    transition: all 600ms;
-    z-index: 20;
-  }
-  
-  .card div {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #89e971;
-    text-align: center;
-    line-height: 200px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 20px;
-  }
-  
-  .card .back {
-    background: #222;
-    color: #fff;
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-  }
-  
-  .input-flip-card {
-    display: none;
-  }
-  
-  :checked + .card {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-  }
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+}
+
+.card div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(162, 231, 115);
+  text-align: center;
+  /* line-height: 200px; */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+.card .back {
+  background: #222;
+  color: #fff;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+input {
+  display: none;
+}
+
+:checked + .card {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+
+
+  .contato-img{
+    width: 300px;
+    height: auto;
+    border-radius: 10px ;
+}
+.contato-nome{
+    background-color: var(--Azul-Marinho);
+    color: white;
+    border-radius: 10px;
+}
+.diogo{
+  background-color: var(--Azul-Marinho);
+}
+.danilo{
+  background-color: var(--Laranja);
+}
+.iago{
+  background-color: var(--Roxo);
+}
+
+.bloco {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.bloco .content {
+  position: absolute;
+  bottom: 0;
+  /* background: rgb(0, 0, 0); */
+   /* Fallback color */
+  /* background: rgba(0, 0, 0, 0.5); Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+}
