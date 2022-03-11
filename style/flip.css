@@ -28,7 +28,7 @@ label {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgb(162, 231, 115);
+  /* background: rgb(162, 231, 115); */
   text-align: center;
   /* line-height: 200px; */
   -webkit-backface-visibility: hidden;
@@ -37,10 +37,16 @@ label {
 }
 
 .card .back {
-  background: #222;
+  /* background: #222; */
   color: #fff;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
+}
+.back{
+  display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 input {
@@ -78,6 +84,11 @@ input {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.icone-redes{
+  width: 64px;
+  height: 64px;
 }
 
 
