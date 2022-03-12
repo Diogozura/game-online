@@ -84,7 +84,7 @@ section.titulo{
     color: var(--Cinza);
     padding: 10px;
 }
-.titulo>p{
+.p-destaque{
     color: var(--Cinza);
     font-size: 1.4em;
 }
