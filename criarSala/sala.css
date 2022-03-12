@@ -12,9 +12,10 @@ main{
 }
 section.form-criar-sala{
     background-color: #FFFFFF;
-    margin: auto;
-    max-width: 700px;
-    padding: 20px;
+    /* margin: auto; */
+    width: 300px;
+    /* max-width: 700px; */
+    /* padding: 20px; */
     border-radius: 64px;
 }
 .cria{
@@ -23,7 +24,7 @@ section.form-criar-sala{
 
 @media only screen and (max-width: 600px) {
     section{
-        width: 350px;
+        width: 320px;
     }
     h1{
         font-size: 1.5em;
