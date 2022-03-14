@@ -34,11 +34,13 @@ header{
 }
 .logo1{
     margin-top: 10px;
+    margin-bottom: 1em;
     width: 100px;
 }
 img.logo{
     width: 250px;
     margin-top: 10px;
+    margin-bottom: 1em;
     text-align: center;
 }
 

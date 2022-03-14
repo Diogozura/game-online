@@ -1,6 +1,7 @@
+const flag = localStorage.getItem("flag")
 export function playerBank() {
-  const flag = localStorage.getItem("flag")
   console.log(flag)
+  
   if (flag == 1) {
     const banco = document.querySelector(".bank")
     banco.style.display = "block"
@@ -50,6 +51,16 @@ export function playerBank() {
   }
   // if()
 }
+const btnSair = document.querySelector("[btn-sair]")
+btnSair.dataset.target = "#exampleModal" 
+btnSair.dataset.toggle = "modal"
+btnSair.
+
+
+btnSair.addEventListener("click", function () {
+  console.log(btnSair)
+  
+})
 
 
 // banco 0

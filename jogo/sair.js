@@ -6,7 +6,7 @@ export function sair() {
     sair.addEventListener("click", function () {
 
         if (flag == 1) {
-            alert("você não pode sair, para de ser gayyyy")
+            
         } else {
             console.log("sair")
             localStorage.clear()

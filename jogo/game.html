@@ -41,7 +41,8 @@
     </header>
     <main>
         <div class="btn-sair">
-            <button type="button" class="btn1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <!--  -->
+            <button type="button" btn-sair class="btn1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Sair
             </button>
         </div>
@@ -56,12 +57,33 @@
 
                     <div class="modal-footer justify-content-around">
                         <button type="button" class="btn1 " data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn2" sair>Sair</button>
+                        <button type="button" class="btn2" sair data-bs-toggle="modal"
+                            data-bs-target="#sair">Sair</button>
                     </div>
                 </div>
             </div>
         </div>
 
+
+
+        <!-- Modal Sair Banco -->
+        <div class="modal fade" id="sair" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Antes de sair escolha o novo player bank </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                        <button type="button" class="btn btn-primary">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -81,7 +103,8 @@
                     <aside>
                         <!--jogador    -->
                         <p class="valor-jogador" valor>R$</p>
-                        <buttontype="button" class="btn1" data-bs-toggle="modal" data-bs-target="#bancoa">Tranferir</buttontype=>
+                        <buttontype="button" class="btn1" data-bs-toggle="modal" data-bs-target="#bancoa">Tranferir
+                            </buttontype=>
 
 
                     </aside>
@@ -103,8 +126,8 @@
                         </aside>
                     </aside>
                 </div>
-                <div class="modal fade" id="bancoa" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="bancoa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
 
                     <div class="modal-dialog" role="document">
                         <div class=" trasnfere-cor-fundo">
