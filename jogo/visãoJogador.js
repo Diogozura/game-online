@@ -21,6 +21,7 @@ function criaImg(cor) {
   const svg = document.createElement("IMG")
   svg.src = `../img/avatar/${cor}.svg`
   svg.classList.add("icone")
+  svg.id = "icone"
   
   const aside = document.querySelector("[img]")
   aside.appendChild(svg)

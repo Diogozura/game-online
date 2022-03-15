@@ -4,6 +4,7 @@ import { playerBank } from "./banco.js"
 
 
 const tranferir = document.querySelector("[trasferir]")
+
 tranferir.addEventListener("submit", (event) => {
   event.preventDefault()
   validaCampos.escolhido()
@@ -22,7 +23,8 @@ function criarPlayerTrasfere(player) {
   jogadoresDis.appendChild(botaaside)
   botaaside.appendChild(label(player.identificador))
   botaaside.appendChild(nome(player.namePlayer))
-  botaaside.appendChild(input(player.idPlayer))
+  botaaside.appendChild(input(player.idPlayer , player.identificador))
+  
   
   // console.log(botaaside.id)
   // console.log(localStorage.getItem("idPlayer"))
@@ -34,18 +36,18 @@ function criarPlayerTrasfere(player) {
 
 
 
-function input(dado) {
+export function input(dado,cor) {
 
   const criarInput = document.createElement("input")
   criarInput.name = "cores"
   criarInput.type = "radio"
   criarInput.value = dado
-  criarInput.id = dado
+  criarInput.id = cor
 
   return criarInput
 }
 
-function nome(player) {
+export function nome(player) {
   const nome = document.createElement("p")
   nome.className = "p-trasfere"
 
@@ -54,13 +56,15 @@ function nome(player) {
   return nome
 }
 
-function label(cor) {
+export function label(cor) {
 
   const svg = document.createElement("IMG")
   svg.src = `../img/avatar/${cor}.svg`
   svg.classList.add("icone")
+  
 
   const criaLabel = document.createElement("label")
+  criaLabel.htmlFor = cor
   criaLabel.appendChild(svg)
 // criaLabel.textContent = cor
   return criaLabel
@@ -90,7 +94,7 @@ dadosSala.dados()
     })
   })
 
-function quem() {
+export function quem() {
   let quem = " "
   const normal = parseInt(localStorage.getItem("idPlayer"))
   const banco = localStorage.getItem("banco")

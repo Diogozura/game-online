@@ -5,7 +5,7 @@ const idPlayer = localStorage.getItem("idPlayer")
 function botaExtra(dado) {
     const extrato = document.querySelector("[extrato]")
     const tr = criaTr(dado)
-    console.log(dado.descricao)
+    // console.log(dado.descricao)
     extrato.appendChild(tr)
     
     return extrato

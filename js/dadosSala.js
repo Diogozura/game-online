@@ -22,6 +22,29 @@ const visao = () => {
     })
 
 }
+
+const trocaBanco = (idPlayerDe, idPlayerPara) => {
+    return fetch(`${url}api/troca_player_banc?keyRoom=${token}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 
+            idPlayerDe: idPlayerDe,
+            idPlayerPara: idPlayerPara
+        })
+    })
+        .then(resposta => {
+            if (resposta.status == 201) {
+               console.log("saiu")
+            } else {
+                console.log("não saiu")
+            }
+            
+            return resposta.json()
+        })
+
+}
 const extrato = () => {
     return fetch(`${url}api/extrato/?keyRoom=${token}`)
     .then(resposta => {
@@ -117,5 +140,5 @@ const trafereDinheiroParaOsAmigos = (idPlayerDe, idPlayerPara, valor) => {
 
 
 export const dadosSala = {
-    dados,visao, extrato,  criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos
+    dados,visao, extrato,  criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos, trocaBanco
 }

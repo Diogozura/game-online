@@ -1,13 +1,16 @@
 import { dadosSala } from "../js/dadosSala.js"
-import { playerBank } from "./banco.js"
+import { flag, playerBank } from "./banco.js"
 import { sair } from "./sair.js"
 
 
 function addNaTela(jogador) {
     const dadosJogador = document.querySelector("[lista-jogadores]")
+    const sair = document.querySelector(".btn-sair")
     const jogadorAside = montaCampo(jogador)
 
     dadosJogador.appendChild(jogadorAside)
+
+   sair.appendChild(montaBtnSair()) 
 
     console.log("atualizou")
 
@@ -33,6 +36,7 @@ function montaCampo(jogador) {
 
     article.appendChild(asideNomeIcone)
     article.appendChild(asideJogador)
+    
 
 
     // asideJogador.appendChild(montaBtn())
@@ -59,7 +63,8 @@ function montaCampo(jogador) {
 
     const svg = document.createElement("IMG")
     svg.src = `../img/avatar/${dado}.svg`
-    svg.classList.add("icone")
+     svg.classList.add("icone")
+     
 
     return svg
 }
@@ -79,19 +84,30 @@ function montaValor(dado) {
 
     return ValorP
 }
-// function montaBtn() {
-//     const botao = document.createElement("button")
-//     botao.type = "button"
-//     botao.className = "btn-inicia"
-//     // botao.setAttribute('data-toggle',modal)
-//     // botao.setAttribute('#data-toggle', #modalExemplo)
-//     botao.dataset.toggle = "modal"
-//     botao.dataset.target = "#modalExemplo"
+function montaBtnSair() {
+    const botao = document.querySelector("[btn-sair]")
+    botao.type = "button"
+    // botao.className = "btn-inicia"
 
-//     botao.innerText = "teste uau";
+    if (flag == 1) {
+        botao.setAttribute('data-bs-toggle', 'modal')
+    botao.setAttribute('data-bs-target', '#sair')
+    }
+    
+    // botao.setAttribute('#data-target', '#modalExemplo')
+    // botao.dataset.toggle = "modal"
+    // botao.dataset.target = "#sair"
+    
+    // botao.getAttribute('data-bs-target')
 
-//     return botao
-// }
+    
+
+    // botao.innerText = "botão sair";
+
+    return botao
+}
+
+
 
 dadosSala.dados()
     .then(dados => {
