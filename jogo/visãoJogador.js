@@ -13,6 +13,8 @@ function jogador(id) {
   const valor = document.querySelector("[valor]")
   valor.textContent = id.saldo
 
+  localStorage.setItem("flag" , id.playerBank)
+  console.log(id.playerBank)
   return asideJogador
 
 }
@@ -33,6 +35,7 @@ function criaImg(cor) {
 dadosSala.visao()
   .then((id) => {
     jogador(id)
+    console.log(id)
   })
 
 
