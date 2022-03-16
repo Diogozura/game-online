@@ -10,7 +10,8 @@ export function sair() {
     sair.addEventListener("click", function () {
 
         if (flag == 1) {
-            
+            localStorage.clear()
+            location.href = '../index.html'
         } else {
             console.log("sair")
             localStorage.clear()
@@ -27,7 +28,8 @@ const btnSair = document.querySelector("[sair-player-banco]")
 btnSair.addEventListener("submit", event => {
 
   event.preventDefault()
-
+  localStorage.clear()
+  location.href = '../index.html'
   console.log("clicou no pai")
   const trocar = troca()
   console.log(trocar)

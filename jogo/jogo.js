@@ -18,9 +18,6 @@ function addNaTela(jogador) {
 }
 
 
-
-
-
 function montaCampo(jogador) {
     const article = document.createElement("article")
 
