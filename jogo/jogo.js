@@ -14,7 +14,6 @@ function addNaTela(jogador) {
 
    sair.appendChild(montaBtnSair()) 
 
-    console.log("atualizou")
 
     return dadosJogador
 }

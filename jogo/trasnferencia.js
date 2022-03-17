@@ -29,9 +29,7 @@ function criarPlayerTrasfere(player) {
   // console.log(botaaside.id)
   // console.log(localStorage.getItem("idPlayer"))
 
-  if (localStorage.getItem("idPlayer") == botaaside.id) {
-  console.log("sai")
-}
+
 }
 
 

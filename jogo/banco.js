@@ -4,7 +4,6 @@ export const flag = localStorage.getItem("flag")
 
 
 export function playerBank() {
-  console.log(flag)
 
   if (flag == 1) {
     const banco = document.querySelector(".bank")
@@ -34,10 +33,8 @@ export function playerBank() {
         nomeBanco.style.display = "none"
         nomePlayer.style.display = "block"
 
-        console.log(bancoTrans)
         bancoTrans.style.display = "block"
 
-        console.log(jogador.id)
         jogador.style.display = "none"
 
         localStorage.setItem("banco", 0)
@@ -46,7 +43,6 @@ export function playerBank() {
         return true
 
       } else {
-        console.log("fui ativado")
 
         icon.style.display = "block"
         iconePlayer.style.display = "none"
@@ -55,11 +51,9 @@ export function playerBank() {
         nomeBanco.style.display = "block"
         nomePlayer.style.display = "none"
         
-        console.log(bancoTrans)
         bancoTrans.style.display = "none"
 
         jogador.style.display = "block"
-        console.log(jogador)
         localStorage.setItem("banco", 1)
 
         return false

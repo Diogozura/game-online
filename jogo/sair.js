@@ -28,8 +28,8 @@ const btnSair = document.querySelector("[sair-player-banco]")
 btnSair.addEventListener("submit", event => {
 
   event.preventDefault()
-  localStorage.clear()
-  location.href = '../index.html'
+  // localStorage.clear()
+  // location.href = '../index.html'
   console.log("clicou no pai")
   const trocar = troca()
   console.log(trocar)
@@ -41,12 +41,17 @@ function sairBanco(dado) {
   const aside = document.createElement("aside")
   aside.className = "transfere-jogador"
 
-
+  aside.id = dado.idPlayer
   aside.appendChild(label(dado.identificador))
   aside.appendChild(nome(dado.namePlayer))
   aside.appendChild(input(dado.idPlayer, dado.identificador))
 
   escolha.appendChild(aside)
+
+
+  if (aside.id == localStorage.getItem("idPlayer")) {
+    aside.style.display = "none"
+  }
 
   return escolha
 }
