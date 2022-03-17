@@ -46,6 +46,15 @@ const trocaBanco = (idPlayerDe, idPlayerPara) => {
         })
 
 }
+
+const sair = () => {
+    return fetch(`${url}/api/quitPlayer?keyRoom=${token}&idPlayer=${idPlayer}`, {
+        method: 'DELETE',
+    })
+    
+}
+
+
 const extrato = () => {
     return fetch(`${url}api/extrato/?keyRoom=${token}`)
         .then(resposta => {
@@ -141,5 +150,5 @@ const trafereDinheiroParaOsAmigos = (idPlayerDe, idPlayerPara, valor) => {
 
 
 export const dadosSala = {
-    dados, visao, extrato, criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos, trocaBanco
+    dados, visao, extrato, criarSala, temCor, criarJogadorPlayer, trafereDinheiroParaOsAmigos, trocaBanco,sair
 }
