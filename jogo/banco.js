@@ -1,11 +1,8 @@
-import { dadosSala } from "../js/dadosSala.js"
-import { validaCampos } from "../js/validaCampos.js"
-import { input, label, nome, quem, } from "./trasnferencia.js"
-
-
-
 
 export const flag = localStorage.getItem("flag")
+
+
+
 export function playerBank() {
   console.log(flag)
 
@@ -16,47 +13,63 @@ export function playerBank() {
 
     const ativa = document.querySelector("[ativa]")
     ativa.addEventListener("click", () => {
+
       const icon = document.querySelector("[banco-icone]")
       const iconePlayer = document.querySelector("#icone")
+
       const nomePlayer = document.querySelector("[nome]")
       const nomeBanco = document.querySelector(".nome-banco")
+
       const bancoTrans = document.querySelector("#bancoTras")
-      const jogador = document.querySelector(".transfere-jogador")
+      const jogador = document.querySelector(".transfere-jogadorP")
 
 
 
-      console.log("fui ativado")
+     
       if (ativa.checked) {
-
+        
         icon.style.display = "none"
         iconePlayer.style.display = "block"
 
         nomeBanco.style.display = "none"
         nomePlayer.style.display = "block"
 
-
+        console.log(bancoTrans)
         bancoTrans.style.display = "block"
+
+        console.log(jogador.id)
         jogador.style.display = "none"
+
         localStorage.setItem("banco", 0)
+
+        
         return true
 
       } else {
+        console.log("fui ativado")
 
-        nomePlayer.style.display = "none"
-        nomeBanco.style.display = "block"
-
-        iconePlayer.style.display = "none"
         icon.style.display = "block"
+        iconePlayer.style.display = "none"
+       
 
+        nomeBanco.style.display = "block"
+        nomePlayer.style.display = "none"
+        
+        console.log(bancoTrans)
         bancoTrans.style.display = "none"
+
         jogador.style.display = "block"
+        console.log(jogador)
         localStorage.setItem("banco", 1)
 
         return false
       }
+
+      
     })
   }
   // if()
+  
 }
 
 

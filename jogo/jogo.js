@@ -2,6 +2,8 @@ import { dadosSala } from "../js/dadosSala.js"
 import { flag, playerBank } from "./banco.js"
 import { sair } from "./sair.js"
 
+playerBank()
+sair()
 
 function addNaTela(jogador) {
     const dadosJogador = document.querySelector("[lista-jogadores]")
@@ -142,8 +144,7 @@ ondeMostrar.value = tokenDoLocal
 //         main.classList = "off"
 //     }
 // })
-playerBank()
-sair()
+
 
 
 export { montaNome, montaImg, montaValor }

@@ -65,8 +65,3 @@ criarPlayer.addEventListener("click", function (event) {
 
 
 })
-
-
-
-
-

@@ -37,5 +37,3 @@ dadosSala.visao()
     jogador(id)
     console.log(id)
   })
-
-

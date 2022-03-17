@@ -19,7 +19,7 @@ function criarPlayerTrasfere(player) {
   const jogadoresDis = document.querySelector("[jogadores-disponiveis]")
   const botaaside = document.createElement("aside")
   botaaside.id = player.idPlayer
-  botaaside.className = "transfere-jogador"
+  botaaside.className = "transfere-jogadorP"
   jogadoresDis.appendChild(botaaside)
   botaaside.appendChild(label(player.identificador))
   botaaside.appendChild(nome(player.namePlayer))
@@ -30,8 +30,8 @@ function criarPlayerTrasfere(player) {
   // console.log(localStorage.getItem("idPlayer"))
 
   if (localStorage.getItem("idPlayer") == botaaside.id) {
-    botaaside.style.display = "none"
-  }
+  console.log("sai")
+}
 }
 
 
@@ -122,4 +122,3 @@ function tranfere() {
       console.log(`Quem enviou ${idPlayerDe}, para ${idPlayerPara} o valor ${valor} `)
     })
 }
-

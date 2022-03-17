@@ -46,7 +46,7 @@ form.trasfe{
  margin-bottom: 100px;
 }
 .transfere-jogador{
-  display: block;
+  /* display: none; */
 
   width: 64px;
   height: auto;
@@ -54,6 +54,9 @@ form.trasfe{
   margin: 0 1em;
 
   text-align: center;
+}
+.transfere-jogadorP{
+  display: none;
 }
 .p-trasfere{
   margin-bottom: 0;
