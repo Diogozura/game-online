@@ -3,6 +3,7 @@ import { flag, playerBank } from "./banco.js"
 import { sair } from "./sair.js"
 
 playerBank()
+
 sair()
 
 function addNaTela(jogador) {
