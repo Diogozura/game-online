@@ -19,16 +19,20 @@ function criarPlayerTrasfere(player) {
   const jogadoresDis = document.querySelector("[jogadores-disponiveis]")
   const botaaside = document.createElement("aside")
   botaaside.id = player.idPlayer
-  botaaside.className = "transfere-jogadorP"
+  botaaside.className = "transfere-jogador"
   jogadoresDis.appendChild(botaaside)
   botaaside.appendChild(label(player.identificador))
   botaaside.appendChild(nome(player.namePlayer))
-  botaaside.appendChild(input(player.idPlayer , player.identificador))
+  botaaside.appendChild(input(player.idPlayer, player.identificador))
   
   
   // console.log(botaaside.id)
   // console.log(localStorage.getItem("idPlayer"))
 
+
+  if (botaaside.id == localStorage.getItem("idPlayer")) {
+    botaaside.style.display = "none"
+  }
 
 }
 

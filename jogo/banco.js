@@ -2,9 +2,10 @@
 export const flag = localStorage.getItem("flag")
 
 
-
 export function playerBank() {
 
+
+  
   if (flag == 1) {
     const banco = document.querySelector(".bank")
     banco.style.display = "block"
@@ -20,9 +21,12 @@ export function playerBank() {
       const nomeBanco = document.querySelector(".nome-banco")
 
       const bancoTrans = document.querySelector("#bancoTras")
+      const jogadores = document.querySelector("[jogadores-disponiveis]")
+      for( const aside of jogadores.querySelectorAll("aside"))
+        console.log(aside.id)
+      
       const jogador = document.querySelector(".transfere-jogadorP")
-
-
+   
 
      
       if (ativa.checked) {
@@ -35,7 +39,14 @@ export function playerBank() {
 
         bancoTrans.style.display = "block"
 
-        jogador.style.display = "none"
+        // jogador.style.display = "none"
+
+        
+        for( const aside of jogadores.querySelectorAll("aside"))
+          if (aside.id == localStorage.getItem("idPlayer")) {
+          console.log("ativo")
+          aside.style.display = "none"
+        }
 
         localStorage.setItem("banco", 0)
 
@@ -45,6 +56,7 @@ export function playerBank() {
       } else {
 
         icon.style.display = "block"
+
         iconePlayer.style.display = "none"
        
 
@@ -53,7 +65,12 @@ export function playerBank() {
         
         bancoTrans.style.display = "none"
 
-        jogador.style.display = "block"
+        // jogador.style.display = "block"
+        for( const aside of jogadores.querySelectorAll("aside"))
+        if (aside.id == localStorage.getItem("idPlayer")) {
+          aside.style.display = "block"
+        }
+
         localStorage.setItem("banco", 1)
 
         return false
