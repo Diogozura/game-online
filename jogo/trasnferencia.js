@@ -77,7 +77,7 @@ function dinheiro() {
   const pegaValor = document.querySelector("[valor-transfere]").value
   const errorValor = document.querySelector("[erro-valor]")
 
-  if (pegaValor <= 1) {
+  if (pegaValor <= 0) {
     errorValor.className = "hide"
   } else {
     errorValor.style.display = "none"
@@ -120,7 +120,7 @@ function tranfere() {
 
   dadosSala.trafereDinheiroParaOsAmigos(idPlayerDe, idPlayerPara, valor)
     .then(() => {
-      location.reload()
+      // location.reload()
       console.log(`Quem enviou ${idPlayerDe}, para ${idPlayerPara} o valor ${valor} `)
     })
 }
