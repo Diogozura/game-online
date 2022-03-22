@@ -120,7 +120,7 @@ function tranfere() {
 
   dadosSala.trafereDinheiroParaOsAmigos(idPlayerDe, idPlayerPara, valor)
     .then(() => {
-      // location.reload()
+      
       console.log(`Quem enviou ${idPlayerDe}, para ${idPlayerPara} o valor ${valor} `)
     })
 }

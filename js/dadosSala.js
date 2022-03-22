@@ -146,6 +146,7 @@ const trafereDinheiroParaOsAmigos = (idPlayerDe, idPlayerPara, valor) => {
         .then(resposta => {
             if (resposta.status == 200) {
                 alert("transferncia aprovada")
+                location.reload()
             } else {
                 console.log("transferencia não aprovada")
             }
