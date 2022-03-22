@@ -28,7 +28,7 @@ function montaCampo(jogador) {
     const icon = montaImg(jogador.identificador)
     asideNomeIcone.appendChild(icon)
     asideNomeIcone.appendChild(montaNome(jogador.namePlayer))
-
+localStorage.setItem("flag" , jogador.playerBank)
     const asideJogador = document.createElement("aside")
     asideJogador.className = "players"
     asideJogador.appendChild(montaValor(jogador.saldo))
@@ -111,10 +111,10 @@ function montaBtnSair() {
 dadosSala.dados()
     .then(dados => {
         const dadoJogador = dados.players
-        // console.log(dadoJogador)
+        console.log(dadoJogador)
         dadoJogador.forEach(function (dado) {
             addNaTela(dado)
-
+            
         })
 
     })
