@@ -145,6 +145,10 @@ a:hover{
     border-bottom:1px solid #000000;
 }
 
+p{
+    color: var(--Cinza);
+}
+
 .criar{
     text-decoration: none;
     color: var(--Cinza);

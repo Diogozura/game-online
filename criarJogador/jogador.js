@@ -91,8 +91,7 @@ btnCria.addEventListener("submit", (event) => {
         MensagemErro.textContent = id.erro
         MensagemErro.style.display = "block"
         console.log(id.erro)
-        return
-        window.location.href = '../jogo/game.html'
+        return window.location.href = '../game.html'
 
 
       }

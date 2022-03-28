@@ -44,8 +44,7 @@ formulario.addEventListener('submit', function (evento) {
           localStorage.setItem("idPlayer", id.idPlayer)
           localStorage.setItem("flag", 1)
           
-        return 
-        window.location.href = '../jogo/game.html'
+        return window.location.href = '../game.html'
       } 
    
       })

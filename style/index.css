@@ -53,6 +53,14 @@ img.logo{
     
 }
 
+.termos-politica{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 600px;
+    padding: 15px;
+}
+
 .cancelar{
     background-color: var(--Azul-Marinho);
 }
@@ -141,5 +149,8 @@ padding: 5px;
     }
     img.logo{
         width: 120px;
+    }
+    .termos-politica{
+        width: 300px;
     }
 }
