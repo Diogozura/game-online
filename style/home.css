@@ -33,9 +33,7 @@ body{
 h1{
     margin: 0;
 }
-ul{
-    justify-content: space-around !important;
-}
+
 li>a{
     text-decoration: none;
     color: #000;

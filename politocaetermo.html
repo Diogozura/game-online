@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    meta
 
     <link rel="stylesheet" href="style/home.css">
     <link rel="stylesheet" href="style/index.css">
@@ -27,35 +28,58 @@
 </head>
 
 <body>
-    <header class="mb-5">
+    <header class="">
         <picture>
             <source media="(max-width:650px)" srcset="img/grupo.svg" type="Image/png">
-            <img src="img/logo.svg" class="logo" alt="imagem grande">
-        </picture>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
             
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active home" aria-current="page" href="https://easyimobiliario.com.br">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link regras" href="#Política">Política de Privacidade</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link contatos" href="#Termos">Termos de Uso</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+        </picture>
+        
 
     </header>
 
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light topo">
+        <div class="container-fluid">
+            <picture>
+                <source media="(max-width:650px)" srcset="img/grupo.svg" type="Image/png">
+                <img src="img/logo.svg" class="logo" alt="imagem grande">
+            </picture>
+            
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-around" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-center navegacao">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#Política">Política de Privacidade</a>
+              <a class="nav-link" href="#Termos">Termos de Uso</a>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <!-- <nav class="nav nav-pills nav-fill topo">
+        <div class="container-fluid">
+            <img src="img/logo.svg" class="logo" alt="imagem grande">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarNav">
+            <ul class="navbar-nav text-center">
+              <li class="nav-item">
+                <a class="nav-link active home" aria-current="page" href="https://easyimobiliario.com.br">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link regras" href="#Política">Política de Privacidade</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link contatos" href="#Termos">Termos de Uso</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>     -->
 
     
    
@@ -159,24 +183,14 @@
             <p>Estes termos e condições são regidos e interpretados de acordo com as leis do easy bank e você se submete
                 irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.</p>
         </section>
-
-
-
-
-
-
-
-
-
     </main>
+
     <footer>
         <p>Política de Privacidade e Termos de Uso</p>
         <p class="mb-0">Desenvolvido por <a href="https://diogozura.github.io/2eses/" target="_blank"
-                rel="noopener noreferrer">2eSes technology</a> </p>
+                rel="noopener noreferrer" alt="site da 2eSes ">2eSes technology</a> </p>
     </footer>
 
-    <script type="module" src="js/home.js"></script>
-    <script src="js/flip.js"></script>
 
     <scri<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">

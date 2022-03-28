@@ -32,6 +32,23 @@ header{
     font-size: 700;
     color: #000;
 }
+.topo{
+    background-image: linear-gradient(to right, #951B81, #E6332A);
+}
+.navegacao>a{
+    text-decoration: none;
+    color: #FFF;
+    border: #000;
+    font-size: 300;
+    font-weight: 300;
+    font-family: var(--fonte-destaque);
+    font-size: 1.4em;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+.navegacao>a:hover{
+    color: #000;
+}
 .logo1{
     margin-top: 10px;
     margin-bottom: 1em;
@@ -134,10 +151,17 @@ footer{
 /* position: fixed; */
 
 background-color: var(--Azul-Marinho);
-color: white;
+display: flex;
+justify-content: space-around;
 text-align: center;
 
 padding: 5px;
+}
+footer>p{
+    color: white;
+}
+p>a{
+    color:white;
 }
 
 
