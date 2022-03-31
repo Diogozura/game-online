@@ -25,10 +25,11 @@ function montaCampo(jogador) {
 
     const asideNomeIcone = document.createElement("aside")
     asideNomeIcone.className = "nome-icone"
-    const icon = montaImg(jogador.identificador)
+    const icon = montaImg(jogador.identificador, jogador.playerBank)
+    
     asideNomeIcone.appendChild(icon)
     asideNomeIcone.appendChild(montaNome(jogador.namePlayer))
-localStorage.setItem("flag" , jogador.playerBank)
+    localStorage.setItem("flag" , jogador.playerBank)
     const asideJogador = document.createElement("aside")
     asideJogador.className = "players"
     asideJogador.appendChild(montaValor(jogador.saldo))
@@ -48,7 +49,7 @@ localStorage.setItem("flag" , jogador.playerBank)
 
 }
 
- function montaImg(dado) {
+ function montaImg(dado, flag) {
     // const svg = ` <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
     // class="bi bi-person" viewBox="0 0 16 16">
     // <path
@@ -63,6 +64,12 @@ localStorage.setItem("flag" , jogador.playerBank)
     const svg = document.createElement("IMG")
     svg.src = `../img/avatar/${dado}.svg`
      svg.classList.add("icone")
+
+     if (flag == 1) {
+        const svg = document.createElement("IMG")
+        svg.src = `../img/avatarBanco/B${dado}.svg`
+         svg.classList.add("icone")
+     }
      
 
     return svg
